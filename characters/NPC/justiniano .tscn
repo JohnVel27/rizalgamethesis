@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://cdjpou0v8x1gm"]
+
+[ext_resource type="Script" uid="uid://cs884n70ey56i" path="res://characters/NPC/scripts/justiano.gd" id="1_7pg2y"]
+[ext_resource type="Texture2D" uid="uid://um0meilnmre1" path="res://characters/NPC/Entities/Npc's/Wizzard/Idle/Idle-Sheet.png" id="2_7agau"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7agau"]
+radius = 32.0624
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bdggl"]
+atlas = ExtResource("2_7agau")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x65ni"]
+atlas = ExtResource("2_7agau")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlqje"]
+atlas = ExtResource("2_7agau")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rjq1b"]
+atlas = ExtResource("2_7agau")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bdggl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bdggl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x65ni")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlqje")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rjq1b")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_rjxl1"]
+radius = 81.4923
+
+[node name="justiniano" type="CharacterBody2D"]
+script = ExtResource("1_7pg2y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_7agau")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.1875, 2.5625)
+scale = Vector2(1.73828, 2.02734)
+sprite_frames = SubResource("SpriteFrames_bdggl")
+frame_progress = 0.531879
+
+[node name="chatdetectionjustiano" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatdetectionjustiano"]
+position = Vector2(1, 1)
+shape = SubResource("CircleShape2D_rjxl1")
+
+[connection signal="body_entered" from="chatdetectionjustiano" to="." method="_on_chatdetectionjustiano_body_entered"]
+[connection signal="body_exited" from="chatdetectionjustiano" to="." method="_on_chatdetectionjustiano_body_exited"]

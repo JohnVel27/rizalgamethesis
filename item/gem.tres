@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="ItemData" load_steps=4 format=3 uid="uid://t3yx2apedfwh"]
+
+[ext_resource type="Script" uid="uid://c04jwa6ijx6sq" path="res://item/scripts/item_data.gd" id="1_5t0f1"]
+[ext_resource type="Texture2D" uid="uid://cxo5tm4d472o4" path="res://item/sprites/items.png" id="2_jwhjr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f83os"]
+atlas = ExtResource("2_jwhjr")
+region = Rect2(0, 0, 30.4796, 32)
+
+[resource]
+script = ExtResource("1_5t0f1")
+name = "Gem"
+description = "fasdfsadfads"
+texture = SubResource("AtlasTexture_f83os")
+metadata/_custom_type_script = "uid://c04jwa6ijx6sq"

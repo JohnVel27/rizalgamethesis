@@ -1,0 +1,65 @@
+[gd_scene load_steps=10 format=3 uid="uid://cprj2qdl0ufm"]
+
+[ext_resource type="Texture2D" uid="uid://dv5tlqdk44fg4" path="res://characters/NPC/Entities/Npc's/Rogue/Idle/Idle-Sheet.png" id="1_7c50y"]
+[ext_resource type="Script" uid="uid://c4d2an6tt8cm6" path="res://characters/NPC/scripts/dominicanfriar.gd" id="1_yhg5y"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ctinb"]
+radius = 28.2843
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yhg5y"]
+atlas = ExtResource("1_7c50y")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0rmnq"]
+atlas = ExtResource("1_7c50y")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ipbrb"]
+atlas = ExtResource("1_7c50y")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lqbms"]
+atlas = ExtResource("1_7c50y")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_y6v4m"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yhg5y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0rmnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ipbrb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lqbms")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_0rmnq"]
+radius = 58.3095
+
+[node name="dominicanfriars" type="CharacterBody2D"]
+script = ExtResource("1_yhg5y")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_ctinb")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-1, -5)
+scale = Vector2(1.96875, 1.8125)
+sprite_frames = SubResource("SpriteFrames_y6v4m")
+
+[node name="chatdetectiondfriar" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatdetectiondfriar"]
+shape = SubResource("CircleShape2D_0rmnq")
+
+[connection signal="body_entered" from="chatdetectiondfriar" to="." method="_on_chatdetectiondfriar_body_entered"]
+[connection signal="body_exited" from="chatdetectiondfriar" to="." method="_on_chatdetectiondfriar_body_exited"]

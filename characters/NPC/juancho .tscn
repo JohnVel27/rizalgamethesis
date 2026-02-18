@@ -1,0 +1,3 @@
+[gd_scene format=3 uid="uid://bg5r6uvlt2lch"]
+
+[node name="juancho" type="CharacterBody2D"]

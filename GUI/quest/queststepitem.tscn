@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://b0hbqwkdn40k4"]
+
+[ext_resource type="Script" uid="uid://febmgeov6817" path="res://GUI/quest/queststepitem.gd" id="1_rytvj"]
+[ext_resource type="Texture2D" uid="uid://diqfn3fo044ne" path="res://GUI/quest/checkbox.png" id="2_c58ja"]
+
+[node name="queststepitem" type="Control"]
+custom_minimum_size = Vector2(200, 22)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 260.0
+offset_bottom = 44.0
+script = ExtResource("1_rytvj")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 37.0
+offset_top = -2.0
+offset_right = 96.0
+offset_bottom = 26.0
+theme_override_font_sizes/font_size = 20
+text = "step "
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(17, 16)
+scale = Vector2(1.625, 1.6875)
+texture = ExtResource("2_c58ja")
+hframes = 2

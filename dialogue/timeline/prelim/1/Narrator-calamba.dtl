@@ -1,0 +1,10 @@
+join Narrator center
+Narrator: Hello, Player! Welcome to Lakbay Bayani, a 2D game set in the prelim level
+Narrator: We are now in Calamba, Laguna, in the year 1861—a small town near Mount Makiling and Laguna de Bay.
+Narrator: On a warm night of June 19, 1861, in a stone house in Calamba, a baby boy named José Protasio Rizal Mercado was born.
+Narrator: He grew up in a home filled with books, prayers, and learning, guided by a loving family who believed in education.
+Narrator: José was a small and sickly child when he was young, but he had a very sharp mind and a strong desire to learn. Even though his body was weak, his curiosity was powerful.
+Narrator: At just three years old, he already knew the alphabet. He loved listening to stories and asking many questions about the world around him. By the age of five, he could read the Bible in Spanish, which was not easy for a child his age.
+Narrator: His mother, Doña Teodora, was his first teacher. She patiently taught him how to read, write, and think deeply. She told him stories, guided his imagination, and trained him to value education. Under her care, José’s love for knowledge began to grow.
+Narrator: Go to the Rizal house and talk to his mother.
+leave Narrator

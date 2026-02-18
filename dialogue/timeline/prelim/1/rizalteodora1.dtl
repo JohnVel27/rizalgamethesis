@@ -1,0 +1,173 @@
+Teodora: Come closer, José. Tonight, I will tell you a story.
+Rizal: Yes, Mother. I love your stories.
+Teodora: This is a story about a young moth and his mother.
+Rizal: What is a moth, Mother?
+Teodora: A moth is a small insect that flies at night. They are often attracted to light.
+Rizal: Like the lamp beside us?
+Teodora: Yes, just like this lamp.
+Narrator: The Story Begins
+Teodora: One night, a mother moth and her son were flying in the dark. Then they saw a bright and beautiful flame.
+Rizal: Was it very bright?
+Teodora: Yes, it was shining strongly. The young moth had never seen something so beautiful before.
+Rizal: What did he think it was?
+Teodora: He thought it was the sun.
+Rizal: But the sun only appears in the morning.
+Teodora: That is true. But the young moth did not know that.
+Narrator: The Warning
+Teodora: The mother moth said, 'Do not go near that light. It is not the sun. It is dangerous.
+Rizal: Why was it dangerous?
+Teodora: Because it was fire. And fire can burn.
+Rizal: Did the young moth believe his mother?
+Teodora: He heard her… but he did not listen.
+Teodora: The young moth was curious. He wanted to see the beautiful light up close.
+Rizal: Was he brave?
+Teodora: He thought he was brave. But sometimes, bravery without wisdom can be dangerous.
+Rizal: What happened then?
+Teodora: He flew closer… and closer… until the flame burned his wings.
+Rizal: Did he die?
+Teodora: Yes, my son. The flame consumed him.
+Narrator: The Lesson
+Teodora: My child, remember this\: Not all bright things are good. And not all dangers look frightening.
+Rizal: I do not know, Mother…
+Teodora: That is something you must learn as you grow. There are times when you must be careful. But there may also be times when you must stand for what is right—even if it is dangerous
+Narrator: José did not fully understand it yet. But deep in his heart, the story of the moth began to mean something more. Outside their peaceful home, injustice was growing. And one day, José would choose to face a different kind of flame.
+Narrator: Now, Player, let’s see how much you learned from the story of the moth. Answer carefully!
+if {mothmultiplechoice.mothmultiplehoicefinished} == true:
+	Narrator: You already pass the test of the moth story !!
+else:
+	label QuizStart
+	Teodora: 1.Who told the story of the moth?
+	- His father
+		Narrator: Not quite, José. It was your mother who told you the story.
+		Narrator: Let’s start over from Question 1.
+		jump rizalteodora1/QuizStart
+	- His teacher
+		Narrator: Not quite, José. It was your mother who told you the story.
+		Narrator: Let’s start over from Question 1.
+		jump rizalteodora1/QuizStart
+	- Doña Teodora
+		Narrator: Correct! It was Doña Teodora, José’s mother.
+	- His brother
+		Narrator: Not quite, José. It was your mother who told you the story.
+		Narrator: Let’s start over from Question 1.
+		jump rizalteodora1/QuizStart
+	Narrator: 2.What did the young moth see in the dark?
+	- The moon
+		Narrator: That’s not right. The moth saw a bright flame shining in the dark.
+		Narrator: Try again from Question 1.
+		jump rizalteodora1/QuizStart
+	- A bright flame
+		Narrator: Correct! The moth was drawn to the bright flame.
+	- A star
+		Narrator: That’s not right. The moth saw a bright flame shining in the dark.
+		Narrator: Try again from Question 1.
+		jump rizalteodora1/QuizStart
+	- A lantern outside
+		Narrator: That’s not right. The moth saw a bright flame shining in the dark.
+		Narrator: Try again from Question 1.
+		jump rizalteodora1/QuizStart
+	Narrator: 3.What kind of insect was in the story?
+	- Butterfly
+		Narrator: Not quite. Remember, it was a moth, not another insect.
+		Narrator: Start again from Question 1.
+		jump rizalteodora1/QuizStart
+	- Bee
+		Narrator: Not quite. Remember, it was a moth, not another insect.
+		Narrator: Start again from Question 1.
+		jump rizalteodora1/QuizStart
+	- Ant
+		Narrator: Not quite. Remember, it was a moth, not another insect.
+		Narrator: Start again from Question 1.
+		jump rizalteodora1/QuizStart
+	- Moth
+		Narrator: Yes! The young insect was a moth, curious and drawn to light
+	Narrator: 4.What did the young moth think the flame was?
+	- The moon
+		Narrator: Not quite. He thought it was the sun, José
+		Narrator: Start again from Question 1
+		jump rizalteodora1/QuizStart
+	- A firefly
+		Narrator: Not quite. He thought it was the sun, José
+		Narrator: Start again from Question 1
+		jump rizalteodora1/QuizStart
+	- The sun
+		Narrator: Well done! The moth thought the flame was the sun.
+	- A star
+		Narrator: Not quite. He thought it was the sun, José
+		Narrator: Start again from Question 1
+		jump rizalteodora1/QuizStart
+	Narrator: 5. What did the mother moth warn her son about?
+	- The wind
+		Narrator: Oops, José. She warned him about the flame, not the wind or rain.
+		Narrator: Try again from Question 1
+		jump rizalteodora1/QuizStart
+	- The rain
+		Narrator: Oops, José. She warned him about the flame, not the wind or rain.
+		Narrator: Try again from Question 1
+		jump rizalteodora1/QuizStart
+	- The darkness
+		Narrator: Oops, José. She warned him about the flame, not the wind or rain.
+		Narrator: Try again from Question 1
+		jump rizalteodora1/QuizStart
+	- The dangerous flame
+		Narrator: Exactly! She warned him about the dangerous flame.
+	Narrator: 6. Why was the flame dangerous?
+	- It was too bright
+		Narrator: Not quite. Flames can burn, that’s why it was dangerous
+		Narrator: Start again from Question 1
+		jump rizalteodora1/QuizStart
+	- It could burn him
+		Narrator: Yes! The flame could burn the moth’s wings.
+	- It was moving
+		Narrator: Not quite. Flames can burn, that’s why it was dangerous
+		Narrator: Start again from Question 1
+		jump rizalteodora1/QuizStart
+	- It was noisy
+		Narrator: Not quite. Flames can burn, that’s why it was dangerous
+		Narrator: Start again from Question 1
+		jump rizalteodora1/QuizStart
+	Narrator: 7. Did the young moth listen to his mother?
+	- Yes
+		Narrator: Not quite. He did not listen to me, José
+		Narrator: Try again from Question 1
+		jump rizalteodora1/QuizStart
+	- No
+		Narrator: Correct. He heard her, but did not follow her advice.
+	Narrator: 8. What happened when the moth flew too close?
+	- He became stronger
+		Narrator: No, José. Flying too close to the flame burned him
+		Narrator: Start again from Question 1
+	- He burned in the flame
+		Narrator: Yes! The flame burned his wings.
+	- He flew higher
+		Narrator: No, José. Flying too close to the flame burned him
+		Narrator: Start again from Question 1
+	- He became happy
+		Narrator: No, José. Flying too close to the flame burned him
+		Narrator: Start again from Question 1
+	Narrator: 9. What is one lesson of the story?
+	- Always follow bright things
+		Narrator: Not quite. The lesson is to listen to advice and be careful.
+		Narrator: Try again from Question 1.
+	- Fire is beautiful
+		Narrator: Not quite. The lesson is to listen to advice and be careful.
+		Narrator: Try again from Question 1.
+	- Listen to your parents' advice
+		Narrator: Correct! Obey advice and be wise
+	- Darkness is bad
+		Narrator: Not quite. The lesson is to listen to advice and be careful.
+		Narrator: Try again from Question 1.
+	Narrator: 10.  Why did Doña Teodora tell José this story?
+	- To scare him
+		Narrator: Not quite. I told you the story to teach a lesson, not to scare you.
+		Narrator: Start again from Question 1.
+	- To teach him a lesson about wisdom and dange
+		Narrator: Exactly! She wanted José to learn about wisdom and danger. You pass all the question !
+		set {mothmultiplechoice.mothmultiplehoicefinished} = true
+		set {mothmultiplechoice.mothmultiplechoicestarted} = false
+	- To make him laugh
+		Narrator: Not quite. I told you the story to teach a lesson, not to scare you.
+		Narrator: Start again from Question 1.
+	- To make him sleep
+		Narrator: Not quite. I told you the story to teach a lesson, not to scare you.
+		Narrator: Start again from Question 1.

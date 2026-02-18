@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://cobyvd1d16j27"]
+
+[ext_resource type="Texture2D" uid="uid://um0meilnmre1" path="res://characters/NPC/Entities/Npc's/Wizzard/Idle/Idle-Sheet.png" id="1_dupks"]
+[ext_resource type="Script" uid="uid://bkx6wcd5qcios" path="res://characters/NPC/scripts/jesuit.gd" id="1_i6w0v"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_i6w0v"]
+radius = 39.2173
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xdjfr"]
+atlas = ExtResource("1_dupks")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_le4c7"]
+atlas = ExtResource("1_dupks")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hhrc3"]
+atlas = ExtResource("1_dupks")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afhcq"]
+atlas = ExtResource("1_dupks")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pg6w4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xdjfr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_le4c7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hhrc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afhcq")
+}],
+"loop": true,
+"name": &"jesuit",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_xdjfr"]
+radius = 86.8332
+
+[node name="jesuitprofessors" type="CharacterBody2D"]
+script = ExtResource("1_i6w0v")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -3)
+shape = SubResource("CircleShape2D_i6w0v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-0.999999, -2)
+scale = Vector2(1.75, 1.9375)
+sprite_frames = SubResource("SpriteFrames_pg6w4")
+animation = &"jesuit"
+
+[node name="chatdetectionjesuit" type="Area2D" parent="."]
+position = Vector2(-2, 2)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatdetectionjesuit"]
+shape = SubResource("CircleShape2D_xdjfr")
+
+[connection signal="body_entered" from="chatdetectionjesuit" to="." method="_on_chatdetectionjesuit_body_entered"]
+[connection signal="body_exited" from="chatdetectionjesuit" to="." method="_on_chatdetectionjesuit_body_exited"]

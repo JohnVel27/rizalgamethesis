@@ -1,0 +1,161 @@
+[gd_scene load_steps=12 format=3 uid="uid://bbn6qfqf65qx6"]
+
+[ext_resource type="Script" uid="uid://c6pxrh7igbcno" path="res://GUI/inventory/inventory_menu.gd" id="1_gfpmk"]
+[ext_resource type="Texture2D" uid="uid://c4d7xhfbda8he" path="res://item/sprites/UI inventory.png" id="2_5wsa7"]
+[ext_resource type="Script" uid="uid://c18ha5ef0rhw2" path="res://GUI/inventory/scripts/inventory_ui.gd" id="3_5wsa7"]
+[ext_resource type="PackedScene" uid="uid://boghuajuvxeug" path="res://GUI/inventory/inventory_slot.tscn" id="3_7ywdd"]
+[ext_resource type="Resource" uid="uid://d0yo2glqvhvs6" path="res://GUI/inventory/player_inventory.tres" id="4_hcd40"]
+[ext_resource type="Texture2D" uid="uid://cxo5tm4d472o4" path="res://item/sprites/items.png" id="6_liyx4"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mv8xh"]
+atlas = ExtResource("2_5wsa7")
+region = Rect2(246.05, 70.3303, 35.5372, 36.3636)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5pk4c"]
+texture = SubResource("AtlasTexture_mv8xh")
+texture_margin_left = 10.0
+texture_margin_top = 10.0
+texture_margin_right = 10.0
+texture_margin_bottom = 10.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_p6rua"]
+atlas = ExtResource("2_5wsa7")
+region = Rect2(189.851, 63.7187, 52.8925, 49.5868)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7ywdd"]
+content_margin_left = 10.0
+content_margin_top = 10.0
+content_margin_right = 10.0
+content_margin_bottom = 10.0
+texture = SubResource("AtlasTexture_p6rua")
+texture_margin_left = 16.0
+texture_margin_top = 16.0
+texture_margin_right = 16.0
+texture_margin_bottom = 16.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hcd40"]
+atlas = ExtResource("6_liyx4")
+region = Rect2(197, 0, 25, 35)
+
+[node name="InventoryMenu" type="CanvasLayer"]
+script = ExtResource("1_gfpmk")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer2" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 127.0
+offset_right = -208.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_5pk4c")
+
+[node name="ColorRect" type="ColorRect" parent="Control"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.290196, 0.290196, 0.290196, 0.592157)
+
+[node name="PanelContainer" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -423.0
+offset_top = -213.0
+offset_right = -67.0
+offset_bottom = 316.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7ywdd")
+
+[node name="GridContainer" type="GridContainer" parent="Control/PanelContainer"]
+layout_mode = 2
+columns = 5
+script = ExtResource("3_5wsa7")
+data = ExtResource("4_hcd40")
+
+[node name="inventory_slot" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_7ywdd")]
+layout_mode = 2
+
+[node name="InventorySlot" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_7ywdd")]
+layout_mode = 2
+
+[node name="InventorySlot2" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_7ywdd")]
+layout_mode = 2
+
+[node name="InventorySlot3" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_7ywdd")]
+layout_mode = 2
+
+[node name="InventorySlot4" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_7ywdd")]
+layout_mode = 2
+
+[node name="inventory_slot2" parent="Control/PanelContainer/GridContainer" instance=ExtResource("3_7ywdd")]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -165.0
+offset_top = -298.0
+offset_right = 68.0
+offset_bottom = -229.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 0
+theme_override_font_sizes/font_size = 50
+text = "Inventory"
+
+[node name="ItemsInfo" type="PanelContainer" parent="Control"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -9.0
+offset_top = -211.0
+offset_right = 347.0
+offset_bottom = 311.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_7ywdd")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control/ItemsInfo"]
+layout_mode = 2
+
+[node name="Icon" type="TextureRect" parent="Control/ItemsInfo/VBoxContainer"]
+custom_minimum_size = Vector2(32, 100)
+layout_mode = 2
+texture = SubResource("AtlasTexture_hcd40")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="ItemName" type="Label" parent="Control/ItemsInfo/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 25
+text = "Apple"
+
+[node name="Itemdescription" type="Label" parent="Control/ItemsInfo/VBoxContainer"]
+layout_mode = 2
+text = "fasdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdsaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafsdaf"
+autowrap_mode = 3

@@ -1,0 +1,68 @@
+[gd_scene load_steps=10 format=3 uid="uid://b4woviog5lhqf"]
+
+[ext_resource type="Texture2D" uid="uid://breis1g1wd3r1" path="res://characters/NPC/Entities/Npc's/Knight/Idle/Idle-Sheet.png" id="1_7dmdm"]
+[ext_resource type="Script" uid="uid://befg57a7yv6ep" path="res://characters/NPC/scripts/teodora.gd" id="1_fe6d1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_7ed70"]
+radius = 22.0227
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fe6d1"]
+atlas = ExtResource("1_7dmdm")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3phw"]
+atlas = ExtResource("1_7dmdm")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5wnbp"]
+atlas = ExtResource("1_7dmdm")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sso4x"]
+atlas = ExtResource("1_7dmdm")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kipga"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fe6d1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3phw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5wnbp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sso4x")
+}],
+"loop": true,
+"name": &"idle_sheet",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_h3phw"]
+radius = 38.4708
+
+[node name="teodora" type="CharacterBody2D"]
+script = ExtResource("1_fe6d1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(6, 13)
+shape = SubResource("CircleShape2D_7ed70")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(8.5, 10.5)
+scale = Vector2(1.53125, 1.65625)
+sprite_frames = SubResource("SpriteFrames_kipga")
+animation = &"idle_sheet"
+
+[node name="chatdetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatdetection"]
+position = Vector2(7, 10)
+shape = SubResource("CircleShape2D_h3phw")
+
+[connection signal="body_entered" from="chatdetection" to="." method="_on_chatdetection_body_entered"]
+[connection signal="body_exited" from="chatdetection" to="." method="_on_chatdetection_body_exited"]

@@ -1,0 +1,30 @@
+[gd_scene load_steps=2 format=3 uid="uid://bqpdfjgu3npe5"]
+
+[ext_resource type="Script" uid="uid://imwv80to8pup" path="res://GUI/quest/questitem.gd" id="1_1xuar"]
+
+[node name="questitem" type="Button"]
+custom_minimum_size = Vector2(500, 100)
+theme_override_font_sizes/font_size = 20
+script = ExtResource("1_1xuar")
+
+[node name="titlelabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 10.0
+offset_top = -2.0
+offset_right = 196.0
+offset_bottom = 21.0
+theme_override_font_sizes/font_size = 35
+text = "Quest Title"
+clip_text = true
+text_overrun_behavior = 3
+
+[node name="steplabel" type="Label" parent="."]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 42.0
+offset_right = 215.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 15
+text = "quest step 1/5"
+clip_text = true
+text_overrun_behavior = 3
