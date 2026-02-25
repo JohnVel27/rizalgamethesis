@@ -3200,7 +3200,7 @@ layer_0/tile_data = PackedInt32Array(-131079, 2818048, 2, -65543, 2818048, 2, -7
 script = ExtResource("3_uvd4u")
 
 [node name="youngrizal" parent="." instance=ExtResource("4_i44td")]
-position = Vector2(-24, 56)
+position = Vector2(594, 315)
 
 [node name="teodora" parent="." instance=ExtResource("5_i44td")]
 position = Vector2(688, 289)

@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://634nvfjyveqo"]
+[gd_scene load_steps=13 format=3 uid="uid://634nvfjyveqo"]
 
 [ext_resource type="Texture2D" uid="uid://ixt8v5qca60m" path="res://levels/sprites/environment/Dungeon_Tiles.png" id="1_3bsd4"]
 [ext_resource type="Script" uid="uid://crr7yee58lgos" path="res://levels/prelim/1/tilemap.gd" id="2_mcwho"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://ycgvd8hp2isu" path="res://GUI/inventory/scripts/inventory_data.gd" id="4_cshyr"]
 [ext_resource type="PackedScene" uid="uid://cdjpou0v8x1gm" path="res://characters/NPC/justiniano .tscn" id="4_mcwho"]
 [ext_resource type="PackedScene" uid="uid://djhisukfxtj0m" path="res://levels/level_transition.tscn" id="5_3osll"]
+[ext_resource type="Script" uid="uid://cvsqlhkiihhd0" path="res://GUI/inventory/scripts/slot_data.gd" id="5_ca5wy"]
 [ext_resource type="PackedScene" uid="uid://d0d1j41th0kpl" path="res://item/item_pickup/item_pickup.tscn" id="6_vtawn"]
 [ext_resource type="Resource" uid="uid://denk4ao8sn27r" path="res://item/apple.tres" id="7_cshyr"]
 
@@ -313,7 +314,7 @@ sources/1 = SubResource("TileSetAtlasSource_6a2ej")
 
 [sub_resource type="Resource" id="Resource_ca5wy"]
 script = ExtResource("4_cshyr")
-slots = Array[Resource]([])
+slots = Array[ExtResource("5_ca5wy")]([])
 
 [node name="classroom" type="Node2D"]
 
