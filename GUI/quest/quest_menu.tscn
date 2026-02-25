@@ -7,27 +7,32 @@
 [node name="QuestMenu" type="CanvasLayer"]
 script = ExtResource("1_7f168")
 
-[node name="Label" type="Label" parent="."]
-offset_left = 466.0
-offset_right = 642.0
-offset_bottom = 76.0
-size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 55
-text = "QUEST"
-
 [node name="PanelContainer" type="PanelContainer" parent="."]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 6.0
+offset_top = 8.0
+offset_right = 6.0
+offset_bottom = 8.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_vertical = 4
 
+[node name="Label" type="Label" parent="."]
+offset_left = 472.0
+offset_top = 8.0
+offset_right = 648.0
+offset_bottom = 84.0
+size_flags_horizontal = 4
+theme_override_font_sizes/font_size = 55
+text = "QUEST"
+
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-offset_left = 26.0
-offset_top = 96.0
-offset_right = 556.0
-offset_bottom = 626.0
+offset_left = 32.0
+offset_top = 104.0
+offset_right = 562.0
+offset_bottom = 634.0
 follow_focus = true
 scroll_vertical_custom_step = 100.0
 horizontal_scroll_mode = 0
@@ -60,10 +65,10 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 606.0
-offset_top = 104.0
-offset_right = 1133.0
-offset_bottom = 241.0
+offset_left = 612.0
+offset_top = 112.0
+offset_right = 1139.0
+offset_bottom = 249.0
 
 [node name="titlelabel" type="Label" parent="VBoxContainer"]
 custom_minimum_size = Vector2(200, 30)

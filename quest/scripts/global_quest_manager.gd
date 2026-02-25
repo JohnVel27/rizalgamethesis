@@ -4,6 +4,9 @@ signal quest_updated(q)
 
 const QUEST_DATA_LOCATION: String = "res://quest/"
 
+## Drag your .tres files here in the Inspector! (Safest for exports)
+@export var quest_library: Array[Quest] = []
+
 var quests: Array[Quest] = []
 var current_quests: Array = []
 
@@ -29,15 +32,40 @@ func check_location_completion() -> void:
 		print("Location reached: Rizal Home")
 
 func gather_quest_data() -> void:
-	if not DirAccess.dir_exists_absolute(QUEST_DATA_LOCATION):
-		return
-	var quest_files = DirAccess.get_files_at(QUEST_DATA_LOCATION)
 	quests.clear()
-	for q in quest_files:
-		if q.ends_with(".tres"):
-			var resource = load(QUEST_DATA_LOCATION + "/" + q)
-			if resource is Quest:
-				quests.append(resource)
+	
+	# 1. Use the exported library if you filled it (Most reliable)
+	if quest_library.size() > 0:
+		quests = quest_library
+		print("QuestManager: Loaded from Inspector Library. Count: ", quests.size())
+		return
+
+	# 2. Fallback to DirAccess (handling exports via .remap check)
+	if not DirAccess.dir_exists_absolute(QUEST_DATA_LOCATION):
+		print("QuestManager Error: Folder not found: ", QUEST_DATA_LOCATION)
+		return
+		
+	var dir = DirAccess.open(QUEST_DATA_LOCATION)
+	if dir:
+		dir.list_dir_begin()
+		var file_name = dir.get_next()
+		
+		while file_name != "":
+			if not dir.current_is_dir():
+				# In export, files end in .remap; we strip that to load the base resource
+				var clean_path = file_name.replace(".remap", "")
+				
+				if clean_path.ends_with(".tres") or clean_path.ends_with(".res"):
+					var full_path = QUEST_DATA_LOCATION + clean_path
+					var resource = load(full_path)
+					if resource is Quest:
+						quests.append(resource)
+						print("QuestManager: Loaded via DirAccess: ", clean_path)
+			
+			file_name = dir.get_next()
+		dir.list_dir_end()
+	
+	print("QuestManager: Total quests loaded: ", quests.size())
 
 func update_quest(_title: String, _step: String = "", _complete: bool = false) -> void:
 	var index = get_quest_index_by_title(_title)
@@ -45,24 +73,26 @@ func update_quest(_title: String, _step: String = "", _complete: bool = false) -
 
 	# If quest isn't in current_quests, add it
 	if index == -1:
-		var new_quest: Dictionary = { 
-			"title": _title, 
-			"is_complete": _complete, 
-			"completed_steps": [] 
+		var new_quest: Dictionary = {
+			"title": _title,
+			"is_complete": _complete,
+			"completed_steps": []
 		}
-		if sanitized_step != "": new_quest["completed_steps"].append(sanitized_step)
+		if sanitized_step != "": 
+			new_quest["completed_steps"].append(sanitized_step)
+		
 		current_quests.append(new_quest)
-		if _complete: _process_rewards(_title)
+		if _complete: 
+			_process_rewards(_title)
+		
 		quest_updated.emit(new_quest)
 		return
 
 	var q = current_quests[index]
 
-	# Add step if provided
 	if sanitized_step != "" and not q["completed_steps"].has(sanitized_step):
 		q["completed_steps"].append(sanitized_step)
 
-	# Mark complete and give rewards
 	if _complete and not q["is_complete"]:
 		q["is_complete"] = true
 		_process_rewards(_title)
@@ -77,26 +107,27 @@ func _process_rewards(_title: String) -> void:
 
 func disperse_quest_rewards(_q: Quest) -> void:
 	for reward in _q.reward_items:
-		# Ensure the reward object and item reference are valid
 		if reward and reward.item != null:
 			if has_node("/root/PlayerManager"):
-				PlayerManager.INVENTORY_DATA.add_item(reward.item, reward.quantity)
+				# Ensure PlayerManager exists and has INVENTORY_DATA
+				get_node("/root/PlayerManager").INVENTORY_DATA.add_item(reward.item, reward.quantity)
 				print("Reward Received: ", reward.item.name)
 
 func find_quest_by_title(_title: String) -> Quest:
 	for q in quests:
-		if q.title.to_lower() == _title.to_lower(): return q
+		if q.title.to_lower() == _title.to_lower(): 
+			return q
 	return null
 
 func get_quest_index_by_title(_title: String) -> int:
 	for i in range(current_quests.size()):
-		if current_quests[i]["title"].to_lower() == _title.to_lower(): return i
+		if current_quests[i]["title"].to_lower() == _title.to_lower(): 
+			return i
 	return -1
-	
-# Add this to your QuestManager.gd script
+
 func find_quest(_quest: Quest) -> Dictionary:
 	for q in current_quests:
 		if q["title"].to_lower() == _quest.title.to_lower():
 			return q
-	# Return a default empty quest structure if not found
 	return { "title": "not found", "is_complete": false, "completed_steps": [] }
+	

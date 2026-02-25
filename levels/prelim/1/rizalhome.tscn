@@ -10950,7 +10950,6 @@ level = "uid://cds5xlsdanwcf"
 size = 1
 
 [node name="ItemPickup" parent="." instance=ExtResource("10_ql6nh")]
-visible = false
 position = Vector2(667, 602)
 item_data = ExtResource("11_ywvnf")
 
