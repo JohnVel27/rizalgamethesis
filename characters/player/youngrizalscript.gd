@@ -8,7 +8,7 @@ var tile_map: TileMap
 var astar: AStarGrid2D
 
 var current_id_path: Array[Vector2i] = []
-var speed: float = 100.0
+var speed: float = 140.0
 var last_direction: Vector2 = Vector2.DOWN
 
 func _ready() -> void:

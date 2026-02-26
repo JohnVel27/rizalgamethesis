@@ -1,8 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://c45kikv6nn0an"]
+[gd_scene load_steps=8 format=3 uid="uid://c45kikv6nn0an"]
 
 [ext_resource type="Script" uid="uid://1jc0qcmk7rk7" path="res://GUI/quest/scripts/quest_menu.gd" id="1_7f168"]
 [ext_resource type="PackedScene" uid="uid://bqpdfjgu3npe5" path="res://GUI/quest/questitem.tscn" id="2_qb3tv"]
+[ext_resource type="FontFile" uid="uid://btm6ski75xory" path="res://asset/font/PF Pixelscript Pro Regular.ttf" id="3_3cb3n"]
 [ext_resource type="PackedScene" uid="uid://b0hbqwkdn40k4" path="res://GUI/quest/queststepitem.tscn" id="3_7tqwi"]
+
+[sub_resource type="FontVariation" id="FontVariation_3cb3n"]
+base_font = ExtResource("3_3cb3n")
+
+[sub_resource type="FontVariation" id="FontVariation_mnqp4"]
+base_font = ExtResource("3_3cb3n")
+
+[sub_resource type="FontVariation" id="FontVariation_hujse"]
+base_font = ExtResource("3_3cb3n")
 
 [node name="QuestMenu" type="CanvasLayer"]
 script = ExtResource("1_7f168")
@@ -20,19 +30,22 @@ grow_vertical = 2
 size_flags_vertical = 4
 
 [node name="Label" type="Label" parent="."]
-offset_left = 472.0
-offset_top = 8.0
-offset_right = 648.0
-offset_bottom = 84.0
+offset_left = 675.0
+offset_top = 85.0
+offset_right = 1140.0
+offset_bottom = 165.0
 size_flags_horizontal = 4
-theme_override_font_sizes/font_size = 55
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_3cb3n")
+theme_override_font_sizes/font_size = 40
 text = "QUEST"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-offset_left = 32.0
-offset_top = 104.0
-offset_right = 562.0
-offset_bottom = 634.0
+offset_left = 298.0
+offset_top = 225.0
+offset_right = 828.0
+offset_bottom = 755.0
 follow_focus = true
 scroll_vertical_custom_step = 100.0
 horizontal_scroll_mode = 0
@@ -45,6 +58,7 @@ theme_override_constants/margin_bottom = 5
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer/MarginContainer"]
 layout_mode = 2
+theme_override_constants/separation = 30
 
 [node name="questitem" parent="ScrollContainer/MarginContainer/VBoxContainer" instance=ExtResource("2_qb3tv")]
 layout_mode = 2
@@ -65,22 +79,26 @@ layout_mode = 2
 layout_mode = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_left = 612.0
-offset_top = 112.0
-offset_right = 1139.0
-offset_bottom = 249.0
+offset_left = 899.0
+offset_top = 232.0
+offset_right = 1426.0
+offset_bottom = 450.0
 
 [node name="titlelabel" type="Label" parent="VBoxContainer"]
-custom_minimum_size = Vector2(200, 30)
+custom_minimum_size = Vector2(200, 80)
 layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_mnqp4")
 theme_override_font_sizes/font_size = 30
 text = "quest title"
 autowrap_mode = 2
 
 [node name="descriptionlabel" type="Label" parent="VBoxContainer"]
-custom_minimum_size = Vector2(200, 20)
+custom_minimum_size = Vector2(200, 80)
 layout_mode = 2
-theme_override_font_sizes/font_size = 20
+theme_override_fonts/font = SubResource("FontVariation_hujse")
+theme_override_font_sizes/font_size = 15
 text = "quest description"
 autowrap_mode = 2
 

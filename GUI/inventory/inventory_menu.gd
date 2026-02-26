@@ -7,7 +7,7 @@ var is_open: bool = false
 
 @onready var Icon := get_node_or_null("Control/ItemsInfo/VBoxContainer/Icon")
 @onready var ItemName := get_node_or_null("Control/ItemsInfo/VBoxContainer/ItemName")
-@onready var ItemDescription := get_node_or_null("Control/ItemsInfo/VBoxContainer/Itemdescription")
+@onready var ItemDescription := get_node_or_null("Control/ItemsInfo/VBoxContainer/ScrollContainer/Itemdescription")
 
 func _ready() -> void:
 	hide()

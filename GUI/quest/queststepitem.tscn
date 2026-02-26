@@ -1,10 +1,14 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0hbqwkdn40k4"]
+[gd_scene load_steps=5 format=3 uid="uid://b0hbqwkdn40k4"]
 
 [ext_resource type="Script" uid="uid://febmgeov6817" path="res://GUI/quest/queststepitem.gd" id="1_rytvj"]
 [ext_resource type="Texture2D" uid="uid://diqfn3fo044ne" path="res://GUI/quest/checkbox.png" id="2_c58ja"]
+[ext_resource type="FontFile" uid="uid://btm6ski75xory" path="res://asset/font/PF Pixelscript Pro Regular.ttf" id="2_vi0ck"]
+
+[sub_resource type="FontVariation" id="FontVariation_x75tt"]
+base_font = ExtResource("2_vi0ck")
 
 [node name="queststepitem" type="Control"]
-custom_minimum_size = Vector2(200, 22)
+custom_minimum_size = Vector2(200, 50)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 260.0
@@ -17,7 +21,10 @@ offset_left = 37.0
 offset_top = -2.0
 offset_right = 96.0
 offset_bottom = 26.0
-theme_override_font_sizes/font_size = 20
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = SubResource("FontVariation_x75tt")
+theme_override_font_sizes/font_size = 15
 text = "step "
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
