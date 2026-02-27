@@ -1,7 +1,6 @@
 [gd_scene load_steps=14 format=4 uid="uid://b2uulbo77qhtw"]
 
 [ext_resource type="Texture2D" uid="uid://dihtl2bhwd2iq" path="res://levels/sprites/environment/Ground.png" id="1_mhij6"]
-[ext_resource type="Texture2D" uid="uid://c74e84uq7b68e" path="res://levels/sprites/environment/Props_Decor.png" id="2_3vqvr"]
 [ext_resource type="Texture2D" uid="uid://eyn88wp11fmk" path="res://levels/sprites/place/school.png" id="2_ir6kn"]
 [ext_resource type="Texture2D" uid="uid://pg3x00y6y1rt" path="res://levels/sprites/place/house.png" id="5_4n2e2"]
 [ext_resource type="Script" uid="uid://crr7yee58lgos" path="res://levels/prelim/1/tilemap.gd" id="5_ir6kn"]
@@ -4479,8 +4478,11 @@ texture = ExtResource("2_ir6kn")
 88:85/0 = 0
 89:85/0 = 0
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_ir6kn"]
+load_path = "res://.godot/imported/Props_Decor.png-e64d980bb64aede19b7d2324a1c3662d.ctex"
+
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vu6v6"]
-texture = ExtResource("2_3vqvr")
+texture = SubResource("CompressedTexture2D_ir6kn")
 0:0/0 = 0
 1:0/0 = 0
 2:0/0 = 0

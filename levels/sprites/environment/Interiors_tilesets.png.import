@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ixt8v5qca60m"
-path="res://.godot/imported/Dungeon_Tiles.png-806d9a3ad0ab6179607c0775e6c112bb.ctex"
+uid="uid://3isw37f77rtq"
+path="res://.godot/imported/Interiors_tilesets.png-d7738de7566f77f55b6e9b6578d68ca9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/sprites/environment/Dungeon_Tiles.png"
-dest_files=["res://.godot/imported/Dungeon_Tiles.png-806d9a3ad0ab6179607c0775e6c112bb.ctex"]
+source_file="res://levels/sprites/environment/Interiors_tilesets.png"
+dest_files=["res://.godot/imported/Interiors_tilesets.png-d7738de7566f77f55b6e9b6578d68ca9.ctex"]
 
 [params]
 

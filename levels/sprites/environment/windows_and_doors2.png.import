@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://3aoojvqpt0mh"
-path="res://.godot/imported/Wall_Variations.png-0ca70ccb969e40657a28e403b98f986b.ctex"
+uid="uid://bbkawb3d4xlqm"
+path="res://.godot/imported/windows_and_doors2.png-8f370ce07eb4b2d987084c1ffc44f16e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://levels/sprites/environment/Wall_Variations.png"
-dest_files=["res://.godot/imported/Wall_Variations.png-0ca70ccb969e40657a28e403b98f986b.ctex"]
+source_file="res://levels/sprites/environment/windows_and_doors2.png"
+dest_files=["res://.godot/imported/windows_and_doors2.png-8f370ce07eb4b2d987084c1ffc44f16e.ctex"]
 
 [params]
 

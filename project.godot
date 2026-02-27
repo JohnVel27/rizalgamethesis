@@ -75,8 +75,9 @@ glossary/default_case_sensitive=true
 
 [display]
 
-window/size/viewport_height=1000
-window/size/window_width_override=2000
+window/size/viewport_width=1000
+window/size/viewport_height=800
+window/size/window_width_override=1600
 window/size/window_height_override=1000
 
 [editor_plugins]

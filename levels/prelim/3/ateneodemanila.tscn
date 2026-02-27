@@ -1,7 +1,7 @@
 [gd_scene load_steps=14 format=4 uid="uid://30vfsxms4f78"]
 
 [ext_resource type="Texture2D" uid="uid://dihtl2bhwd2iq" path="res://levels/sprites/environment/Ground.png" id="1_hc4oc"]
-[ext_resource type="Texture2D" uid="uid://c74e84uq7b68e" path="res://levels/sprites/environment/Props_Decor.png" id="2_u2xpb"]
+[ext_resource type="Texture2D" uid="uid://b2upubioo8i3s" path="res://levels/sprites/environment/Props_Decor.png" id="2_u2xpb"]
 [ext_resource type="Texture2D" uid="uid://eyn88wp11fmk" path="res://levels/sprites/place/school.png" id="5_24rfd"]
 [ext_resource type="Texture2D" uid="uid://pg3x00y6y1rt" path="res://levels/sprites/place/house.png" id="5_wttop"]
 [ext_resource type="Script" uid="uid://crr7yee58lgos" path="res://levels/prelim/1/tilemap.gd" id="7_gaos1"]
