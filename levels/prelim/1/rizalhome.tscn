@@ -10941,6 +10941,8 @@ layer_0/tile_data = PackedInt32Array(-1376286, 65536, 5, -1310750, 65536, 6, -13
 layer_1/name = "props_decor"
 script = ExtResource("6_jpeof")
 
+[node name="walls" type="TileMapLayer" parent="TileMap"]
+
 [node name="youngrizal" parent="." instance=ExtResource("7_tasoe")]
 position = Vector2(-188, 157)
 
