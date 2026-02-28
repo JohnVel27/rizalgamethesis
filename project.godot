@@ -35,16 +35,18 @@ directories/dch_directory={
 "classmates": "res://dialogue/characters/classmates.dch",
 "dominicanfriars": "res://dialogue/characters/dominicanfriars.dch",
 "fathersanchez": "res://dialogue/characters/fathersanchez.dch",
-"francisco": "res://dialogue/characters/francisco.dch"
+"francisco": "res://dialogue/characters/francisco.dch",
+"juancho": "res://dialogue/characters/juancho.dch"
 }
 directories/dtl_directory={
+"2juanchorizal1": "res://dialogue/timeline/prelim/2/2juanchorizal1.dtl",
 "2justianorizal1": "res://dialogue/timeline/prelim/2/scrapt/2justianorizal1.dtl",
 "2maestrocruzrizal1": "res://dialogue/timeline/prelim/2/2maestrocruzrizal1.dtl",
 "2narrator1": "res://dialogue/timeline/prelim/2/2narrator1.dtl",
 "2narrator2": "res://dialogue/timeline/prelim/2/scrapt/2narrator2.dtl",
 "3narrator1": "res://dialogue/timeline/prelim/3/3narrator1.dtl",
-"3narrator2": "res://dialogue/timeline/prelim/3/3narrator2.dtl",
-"3sanchezrizal1": "res://dialogue/timeline/prelim/3/3sanchezrizal1.dtl",
+"3narrator2": "res://dialogue/timeline/prelim/3/scrapt/3narrator2.dtl",
+"3sanchezrizal1": "res://dialogue/timeline/prelim/3/scrapt/3sanchezrizal1.dtl",
 "4dominicanfriarsrizal1": "res://dialogue/timeline/prelim/4/4dominicanfriarsrizal1.dtl",
 "4narrato2": "res://dialogue/timeline/prelim/4/4narrato2.dtl",
 "4narrator1": "res://dialogue/timeline/prelim/4/4narrator1.dtl",

@@ -33,12 +33,18 @@ func _ready() -> void:
 
 	elif scene_path.ends_with("storyofthemoth.tscn"):
 		start_opening_dialogue("storyofmoth")
+		
+	elif scene_path.ends_with("leavingtocalamba.tscn"):
+		start_opening_dialogue("goingtobinan")
 
 	elif scene_path.ends_with("maestroschool.tscn"):
 		start_opening_dialogue("2narrator1")
 
 	elif scene_path.ends_with("justianoclassroom.tscn"):
 		start_opening_dialogue("2maestrocruzrizal1")
+		
+	elif scene_path.ends_with("juanchocarrera.tscn"):
+		start_opening_dialogue("2juanchorizal1")
 
 	elif scene_path.ends_with("ateneodemanila.tscn"):
 		start_opening_dialogue("3narrator1")
@@ -73,7 +79,16 @@ func _on_dialogue_finished() -> void:
 
 	# If Story of the Moth finished → smooth transition
 	if current_opening_dialogue == "storyofmoth":
+		await start_smooth_transition("res://levels/prelim/1/leavingtocalamba.tscn")
+		
+	if current_opening_dialogue == "goingtobinan":
 		await start_smooth_transition("res://transitionstoryboard/binan.tscn")
+	
+	if current_opening_dialogue == "2maestrocruzrizal1":
+		await start_smooth_transition("res://levels/prelim/2/juanchocarrera.tscn")
+			
+	if current_opening_dialogue == "2juanchorizal1":
+		await start_smooth_transition("res://transitionstoryboard/ateneotranslationstory/ateneo1.tscn")
 		
 
 	current_opening_dialogue = ""
