@@ -15,22 +15,18 @@
 [sub_resource type="Resource" id="Resource_06xq3"]
 script = ExtResource("2_5qcao")
 scene = ExtResource("1_oahqs")
-overrides = {}
 
 [sub_resource type="Resource" id="Resource_1gwgi"]
 script = ExtResource("2_5qcao")
 scene = ExtResource("3_5t7wv")
-overrides = {}
 
 [sub_resource type="Resource" id="Resource_usgt5"]
 script = ExtResource("2_5qcao")
 scene = ExtResource("4_v0wmu")
-overrides = {}
 
 [sub_resource type="Resource" id="Resource_36pc4"]
 script = ExtResource("2_5qcao")
 scene = ExtResource("5_n6qwc")
-overrides = {}
 
 [sub_resource type="Resource" id="Resource_wnx32"]
 script = ExtResource("2_5qcao")
@@ -40,29 +36,32 @@ overrides = {
 "box_color_use_global": "false",
 "box_panel": "\"res://dialogue/styles/new_style_box_texture.tres\"",
 "name_label_box_modulate": "Color(1, 1, 1, 1)",
-"name_label_box_offset": "Vector2(-10, -20)",
-"next_indicator_animation": "1"
+"name_label_box_offset": "Vector2(-10, -30)",
+"name_label_custom_font_size": "30.0",
+"name_label_font": "\"res://asset/font/HFPoet.ttf\"",
+"name_label_use_global_font_size": "false",
+"next_indicator_animation": "1",
+"normal_font": "\"res://asset/font/HFPoet.ttf\"",
+"text_size": "30.0",
+"text_use_global_font": "false",
+"text_use_global_size": "false"
 }
 
 [sub_resource type="Resource" id="Resource_8w637"]
 script = ExtResource("2_5qcao")
 scene = ExtResource("7_6kips")
-overrides = {}
 
 [sub_resource type="Resource" id="Resource_5emay"]
 script = ExtResource("2_5qcao")
 scene = ExtResource("8_brj1r")
-overrides = {}
 
 [sub_resource type="Resource" id="Resource_iixcs"]
 script = ExtResource("2_5qcao")
 scene = ExtResource("9_fq52x")
-overrides = {}
 
 [sub_resource type="Resource" id="Resource_a1wi7"]
 script = ExtResource("2_5qcao")
 scene = ExtResource("10_motwg")
-overrides = {}
 
 [resource]
 script = ExtResource("11_8yu5a")
@@ -79,6 +78,4 @@ layer_info = {
 "16": SubResource("Resource_iixcs"),
 "17": SubResource("Resource_a1wi7")
 }
-base_overrides = {}
-layers = Array[ExtResource("2_5qcao")]([])
 metadata/_latest_layer = "13"

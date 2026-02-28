@@ -3,21 +3,21 @@
 [ext_resource type="Script" uid="uid://dm43e4a03fdhq" path="res://characters/NPC/scripts/siblings.gd" id="1_da1n5"]
 [ext_resource type="Texture2D" uid="uid://s5gh7by6t4ix" path="res://characters/NPC/siblingsrizal/rizal_kapatid_1.png" id="2_h8jnl"]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_da1n5"]
+atlas = ExtResource("2_h8jnl")
+region = Rect2(64, 0, 64, 68)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h8jnl"]
+atlas = ExtResource("2_h8jnl")
+region = Rect2(64, 204, 64, 68)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_bmfhp"]
 atlas = ExtResource("2_h8jnl")
-region = Rect2(448, 0, 64, 68)
+region = Rect2(64, 136, 64, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jnx0h"]
 atlas = ExtResource("2_h8jnl")
-region = Rect2(448, 204, 64, 68)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_6fqom"]
-atlas = ExtResource("2_h8jnl")
-region = Rect2(448, 136, 64, 68)
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_ptlpd"]
-atlas = ExtResource("2_h8jnl")
-region = Rect2(448, 68, 64, 68)
+region = Rect2(64, 68, 64, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bf5rc"]
 atlas = ExtResource("2_h8jnl")
@@ -135,7 +135,7 @@ region = Rect2(384, 68, 64, 68)
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bmfhp")
+"texture": SubResource("AtlasTexture_da1n5")
 }],
 "loop": true,
 "name": &"carry_idle_down",
@@ -143,7 +143,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jnx0h")
+"texture": SubResource("AtlasTexture_h8jnl")
 }],
 "loop": true,
 "name": &"carry_idle_left",
@@ -151,7 +151,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6fqom")
+"texture": SubResource("AtlasTexture_bmfhp")
 }],
 "loop": true,
 "name": &"carry_idle_right",
@@ -159,7 +159,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_ptlpd")
+"texture": SubResource("AtlasTexture_jnx0h")
 }],
 "loop": true,
 "name": &"carry_idle_up",

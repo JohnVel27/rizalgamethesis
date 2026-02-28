@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://bbn6qfqf65qx6"]
+[gd_scene load_steps=16 format=3 uid="uid://bbn6qfqf65qx6"]
 
 [ext_resource type="Script" uid="uid://c6pxrh7igbcno" path="res://GUI/inventory/inventory_menu.gd" id="1_gfpmk"]
 [ext_resource type="Texture2D" uid="uid://c4d7xhfbda8he" path="res://item/sprites/UI inventory.png" id="2_5wsa7"]
@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://boghuajuvxeug" path="res://GUI/inventory/inventory_slot.tscn" id="3_7ywdd"]
 [ext_resource type="Resource" uid="uid://d0yo2glqvhvs6" path="res://GUI/inventory/player_inventory.tres" id="4_hcd40"]
 [ext_resource type="Texture2D" uid="uid://cxo5tm4d472o4" path="res://item/sprites/items.png" id="6_liyx4"]
-[ext_resource type="FontFile" uid="uid://btm6ski75xory" path="res://asset/font/PF Pixelscript Pro Regular.ttf" id="6_p6rua"]
+[ext_resource type="FontFile" uid="uid://dov3t2xbxgg58" path="res://asset/font/HFPoet.ttf" id="6_p6rua"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mv8xh"]
 atlas = ExtResource("2_5wsa7")
@@ -37,11 +37,15 @@ expand_margin_left = 20.0
 expand_margin_right = 20.0
 
 [sub_resource type="FontVariation" id="FontVariation_mv8xh"]
+fallbacks = Array[Font]([ExtResource("6_p6rua")])
 base_font = ExtResource("6_p6rua")
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hcd40"]
 atlas = ExtResource("6_liyx4")
 region = Rect2(197, 0, 25, 35)
+
+[sub_resource type="FontVariation" id="FontVariation_lkw84"]
+base_font = ExtResource("6_p6rua")
 
 [sub_resource type="FontVariation" id="FontVariation_5pk4c"]
 base_font = ExtResource("6_p6rua")
@@ -129,17 +133,17 @@ anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -256.0
-offset_top = -335.0
-offset_right = 241.0
-offset_bottom = -234.0
+offset_left = -175.0
+offset_top = -352.0
+offset_right = 322.0
+offset_bottom = -243.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_horizontal = 0
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.882353)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_fonts/font = SubResource("FontVariation_mv8xh")
-theme_override_font_sizes/font_size = 40
+theme_override_font_sizes/font_size = 90
 text = "Inventory"
 
 [node name="ItemsInfo" type="PanelContainer" parent="Control"]
@@ -173,8 +177,8 @@ layout_mode = 2
 size_flags_horizontal = 4
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.741176)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("6_p6rua")
-theme_override_font_sizes/font_size = 20
+theme_override_fonts/font = SubResource("FontVariation_lkw84")
+theme_override_font_sizes/font_size = 40
 text = "Apple"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="Control/ItemsInfo/VBoxContainer"]
@@ -189,7 +193,7 @@ theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.803922)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 10
 theme_override_fonts/font = SubResource("FontVariation_5pk4c")
-theme_override_font_sizes/font_size = 10
+theme_override_font_sizes/font_size = 25
 text = "fasdfffffffffffffffffffffffffffffffffffffffffffffffffffffffffffdsaaaaaaaaaaaaaaafsdafsdaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaafsdaf  afsdfasdf ads  fasdfsdfasdf  adsf adsf adsf asdf  asd "
 horizontal_alignment = 3
 autowrap_mode = 3

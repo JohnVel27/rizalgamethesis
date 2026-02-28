@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://ba5wgeh8v6wad"]
 
 [ext_resource type="Script" uid="uid://c64d87xgwychu" path="res://transitionstoryboard/scripts/binan.gd" id="1_igkce"]
-[ext_resource type="FontFile" uid="uid://btm6ski75xory" path="res://asset/font/PF Pixelscript Pro Regular.ttf" id="2_ycpj8"]
+[ext_resource type="FontFile" uid="uid://dov3t2xbxgg58" path="res://asset/font/HFPoet.ttf" id="2_igkce"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l1uyl"]
 
@@ -10,7 +10,7 @@ texture = SubResource("AtlasTexture_l1uyl")
 modulate_color = Color(0, 0, 0, 1)
 
 [sub_resource type="FontVariation" id="FontVariation_cxhqw"]
-base_font = ExtResource("2_ycpj8")
+base_font = ExtResource("2_igkce")
 
 [node name="binan" type="CanvasLayer"]
 script = ExtResource("1_igkce")
@@ -31,16 +31,16 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -396.5
-offset_top = -27.0
+offset_top = -36.5
 offset_right = 396.5
-offset_bottom = 27.0
+offset_bottom = 36.5
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 0.803922)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/line_spacing = 30
 theme_override_fonts/font = SubResource("FontVariation_cxhqw")
-theme_override_font_sizes/font_size = 20
+theme_override_font_sizes/font_size = 60
 text = "Maligayang pagdating sa Biñan"
 horizontal_alignment = 3
 autowrap_mode = 3

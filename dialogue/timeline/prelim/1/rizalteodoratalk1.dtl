@@ -1,4 +1,4 @@
-join Rizal left
+join Rizal left [animation="Bounce In" length="0.0" wait="true" z_index="-5"]
 Rizal: Opo, Inay! Gusto ko pang matuto.
 join Teodora right
 leave Rizal
