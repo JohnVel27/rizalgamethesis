@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=3 format=3 uid="uid://dfieat57v64gl"]
+
+[ext_resource type="Script" uid="uid://7ktwwmvwtcq0" path="res://quest/scripts/quest_reward_item.gd" id="1_x55bi"]
+[ext_resource type="Script" uid="uid://datfl3b15axlx" path="res://quest/scripts/quest_resource.gd" id="2_rn76t"]
+
+[resource]
+script = ExtResource("2_rn76t")
+title = "Ang Simula sa Calamba"
+description = "Batid ni Pepe ang halaga ng karunungan sa ilalim ng gabay ng kanyang mga magulang."
+steps = Array[String](["Maglakbay patungo sa bahay ni rizal", "Kausapin si Teodora Alonso", "Kausapin si Francisco Mercado"])
+reward_items = Array[ExtResource("1_x55bi")]([])
+metadata/_custom_type_script = "uid://datfl3b15axlx"

@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=4 uid="uid://cds5xlsdanwcf"]
+[gd_scene load_steps=22 format=4 uid="uid://cds5xlsdanwcf"]
 
 [ext_resource type="Script" uid="uid://6pfey0sg0f5t" path="res://levels/scripts/level.gd" id="1_ujy42"]
 [ext_resource type="Texture2D" uid="uid://3isw37f77rtq" path="res://levels/sprites/environment/Interiors_tilesets.png" id="2_ujy42"]
@@ -9,8 +9,9 @@
 [ext_resource type="Texture2D" uid="uid://bndwoold34pjg" path="res://levels/sprites/environment/furniture_and_props.png" id="5_jtwxg"]
 [ext_resource type="Texture2D" uid="uid://bbkawb3d4xlqm" path="res://levels/sprites/environment/windows_and_doors2.png" id="6_5kqsa"]
 [ext_resource type="PackedScene" uid="uid://djhisukfxtj0m" path="res://levels/level_transition.tscn" id="7_l3jtj"]
+[ext_resource type="PackedScene" uid="uid://d1cjynht7awe8" path="res://characters/NPC/francisco.tscn" id="10_jtwxg"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_l3jtj"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jtwxg"]
 texture = ExtResource("2_ujy42")
 92:0/0 = 0
 93:0/0 = 0
@@ -6584,7 +6585,7 @@ texture = ExtResource("2_ujy42")
 53:99/0 = 0
 54:99/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nhh08"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5kqsa"]
 texture = ExtResource("3_35pkv")
 0:2/0 = 0
 1:2/0 = 0
@@ -8417,8 +8418,8 @@ texture = ExtResource("3_35pkv")
 [sub_resource type="TileSet" id="TileSet_ujy42"]
 custom_data_layer_0/name = "Walkable"
 custom_data_layer_0/type = 1
-sources/3 = SubResource("TileSetAtlasSource_l3jtj")
-sources/6 = SubResource("TileSetAtlasSource_nhh08")
+sources/3 = SubResource("TileSetAtlasSource_jtwxg")
+sources/6 = SubResource("TileSetAtlasSource_5kqsa")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cn5r0"]
 texture = ExtResource("5_jtwxg")
@@ -22865,7 +22866,7 @@ sources/1 = SubResource("TileSetAtlasSource_aguiv")
 sources/2 = SubResource("TileSetAtlasSource_h0cap")
 sources/3 = SubResource("TileSetAtlasSource_35pkv")
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_0ogee"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nhh08"]
 texture = ExtResource("6_5kqsa")
 0:2/0 = 0
 1:2/0 = 0
@@ -24423,7 +24424,7 @@ texture = ExtResource("6_5kqsa")
 61:57/0 = 0
 62:57/0 = 0
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wb1kq"]
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qfvcp"]
 texture = ExtResource("3_35pkv")
 0:2/0 = 0
 1:2/0 = 0
@@ -26254,8 +26255,8 @@ texture = ExtResource("3_35pkv")
 61:60/0 = 0
 
 [sub_resource type="TileSet" id="TileSet_ojaph"]
-sources/0 = SubResource("TileSetAtlasSource_0ogee")
-sources/1 = SubResource("TileSetAtlasSource_wb1kq")
+sources/0 = SubResource("TileSetAtlasSource_nhh08")
+sources/1 = SubResource("TileSetAtlasSource_qfvcp")
 
 [node name="Livingroomrizal" type="Node2D"]
 script = ExtResource("1_ujy42")
@@ -26286,3 +26287,6 @@ position = Vector2(829, 751)
 level = "uid://ckswxvohbwucu"
 target_transition_area = "LevelTransition1"
 side = 2
+
+[node name="Francisco" parent="." instance=ExtResource("10_jtwxg")]
+position = Vector2(514, 244)

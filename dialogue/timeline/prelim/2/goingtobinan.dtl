@@ -1,0 +1,14 @@
+join Teodora right
+Teodora: Pepe, hindi magiging katulad ng tahanan ang Biñan.
+leave Teodora
+join Rizal left
+Rizal: Mag-aaral po akong mabuti, Inay
+join Teodora right
+leave Rizal
+Teodora: Hindi lang pag-aaral. Magmasid ka rin. Kilalanin mo ang mga tao… hindi lang ang mga aklat.
+leave Teodora
+join francisco right
+francisco: Tandaan mo, anak dala mo palagi ang iyong dangal saan ka man magpunta.
+leave francisco
+join Rizal left
+Rizal: Opo itay.

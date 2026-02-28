@@ -17962,7 +17962,7 @@ tile_map_data = PackedByteArray("AAAbAAUAAABDAFEAAAAbAAYAAABDAFEAAAAbAAcAAABDAFE
 tile_set = SubResource("TileSet_12o6l")
 
 [node name="youngrizal" parent="." instance=ExtResource("3_3osll")]
-position = Vector2(840, 697)
+position = Vector2(308, 449)
 inventory_data = SubResource("Resource_ca5wy")
 
 [node name="justiniano" parent="." instance=ExtResource("4_mcwho")]

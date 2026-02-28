@@ -283,8 +283,7 @@ shape = SubResource("CircleShape2D_67vlx")
 position = Vector2(1.90735e-06, -17)
 scale = Vector2(2, 1.89063)
 sprite_frames = SubResource("SpriteFrames_gscx5")
-animation = &"carry_walk_up"
-frame_progress = 0.0339744
+animation = &"carry_idle_down"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 editor_draw_limits = true

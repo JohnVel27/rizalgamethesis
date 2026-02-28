@@ -1,0 +1,22 @@
+Justiano: Bagong estudyante. Tumayo ka.
+Rizal: Ako po si José Rizal Mercado, ginoo.
+Justiano: Marunong ka bang magbasa ng Espanyol?
+Rizal: Kaunti po, ginoo.
+Justiano: Ang tiwala sa sarili ay pinaghihirapan. Magbasa ka.
+Narrator: Maghanda sa minigames na pagsusulit ito ay isang multiple choice question.
+label maestrocruz
+Narrator: Sino ang guro na nagsabi ng “Bagong estudyante. Tumayo ka.”?
+- Maestro Juancho Carrera
+	Narrator: Ang sagot ay Maestro Justiniano Aquino Cruz, umulit ka sa umpisa ng tanong.
+	jump 2maestrocruzrizal1/maestrocruz
+- Maestro Justiniano Aquino Cruz
+	Narrator: Tama
+- Padre Damaso
+	Narrator: Ang sagot ay Maestro Justiniano Aquino Cruz, umulit ka sa umpisa ng tanong.
+	jump 2maestrocruzrizal1/maestrocruz
+- Kapitan Tiago
+	Narrator: Ang sagot ay Maestro Justiniano Aquino Cruz, umulit ka sa umpisa ng tanong.
+	jump 2maestrocruzrizal1/maestrocruz
+Narrator: Ano ang buong pangalan na ipinakilala ni Rizal?
+classmates: Akala mo naman espesyal siya.
+Justiano: Tumahimik kayo! Sa silid-aralang ito, ang sipag ang nagbibigay ng respeto hindi ang pagmamataas.

@@ -1,0 +1,21 @@
+join Teodora right
+Teodora: Ngayong gabi, ikukuwento ko sa’yo ang isang kuwento. Tungkol ito sa isang gamu-gamo…
+Teodora: Binalaan ng inang gamu-gamo ang kanyang anak na huwag lumapit sa apoy. Ngunit nais ng batang gamu-gamo na makita ang liwanag sa sarili nitong paraan.
+join Rizal left
+leave Teodora
+Rizal: Ano po ang nangyari?
+join Teodora right
+leave Rizal
+Teodora: Lumipad ito nang palapit… nang palapit…
+leave Teodora
+join Rizal left
+Rizal: Inay… bakit po hindi siya nakinig?
+join Teodora right
+leave Rizal
+Teodora: Dahil may mga handang isugal ang lahat… upang maabot ang liwanag.
+join Rizal left
+leave Teodora
+Rizal: Hangal po ba ang gamu-gamo… o matapang?
+leave Rizal
+join Teodora right
+Teodora: Nakasalalay iyon sa kung ano ang handa niyang ialay.

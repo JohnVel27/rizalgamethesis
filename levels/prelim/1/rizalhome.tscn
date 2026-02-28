@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://ckswxvohbwucu"]
+[gd_scene load_steps=16 format=4 uid="uid://ckswxvohbwucu"]
 
 [ext_resource type="Texture2D" uid="uid://dihtl2bhwd2iq" path="res://levels/sprites/environment/Ground.png" id="1_evi32"]
 [ext_resource type="Script" uid="uid://6pfey0sg0f5t" path="res://levels/scripts/level.gd" id="1_j12d8"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://crr7yee58lgos" path="res://levels/prelim/1/tilemap.gd" id="6_jpeof"]
 [ext_resource type="PackedScene" uid="uid://rl2ubgx68cwd" path="res://characters/player/youngrizal.tscn" id="7_tasoe"]
 [ext_resource type="PackedScene" uid="uid://djhisukfxtj0m" path="res://levels/level_transition.tscn" id="8_dhpqy"]
+[ext_resource type="PackedScene" uid="uid://dqal317m0uj16" path="res://characters/NPC/siblingsrizal/siblings.tscn" id="9_j12d8"]
 [ext_resource type="PackedScene" uid="uid://d0d1j41th0kpl" path="res://item/item_pickup/item_pickup.tscn" id="10_ql6nh"]
 [ext_resource type="Resource" uid="uid://t3yx2apedfwh" path="res://item/gem.tres" id="11_ywvnf"]
 
@@ -5182,3 +5183,6 @@ size = 1
 [node name="ItemPickup" parent="." instance=ExtResource("10_ql6nh")]
 position = Vector2(462, 519)
 item_data = ExtResource("11_ywvnf")
+
+[node name="siblings" parent="." instance=ExtResource("9_j12d8")]
+position = Vector2(161, 527)

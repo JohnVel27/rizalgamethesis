@@ -34,12 +34,14 @@ directories/dch_directory={
 "Teodora": "res://dialogue/characters/Teodora.dch",
 "classmates": "res://dialogue/characters/classmates.dch",
 "dominicanfriars": "res://dialogue/characters/dominicanfriars.dch",
-"fathersanchez": "res://dialogue/characters/fathersanchez.dch"
+"fathersanchez": "res://dialogue/characters/fathersanchez.dch",
+"francisco": "res://dialogue/characters/francisco.dch"
 }
 directories/dtl_directory={
-"2justianorizal1": "res://dialogue/timeline/prelim/2/2justianorizal1.dtl",
+"2justianorizal1": "res://dialogue/timeline/prelim/2/scrapt/2justianorizal1.dtl",
+"2maestrocruzrizal1": "res://dialogue/timeline/prelim/2/2maestrocruzrizal1.dtl",
 "2narrator1": "res://dialogue/timeline/prelim/2/2narrator1.dtl",
-"2narrator2": "res://dialogue/timeline/prelim/2/2narrator2.dtl",
+"2narrator2": "res://dialogue/timeline/prelim/2/scrapt/2narrator2.dtl",
 "3narrator1": "res://dialogue/timeline/prelim/3/3narrator1.dtl",
 "3narrator2": "res://dialogue/timeline/prelim/3/3narrator2.dtl",
 "3sanchezrizal1": "res://dialogue/timeline/prelim/3/3sanchezrizal1.dtl",
@@ -47,12 +49,19 @@ directories/dtl_directory={
 "4narrato2": "res://dialogue/timeline/prelim/4/4narrato2.dtl",
 "4narrator1": "res://dialogue/timeline/prelim/4/4narrator1.dtl",
 "Narrator-calamba": "res://dialogue/timeline/prelim/1/Narrator-calamba.dtl",
+"goingtobinan": "res://dialogue/timeline/prelim/2/goingtobinan.dtl",
 "narrator-livingroom": "res://dialogue/timeline/prelim/1/narrator-livingroom.dtl",
-"rizalteodora1": "res://dialogue/timeline/prelim/1/rizalteodora1.dtl"
+"rizalfranciscotalk1": "res://dialogue/timeline/prelim/1/rizalfranciscotalk1.dtl",
+"rizalteodora1": "res://dialogue/timeline/prelim/1/scrapt/rizalteodora1.dtl",
+"rizalteodoratalk1": "res://dialogue/timeline/prelim/1/rizalteodoratalk1.dtl",
+"storyofmoth": "res://dialogue/timeline/prelim/1/storyofmoth.dtl"
 }
-layout/style_directory={}
-layout/style_list=["res://dialogue/storynovel.tres"]
-layout/default_style="res://dialogue/storynovel.tres"
+layout/style_directory={
+"": "res://dialogue/styles/new_style.tres",
+"new_style": "res://dialogue/styles/new_style.tres"
+}
+layout/style_list=["res://dialogue/styles/new_style.tres"]
+layout/default_style="res://dialogue/styles/new_style.tres"
 variables={
 "dominicanfriarsrizal": {
 "dominicanfriarsrizalfinished": false,

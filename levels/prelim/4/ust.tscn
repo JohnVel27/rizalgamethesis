@@ -9308,7 +9308,7 @@ tile_map_data = PackedByteArray("AAAJAAEAAAAMABMAAAAJAAIAAAAMABQAAAAJAAMAAAAMABU
 tile_set = SubResource("TileSet_btyfq")
 
 [node name="youngrizal" parent="." instance=ExtResource("6_4n2e2")]
-position = Vector2(722, 574)
+position = Vector2(-307, -238)
 
 [node name="LevelTransition" parent="." instance=ExtResource("7_4n2e2")]
 position = Vector2(746, 335)

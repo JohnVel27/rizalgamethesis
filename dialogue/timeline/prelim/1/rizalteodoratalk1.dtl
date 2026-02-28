@@ -1,0 +1,13 @@
+join Rizal left
+Rizal: Opo, Inay! Gusto ko pang matuto.
+join Teodora right
+leave Rizal
+Teodora: Talagang sabik kang matuto. Sige nga, sabihin mo muna ang alpabeto.
+join Teodora right
+Teodora: Natutunan mo ito noong tatlong taong gulang ka pa lamang… gamitin mo nang tama ang iyong talino.
+join Rizal left
+leave Teodora
+Rizal: Bakit po kailangan kong mag-aral nang mag-aral, Inay?
+join Teodora right
+leave Rizal
+Teodora: Dahil ang kaalaman ay isang liwanag. At ang ating bayan ay nabubuhay sa kadiliman.
