@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://dtkqtyb56dh7o"]
+
+[ext_resource type="Script" uid="uid://d4b4leenijj1n" path="res://minigame/scripts/puzzlepiece.gd" id="1_jipxa"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_txrlv"]
+
+[node name="Puzzlepiece" type="Area2D" unique_id=808918058]
+script = ExtResource("1_jipxa")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1389242015]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1250201679]
+shape = SubResource("RectangleShape2D_txrlv")
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]

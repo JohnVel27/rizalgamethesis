@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://cnhfqn4xukch6"]
+
+[ext_resource type="Script" uid="uid://d38awsyhoruwh" path="res://minigame/scripts/cell.gd" id="1_uncgv"]
+
+[sub_resource type="Gradient" id="Gradient_in74x"]
+offsets = PackedFloat32Array(1)
+colors = PackedColorArray(0.49354547, 0.49354553, 0.49354553, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_seym7"]
+gradient = SubResource("Gradient_in74x")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l428t"]
+
+[node name="Cell" type="Area2D" unique_id=2007705155 groups=["cell"]]
+script = ExtResource("1_uncgv")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=926774363]
+scale = Vector2(1, 256)
+texture = SubResource("GradientTexture1D_seym7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=711303299 groups=["cell"]]
+shape = SubResource("RectangleShape2D_l428t")

@@ -8,22 +8,27 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="rizalgamethesis"
 run/main_scene="uid://m6axqlk1c0rq"
-config/features=PackedStringArray("4.5", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Dialogic="*uid://ds2q0uclmolvu"
 Transitionlayer="*res://levels/Transitionlayer.tscn"
 LevelManager="*res://00_globals/global_level_manager.gd"
 PlayerManager="*res://00_globals/global_player_manager.gd"
 InventoryMenu="*res://GUI/inventory/inventory_menu.tscn"
 QuestMenu="*res://GUI/quest/quest_menu.tscn"
 QuestManager="*res://quest/scripts/global_quest_manager.gd"
+G="*uid://blla4wmvjsdye"
 
 [dialogic]
 
@@ -88,8 +93,8 @@ glossary/default_case_sensitive=true
 
 window/size/viewport_width=1000
 window/size/viewport_height=800
-window/size/window_width_override=1600
-window/size/window_height_override=1000
+window/size/window_width_override=1440
+window/size/window_height_override=900
 
 [editor_plugins]
 

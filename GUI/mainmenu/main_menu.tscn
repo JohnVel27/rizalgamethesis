@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://m6axqlk1c0rq"]
+[gd_scene format=3 uid="uid://m6axqlk1c0rq"]
 
 [ext_resource type="Script" uid="uid://c42vehfgbtvy2" path="res://GUI/mainmenu/scripts/main_menu.gd" id="1_3l01i"]
 [ext_resource type="Texture2D" uid="uid://dfkuxcbsg4hrc" path="res://GUI/mainmenu/rizal.jpg" id="1_helb7"]
@@ -16,7 +16,7 @@ shadow_color = Color(0, 0, 0, 0.203922)
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=1375169327]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -25,7 +25,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3l01i")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=201347196]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -36,7 +36,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_3l01i")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=61433899]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5

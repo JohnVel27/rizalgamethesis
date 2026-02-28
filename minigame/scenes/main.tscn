@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://ctahgfalsrm05"]
+
+[ext_resource type="Script" uid="uid://c6qynd2nj6q18" path="res://minigame/scripts/main.gd" id="1_56hpi"]
+
+[node name="Main" type="Node2D" unique_id=1497281474]
+script = ExtResource("1_56hpi")
+
+[node name="cells" type="Node2D" parent="." unique_id=592371089]
+
+[node name="pieces" type="Node2D" parent="." unique_id=755728296]
