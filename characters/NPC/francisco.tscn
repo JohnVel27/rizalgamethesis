@@ -258,7 +258,7 @@ shape = SubResource("CircleShape2D_ctinb")
 position = Vector2(-11.25, -32)
 scale = Vector2(2.05556, 2.44118)
 sprite_frames = SubResource("SpriteFrames_bi7nn")
-animation = &"carry_walk_up"
+animation = &"carry_idle_down"
 
 [node name="chatdetection" type="Area2D" parent="."]
 

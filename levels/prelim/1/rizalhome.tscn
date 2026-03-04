@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://ckswxvohbwucu"]
+[gd_scene load_steps=18 format=4 uid="uid://ckswxvohbwucu"]
 
 [ext_resource type="Texture2D" uid="uid://dihtl2bhwd2iq" path="res://levels/sprites/environment/Ground.png" id="1_evi32"]
 [ext_resource type="Script" uid="uid://6pfey0sg0f5t" path="res://levels/scripts/level.gd" id="1_j12d8"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://rl2ubgx68cwd" path="res://characters/player/youngrizal.tscn" id="7_tasoe"]
 [ext_resource type="PackedScene" uid="uid://djhisukfxtj0m" path="res://levels/level_transition.tscn" id="8_dhpqy"]
 [ext_resource type="PackedScene" uid="uid://dqal317m0uj16" path="res://characters/NPC/siblingsrizal/siblings.tscn" id="9_j12d8"]
+[ext_resource type="FontFile" uid="uid://dov3t2xbxgg58" path="res://asset/font/HFPoet.ttf" id="10_3pew2"]
 [ext_resource type="PackedScene" uid="uid://d0d1j41th0kpl" path="res://item/item_pickup/item_pickup.tscn" id="10_ql6nh"]
 [ext_resource type="Resource" uid="uid://t3yx2apedfwh" path="res://item/gem.tres" id="11_ywvnf"]
 
@@ -5157,6 +5158,9 @@ texture = SubResource("CompressedTexture2D_ir6kn")
 sources/0 = SubResource("TileSetAtlasSource_ql6nh")
 sources/1 = SubResource("TileSetAtlasSource_ywvnf")
 
+[sub_resource type="FontVariation" id="FontVariation_ql6nh"]
+base_font = ExtResource("10_3pew2")
+
 [node name="Outside" type="Node2D"]
 script = ExtResource("1_j12d8")
 
@@ -5186,3 +5190,30 @@ item_data = ExtResource("11_ywvnf")
 
 [node name="siblings" parent="." instance=ExtResource("9_j12d8")]
 position = Vector2(161, 527)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 925.0
+offset_top = 82.0
+offset_right = 1139.0
+offset_bottom = 119.0
+theme_override_fonts/font = SubResource("FontVariation_ql6nh")
+theme_override_font_sizes/font_size = 30
+text = "Philippine old house"
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 351.0
+offset_top = 9.0
+offset_right = 565.0
+offset_bottom = 46.0
+theme_override_fonts/font = SubResource("FontVariation_ql6nh")
+theme_override_font_sizes/font_size = 30
+text = "Philippine old house"
+
+[node name="Label3" type="Label" parent="."]
+offset_left = -264.0
+offset_top = 113.0
+offset_right = -50.0
+offset_bottom = 150.0
+theme_override_fonts/font = SubResource("FontVariation_ql6nh")
+theme_override_font_sizes/font_size = 30
+text = "Jose Rizal House"
