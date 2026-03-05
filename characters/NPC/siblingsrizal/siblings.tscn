@@ -287,3 +287,10 @@ position = Vector2(-1, 0)
 shape = SubResource("CircleShape2D_8f1ks")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="Label" type="Label" parent="."]
+offset_left = -35.0
+offset_top = -62.0
+offset_right = 57.0
+offset_bottom = -39.0
+text = "Rizal Sibling"

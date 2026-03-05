@@ -304,5 +304,12 @@ shape = SubResource("CircleShape2D_h3phw")
 
 [node name="Timer" type="Timer" parent="."]
 
+[node name="Label" type="Label" parent="."]
+offset_left = -21.0
+offset_top = -48.0
+offset_right = 43.0
+offset_bottom = -25.0
+text = "Teodora"
+
 [connection signal="body_entered" from="chatdetection" to="." method="_on_chatdetection_body_entered"]
 [connection signal="body_exited" from="chatdetection" to="." method="_on_chatdetection_body_exited"]
