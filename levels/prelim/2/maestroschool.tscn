@@ -1,8 +1,9 @@
-[gd_scene load_steps=12 format=4 uid="uid://cosib8wfpp0hj"]
+[gd_scene load_steps=13 format=4 uid="uid://cosib8wfpp0hj"]
 
 [ext_resource type="Texture2D" uid="uid://dihtl2bhwd2iq" path="res://levels/sprites/environment/Ground.png" id="1_p63a6"]
 [ext_resource type="Texture2D" uid="uid://pg3x00y6y1rt" path="res://levels/sprites/place/house.png" id="4_vsta7"]
 [ext_resource type="Script" uid="uid://crr7yee58lgos" path="res://levels/prelim/1/tilemap.gd" id="6_hv8xg"]
+[ext_resource type="PackedScene" uid="uid://c6uwktd5sd0bg" path="res://characters/carriage.tscn" id="6_vsta7"]
 [ext_resource type="PackedScene" uid="uid://rl2ubgx68cwd" path="res://characters/player/youngrizal.tscn" id="7_nn01p"]
 [ext_resource type="PackedScene" uid="uid://djhisukfxtj0m" path="res://levels/level_transition.tscn" id="8_nn01p"]
 
@@ -5166,7 +5167,7 @@ tile_map_data = PackedByteArray("AAA3AA8AAQAEAAgAAAA3ABAAAQAEAAkAAAA3ABEAAQAEAAo
 tile_set = SubResource("TileSet_2ppix")
 
 [node name="youngrizal" parent="." instance=ExtResource("7_nn01p")]
-position = Vector2(50, -70)
+position = Vector2(77, 984)
 
 [node name="LevelTransition" parent="." instance=ExtResource("8_nn01p")]
 position = Vector2(1095, 597)
@@ -5180,3 +5181,6 @@ offset_top = 368.0
 offset_right = 1197.0
 offset_bottom = 391.0
 text = "Maestro School"
+
+[node name="Carriage" parent="." instance=ExtResource("6_vsta7")]
+position = Vector2(34, 823)

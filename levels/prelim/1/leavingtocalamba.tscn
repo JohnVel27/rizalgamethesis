@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=4 uid="uid://k81a4bljtab3"]
+[gd_scene load_steps=17 format=4 uid="uid://k81a4bljtab3"]
 
 [ext_resource type="Script" uid="uid://6pfey0sg0f5t" path="res://levels/scripts/level.gd" id="1_t0yc1"]
 [ext_resource type="Texture2D" uid="uid://dihtl2bhwd2iq" path="res://levels/sprites/environment/Ground.png" id="2_npdxu"]
@@ -9,6 +9,7 @@
 [ext_resource type="Resource" uid="uid://t3yx2apedfwh" path="res://item/gem.tres" id="8_q2a8u"]
 [ext_resource type="PackedScene" uid="uid://b4woviog5lhqf" path="res://characters/NPC/teodora.tscn" id="8_t0yc1"]
 [ext_resource type="PackedScene" uid="uid://d1cjynht7awe8" path="res://characters/NPC/francisco.tscn" id="9_npdxu"]
+[ext_resource type="PackedScene" uid="uid://c6uwktd5sd0bg" path="res://characters/carriage.tscn" id="10_npdxu"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3pew2"]
 texture = ExtResource("2_npdxu")
@@ -5173,7 +5174,7 @@ tile_map_data = PackedByteArray("AADq//z/AAAkAAcAAADq//3/AAAkAAgAAADq//7/AAAkAAk
 tile_set = SubResource("TileSet_4epeb")
 
 [node name="youngrizal" parent="." instance=ExtResource("5_0d3gb")]
-position = Vector2(-159, 455)
+position = Vector2(-155, 414)
 
 [node name="ItemPickup" parent="." instance=ExtResource("7_uoavx")]
 visible = false
@@ -5181,7 +5182,10 @@ position = Vector2(462, 519)
 item_data = ExtResource("8_q2a8u")
 
 [node name="teodora" parent="." instance=ExtResource("8_t0yc1")]
-position = Vector2(-133, 419)
+position = Vector2(-129, 378)
 
 [node name="Francisco" parent="." instance=ExtResource("9_npdxu")]
-position = Vector2(-218, 437)
+position = Vector2(-214, 396)
+
+[node name="Carriage" parent="." instance=ExtResource("10_npdxu")]
+position = Vector2(-181, 518)

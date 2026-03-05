@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://bvbluch0ut3qt"]
 
-[ext_resource type="Script" uid="uid://dgld0vs7japw5" path="res://transitionstoryboard/scripts/ust1.gd" id="1_vwe7d"]
+[ext_resource type="Script" path="res://transitionstoryboard/scripts/ust1.gd" id="1_vwe7d"]
 [ext_resource type="FontFile" uid="uid://dov3t2xbxgg58" path="res://asset/font/HFPoet.ttf" id="2_2hcdi"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_l1uyl"]

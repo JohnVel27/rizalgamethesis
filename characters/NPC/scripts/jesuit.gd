@@ -96,4 +96,4 @@ func _on_dialogic_ended() -> void:
 func start_smooth_transition() -> void:
 	Transitionlayer.transition()
 	await Transitionlayer.on_transition_finished
-	get_tree().change_scene_to_file("res://levels/prelim/4/ust.tscn")
+	get_tree().change_scene_to_file("res://transitionstoryboard/usttranslationstory/ust1.tscn")
