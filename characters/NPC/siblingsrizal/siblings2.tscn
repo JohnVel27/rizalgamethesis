@@ -281,7 +281,7 @@ position = Vector2(-7, -24)
 scale = Vector2(1.85156, 1.86765)
 sprite_frames = SubResource("SpriteFrames_034je")
 animation = &"carry_walk_up"
-frame_progress = 0.0864024
+frame_progress = 0.266571
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8f1ks")
