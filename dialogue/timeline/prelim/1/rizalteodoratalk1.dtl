@@ -14,3 +14,4 @@ join Teodora right
 leave Rizal
 [style name="namelabel_teodora"]
 Teodora: Dahil ang kaalaman ay isang liwanag. At ang ating bayan ay nabubuhay sa kadiliman.
+[signal arg="minipuzzle"]

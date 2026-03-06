@@ -28,7 +28,9 @@ func _ready() -> void:
 	timer.start()
 
 	# --- Dialogue connections ---
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.timeline_ended.connect(_on_dialogic_ended)
+	
 
 	# --- Check quest or location at scene start ---
 	if has_node("/root/QuestManager"):
@@ -50,7 +52,6 @@ func _physics_process(_delta: float) -> void:
 		return
 
 	move_to_target(target_position)
-
 
 func move_to_target(target: Vector2) -> void:
 	var direction: Vector2 = (target - global_position).normalized()
@@ -129,13 +130,42 @@ func start_teodora_dialogue() -> void:
 		Dialogic.timeline_ended.connect(_on_dialogue_finished, CONNECT_ONE_SHOT)
 
 
+# --- Dialogic Signals ---
+
+func _on_dialogic_signal(argument: String) -> void:
+	if argument == "minipuzzle":
+		# Search the current scene for the 'Game' UI node
+		var puzzle_ui = get_tree().current_scene.find_child("Game", true, false)
+		
+		if puzzle_ui:
+			# Freeze the world
+			var player = get_tree().current_scene.find_child("youngrizal", true, false)
+			if player:
+				player.set_physics_process(false)
+			
+			timer.stop()
+			velocity = Vector2.ZERO
+			
+			# Show the puzzle
+			puzzle_ui.visible = true
+			
+			# Find and show the Startoverlay
+			var overlay = puzzle_ui.find_child("Startoverlay", true, false)
+			if overlay:
+				overlay.visible = true
+			
+			# Find the Board to trigger the game
+			var board_node = puzzle_ui.find_child("Board", true, false)
+			if board_node:
+				board_node._on_Tile_pressed(-1) # Trigger scramble
+
+
 func _on_dialogue_finished() -> void:
-	# Resume player
 	var player = get_tree().current_scene.find_child("youngrizal", true, false)
 	if player:
 		player.set_physics_process(true)
 
-	# Resume NPC movement
+	
 	timer.start()
 
 	# Update quest
@@ -144,7 +174,7 @@ func _on_dialogue_finished() -> void:
 
 
 func _on_dialogic_ended() -> void:
-	# General cleanup
+	
 	var player = get_tree().current_scene.find_child("youngrizal", true, false)
 	if player:
 		player.set_physics_process(true)
