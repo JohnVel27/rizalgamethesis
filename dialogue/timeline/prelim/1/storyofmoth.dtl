@@ -26,3 +26,4 @@ leave Rizal
 join Teodora right
 [style name="namelabel_teodora"]
 Teodora: Nakasalalay iyon sa kung ano ang handa niyang ialay.
+[signal arg="puzzlegame"]

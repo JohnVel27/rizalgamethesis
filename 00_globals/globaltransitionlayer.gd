@@ -22,3 +22,12 @@ func _on_animation_finished(anim_name: StringName) -> void:
 
 	elif anim_name == "fade_to_normal":
 		color_rect.visible = false
+		
+func start_smooth_transition(next_scene: String) -> void:
+	
+	# If you have a global Transitionlayer (Autoload)
+	if has_node("/root/Transitionlayer"):
+		Transitionlayer.transition()
+		await Transitionlayer.on_transition_finished
+	
+	get_tree().change_scene_to_file(next_scene)

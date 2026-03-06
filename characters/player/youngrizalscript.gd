@@ -58,7 +58,7 @@ func _ready() -> void:
 	elif scene_path.ends_with("ulecturehalls.tscn"):
 		start_opening_dialogue("4narrato2")
 
-
+	Dialogic.signal_event.connect(_on_dialogic_signal)
 # =========================
 # OPENING DIALOGUE
 # =========================
@@ -75,11 +75,51 @@ func start_opening_dialogue(timeline_name: String) -> void:
 # WHEN DIALOGUE ENDS
 # =========================
 
-func _on_dialogue_finished() -> void:
+func _on_dialogic_signal(argument: String) -> void:
+	if argument != "puzzlegame":
+		return
 
-	# If Story of the Moth finished → smooth transition
-	if current_opening_dialogue == "storyofmoth":
-		await start_smooth_transition("res://levels/prelim/1/leavingtocalamba.tscn")
+	# --- Find the puzzle UI in the current scene ---
+	var puzzle_ui = get_tree().current_scene.find_child("Gamelamp", true, false)
+	if not puzzle_ui:
+		push_error("Puzzle UI 'Gamemoth' not found in scene!")
+		return
+
+	# --- Freeze the player ---
+	var player = get_tree().current_scene.find_child("youngrizal", true, false)
+	if player:
+		player.set_physics_process(false)
+
+	
+	velocity = Vector2.ZERO
+
+	# --- Show the puzzle ---
+	puzzle_ui.visible = true
+
+	# --- Show the start overlay if exists ---
+	var overlay = puzzle_ui.find_child("Startoverlay", true, false)
+	if overlay:
+		overlay.visible = true
+
+	# --- Start the board / scramble ---
+	var board_node = puzzle_ui.find_child("Boardlamp", true, false)
+	if board_node:
+		board_node._on_Tile_pressed(-1)
+
+		# --- FIX: Wait for the puzzle to be completed ---
+		# In Godot 4, we use 'await' followed by the signal name directly.
+		await board_node.game_won 
+
+		# Optional: Only proceed if a certain story is finished
+		if current_opening_dialogue == "storyofmoth":
+			await start_smooth_transition("res://levels/prelim/1/leavingtocalamba.tscn")
+
+	# --- Unfreeze the player ---
+	if player:
+		player.set_physics_process(true)
+	
+
+func _on_dialogue_finished() -> void:
 		
 	if current_opening_dialogue == "goingtobinan":
 		await start_smooth_transition("res://transitionstoryboard/binan.tscn")

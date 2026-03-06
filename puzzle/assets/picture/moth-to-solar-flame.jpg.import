@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c1l6wq047w0l0"
-path="res://.godot/imported/bruno2.jpg-f2e8955004638ddab0b517d5cecf1d65.ctex"
+uid="uid://cuo6iiiwth285"
+path="res://.godot/imported/moth-to-solar-flame.jpg-0aad8cdf427beaf962982264e38083f2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://puzzle/assets/picture/bruno2.jpg"
-dest_files=["res://.godot/imported/bruno2.jpg-f2e8955004638ddab0b517d5cecf1d65.ctex"]
+source_file="res://puzzle/assets/picture/moth-to-solar-flame.jpg"
+dest_files=["res://.godot/imported/moth-to-solar-flame.jpg-0aad8cdf427beaf962982264e38083f2.ctex"]
 
 [params]
 
