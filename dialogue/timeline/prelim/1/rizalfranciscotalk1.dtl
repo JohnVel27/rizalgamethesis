@@ -1,14 +1,19 @@
 join francisco right
+[style name="namelabel_francisco"]
 francisco: Pepe, ang isang tao ay hindi lang dapat matalino. Dapat siya’y marangal din
 join Rizal left
 leave francisco
+[style name="new_style"]
 Rizal: Ama, bakit po napakaraming lupa ang pag-aari ng mga prayle?
 leave Rizal
 join francisco right
+[style name="namelabel_francisco"]
 francisco: May mga tanong, anak… na kailangang itanong nang tahimik.
 join Rizal left
 leave francisco
+[style name="new_style"]
 Rizal: Pero makatarungan po ba iyon?
 leave Rizal
 join francisco right
+[style name="namelabel_francisco"]
 francisco: Ang katarungan ay hindi laging kusang ibinibigay. Minsan, ipinaglalaban ito.
