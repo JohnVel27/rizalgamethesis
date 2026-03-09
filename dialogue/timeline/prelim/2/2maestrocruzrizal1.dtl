@@ -5,7 +5,7 @@ Rizal: Kaunti po, ginoo.
 Justiano: Ang tiwala sa sarili ay pinaghihirapan. Magbasa ka.
 Narrator: Maghanda sa minigames na pagsusulit ito ay isang multiple choice question.
 label maestrocruz
-Narrator: Sino ang guro na nagsabi ng “Bagong estudyante. Tumayo ka.”?
+Narrator: Sino ang guro ni José Rizal sa Biñan?
 - Maestro Juancho Carrera
 	Narrator: Ang sagot ay Maestro Justiniano Aquino Cruz, umulit ka sa umpisa ng tanong.
 	jump 2maestrocruzrizal1/maestrocruz
@@ -17,6 +17,31 @@ Narrator: Sino ang guro na nagsabi ng “Bagong estudyante. Tumayo ka.”?
 - Kapitan Tiago
 	Narrator: Ang sagot ay Maestro Justiniano Aquino Cruz, umulit ka sa umpisa ng tanong.
 	jump 2maestrocruzrizal1/maestrocruz
-Narrator: Ano ang buong pangalan na ipinakilala ni Rizal?
+label calamba
+Narrator: Batang José, bago ka pumunta dito sa Biñan… mula sa anong bayan ka naglakbay?
+- Cebu
+	Narrator: Ang sagot ay Calamba, umulit ka sa umpisa ng tanong.
+	jump 2maestrocruzrizal1/calamba
+- Calamba
+	Narrator: Tama
+- Vigan
+	Narrator: Ang sagot ay Calamba, umulit ka sa umpisa ng tanong.
+	jump 2maestrocruzrizal1/calamba
+- Maynila
+	Narrator: Ang sagot ay Calamba, umulit ka sa umpisa ng tanong.
+	jump 2maestrocruzrizal1/calamba
+label subjects
+Narrator: Sa paaralang ito, nag-aaral sila ng mga asignaturang nagpapatalas ng isip. Alin sa mga ito ang kanilang pinag-aaralan sa paaralan ni Rizal?
+- Espanyol, Latin, aritmetika, at katesismo
+	Narrator: Tama
+- Paglalayag at nabigasyon
+	Narrator: Ang sagot ay Espanyol, Latin, aritmetika, at katesismo, umulit ka sa umpisa ng tanong.
+	jump 2maestrocruzrizal1/subjects
+- Karpenterya
+	Narrator: Ang sagot ay Espanyol, Latin, aritmetika, at katesismo, umulit ka sa umpisa ng tanong.
+	jump 2maestrocruzrizal1/subjects
+- Musika at pagsasayaw
+	Narrator: Ang sagot ay Espanyol, Latin, aritmetika, at katesismo, umulit ka sa umpisa ng tanong.
+	jump 2maestrocruzrizal1/subjects
 classmates: Akala mo naman espesyal siya.
 Justiano: Tumahimik kayo! Sa silid-aralang ito, ang sipag ang nagbibigay ng respeto hindi ang pagmamataas.

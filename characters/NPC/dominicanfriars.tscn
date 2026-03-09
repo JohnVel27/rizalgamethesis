@@ -125,7 +125,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_0rmnq")
 }],
 "loop": true,
-"name": &"idle_down",
+"name": &"carry_idle_down",
 "speed": 5.0
 }, {
 "frames": [{
@@ -133,7 +133,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ipbrb")
 }],
 "loop": true,
-"name": &"idle_left",
+"name": &"carry_idle_left",
 "speed": 5.0
 }, {
 "frames": [{
@@ -141,7 +141,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_lqbms")
 }],
 "loop": true,
-"name": &"idle_right",
+"name": &"carry_idle_right",
 "speed": 5.0
 }, {
 "frames": [{
@@ -149,7 +149,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_y6v4m")
 }],
 "loop": true,
-"name": &"idle_up",
+"name": &"carry_idle_up",
 "speed": 5.0
 }, {
 "frames": [{
@@ -172,7 +172,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_gu65t")
 }],
 "loop": true,
-"name": &"walk_down",
+"name": &"carry_walk_down",
 "speed": 5.0
 }, {
 "frames": [{
@@ -195,7 +195,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_ithxa")
 }],
 "loop": true,
-"name": &"walk_left",
+"name": &"carry_walk_side_left",
 "speed": 5.0
 }, {
 "frames": [{
@@ -218,7 +218,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_yk4fy")
 }],
 "loop": true,
-"name": &"walk_right",
+"name": &"carry_walk_side_right",
 "speed": 5.0
 }, {
 "frames": [{
@@ -241,7 +241,7 @@ animations = [{
 "texture": SubResource("AtlasTexture_63hdx")
 }],
 "loop": true,
-"name": &"walk_up",
+"name": &"carry_walk_up",
 "speed": 5.0
 }]
 
@@ -255,16 +255,17 @@ script = ExtResource("1_yhg5y")
 shape = SubResource("CircleShape2D_ctinb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-1.9999981, -5)
+position = Vector2(-2, -5)
 scale = Vector2(1.96875, 1.8125)
 sprite_frames = SubResource("SpriteFrames_y6v4m")
-animation = &"walk_up"
-frame_progress = 0.7528256
+animation = &"carry_idle_down"
 
 [node name="chatdetectiondfriar" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chatdetectiondfriar"]
 shape = SubResource("CircleShape2D_0rmnq")
+
+[node name="Timer" type="Timer" parent="."]
 
 [connection signal="body_entered" from="chatdetectiondfriar" to="." method="_on_chatdetectiondfriar_body_entered"]
 [connection signal="body_exited" from="chatdetectiondfriar" to="." method="_on_chatdetectiondfriar_body_exited"]

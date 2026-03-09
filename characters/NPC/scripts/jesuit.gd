@@ -1,99 +1,115 @@
 extends CharacterBody2D
 
-@export var move_speed: float = 60.0
+@export var speed: float = 80.0
+@export var wander_radius: int = 10 # Ilang tiles ang layo ng random lakad
+@onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+
+# Kakailanganin mo ng Timer node na child ng NPC
+@onready var timer: Timer = $Timer 
 
 var tile_map: TileMap
 var astar: AStarGrid2D
-var player: Player
-var current_path: Array[Vector2i] = []
-
-var path_update_timer: float = 0.0
-var path_update_delay: float = 0.3
-
-var dialogue_active: bool = false
-var dialogue_finished_once: bool = false
+var current_id_path: Array[Vector2i] = []
+var last_direction: Vector2 = Vector2.DOWN
 
 func _ready() -> void:
-	Dialogic.timeline_ended.connect(_on_dialogic_ended)
+	# 1. Hanapin ang TileMap (dapat may node ka na "TileMap" sa scene)
+	if get_tree().current_scene.has_node("TileMap"):
+		tile_map = get_tree().current_scene.get_node("TileMap")
+		# Kunin ang AStarGrid mula sa TileMap script mo
+		if "AstarGrid" in tile_map:
+			astar = tile_map.AstarGrid
+		else:
+			push_error("NPC: AstarGrid not found in TileMap!")
+	else:
+		push_error("NPC: TileMap not found in scene!")
 
-	# Get TileMap (sibling)
-	tile_map = get_parent().get_node("TileMap")
-	astar = tile_map.AstarGrid
+	# 2. Setup ang Timer para sa pag-wander
+	timer.wait_time = randf_range(2.0, 4.0) # Random na oras bago lumipat ng pwesto
+	timer.timeout.connect(_on_timer_timeout)
+	timer.start()
 
-	# Get Player
-	player = get_parent().get_node("youngrizal")
+func _physics_process(_delta: float) -> void:
+	if astar == null: return
 
-
-func _physics_process(delta: float) -> void:
-	if not player or not astar:
-		return
-
-	if dialogue_active:
+	# Kung walang path, idle lang
+	if current_id_path.is_empty():
+		play_idle_animation()
 		velocity = Vector2.ZERO
 		move_and_slide()
 		return
 
-	path_update_timer += delta
-	if path_update_timer >= path_update_delay:
-		update_path()
-		path_update_timer = 0.0
+	# Target center ng kasalukuyang tile sa path
+	var target_position: Vector2 = tile_map.map_to_local(current_id_path[0])
 
-	move_along_path()
-
-
-func update_path():
-	var npc_cell = tile_map.local_to_map(global_position)
-	var player_cell = tile_map.local_to_map(player.global_position)
-
-	if astar.is_in_boundsv(npc_cell) and astar.is_in_boundsv(player_cell):
-		current_path = astar.get_id_path(npc_cell, player_cell)
-
-
-func move_along_path():
-	if current_path.size() <= 1:
-		velocity = Vector2.ZERO
-		move_and_slide()
+	# Kung malapit na sa target tile, lipat sa susunod na tile sa path
+	if global_position.distance_to(target_position) < 2:
+		current_id_path.pop_front()
 		return
 
-	var next_cell = current_path[1]
-	var next_position = tile_map.map_to_local(next_cell)
-	var direction = (next_position - global_position).normalized()
-	velocity = direction * move_speed
+	# Gumalaw patungo sa target
+	move_to_target(target_position)
+
+func move_to_target(target: Vector2) -> void:
+	var direction: Vector2 = (target - global_position).normalized()
+	last_direction = direction
+	velocity = direction * speed
 	move_and_slide()
+	play_walk_animation(direction)
 
-	if global_position.distance_to(next_position) < 4:
-		current_path.remove_at(0)
+# --- RANDOM WANDERING LOGIC ---
+func _on_timer_timeout() -> void:
+	# Maghanap ng bagong random na pwesto
+	find_random_path()
+	# I-reset ang timer para sa susunod na paglakad
+	timer.wait_time = randf_range(1.0, 4.0)
+	timer.start()
+
+func find_random_path() -> void:
+	if astar == null: return
+
+	var start_point: Vector2i = tile_map.local_to_map(global_position)
+	
+	# Random na direksyon (Up, Down, Left, Right)
+	var random_dir = [Vector2i.UP, Vector2i.DOWN, Vector2i.LEFT, Vector2i.RIGHT].pick_random()
+	# Random na layo
+	var distance = randi_range(2, wander_radius)
+	
+	var end_point: Vector2i = start_point + (random_dir * distance)
+	
+	# I-clamp ang end point para hindi lumabas sa mapa
+	end_point.x = clamp(end_point.x, astar.region.position.x, astar.region.end.x - 1)
+	end_point.y = clamp(end_point.y, astar.region.position.y, astar.region.end.y - 1)
+	
+	# Kalkulahin ang path
+	current_id_path = astar.get_id_path(start_point, end_point)
+	
+	# Tanggalin ang unang tile (kasalukuyang pwesto)
+	if current_id_path.size() > 0:
+		current_id_path.remove_at(0)
+
+# --- ANIMATIONS (Gaya ng sa Player mo) ---
+func play_walk_animation(dir: Vector2) -> void:
+	if abs(dir.x) > abs(dir.y):
+		if dir.x > 0:
+			sprite.play("carry_walk_side_right")
+		else:
+			sprite.play("carry_walk_side_left")
+	else:
+		if dir.y > 0:
+			sprite.play("carry_walk_down")
+		else:
+			sprite.play("carry_walk_up")
 
 
-# 🔥 Area2D auto triggers dialogue
-func _on_chatdetectionjesuit_body_entered(body: Node2D) -> void:
-	if body is Player and not dialogue_finished_once:
-		start_dialogue()
-
-
-func start_dialogue() -> void:
-	dialogue_active = true
-	dialogue_finished_once = true
-
-	# Freeze both
-	player.set_physics_process(false)
-	set_physics_process(false)
-
-	Dialogic.start("3sanchezrizal1")
-
-
-# 🔥 Called when any Dialogic timeline ends
-func _on_dialogic_ended() -> void:
-	dialogue_active = false
-	if player:
-		player.set_physics_process(true)
-		set_physics_process(true)
-
-	if Dialogic.VAR.sanchezrizalmultiplechoice.sanchezrizalmultiplechoicefinished == true:
-		start_smooth_transition()
-
-
-func start_smooth_transition() -> void:
-	Transitionlayer.transition()
-	await Transitionlayer.on_transition_finished
-	get_tree().change_scene_to_file("res://transitionstoryboard/usttranslationstory/ust1.tscn")
+func play_idle_animation() -> void:
+	if abs(last_direction.x) > abs(last_direction.y):
+		if last_direction.x > 0:
+			sprite.play("carry_idle_right")
+		else:
+			sprite.play("carry_idle_left")
+	else:
+		if last_direction.y > 0:
+			sprite.play("carry_idle_down")
+		else:
+			sprite.play("carry_idle_up")

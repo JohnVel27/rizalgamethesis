@@ -1,10 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://dpola4vd6l03b"]
+[gd_scene load_steps=6 format=3 uid="uid://dpola4vd6l03b"]
 
 [ext_resource type="Script" uid="uid://bqdwri275e4ki" path="res://GUI/mainmenu/scripts/levelsmainmenu.gd" id="1_d8j8o"]
-[ext_resource type="Texture2D" uid="uid://dfkuxcbsg4hrc" path="res://GUI/mainmenu/rizal.jpg" id="1_l3wuh"]
+[ext_resource type="Texture2D" uid="uid://blho4l12epsfp" path="res://GUI/mainmenu/rizalnotai.png" id="2_d8j8o"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d8j8o"]
-texture = ExtResource("1_l3wuh")
+texture = ExtResource("2_d8j8o")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jyrh2"]
 bg_color = Color(0.964706, 0.878431, 0.443137, 1)
@@ -12,6 +12,9 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d8j8o"]
+bg_color = Color(0.121569, 0.121569, 0.121569, 0.396078)
 
 [node name="Levels" type="Control"]
 layout_mode = 3
@@ -27,8 +30,6 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 260.0
-offset_right = -318.0
 grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_d8j8o")
@@ -74,5 +75,15 @@ theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_jyrh2")
 text = "Final"
+
+[node name="Panel2" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_d8j8o")
 
 [connection signal="pressed" from="VBoxContainer/prelim" to="." method="_on_prelim_pressed"]

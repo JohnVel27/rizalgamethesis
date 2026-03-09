@@ -280,8 +280,7 @@ script = ExtResource("1_sf5yr")
 position = Vector2(-7, -24)
 scale = Vector2(1.85156, 1.86765)
 sprite_frames = SubResource("SpriteFrames_034je")
-animation = &"carry_walk_up"
-frame_progress = 0.266571
+animation = &"carry_idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_8f1ks")

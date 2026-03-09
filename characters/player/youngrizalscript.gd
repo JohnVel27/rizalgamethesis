@@ -49,16 +49,17 @@ func _ready() -> void:
 	elif scene_path.ends_with("ateneodemanila.tscn"):
 		start_opening_dialogue("3narrator1")
 
-	elif scene_path.ends_with("aclassroom.tscn"):
+	elif scene_path.ends_with("ahallway.tscn"):
 		start_opening_dialogue("3narrator2")
 
 	elif scene_path.ends_with("ust.tscn"):
 		start_opening_dialogue("4narrator1")
 
-	elif scene_path.ends_with("ulecturehalls.tscn"):
+	elif scene_path.ends_with("res://levels/prelim/4/uhallway.tscn"):
 		start_opening_dialogue("4narrato2")
 
 	Dialogic.signal_event.connect(_on_dialogic_signal)
+	Dialogic.signal_event.connect(_on_dialogic_juancho_signal)
 # =========================
 # OPENING DIALOGUE
 # =========================
@@ -117,6 +118,50 @@ func _on_dialogic_signal(argument: String) -> void:
 	# --- Unfreeze the player ---
 	if player:
 		player.set_physics_process(true)
+		
+
+func _on_dialogic_juancho_signal(argument: String) -> void:
+	if argument != "minigamepuzzleart":
+		return
+
+	# --- Find the puzzle UI in the current scene ---
+	var puzzle_ui = get_tree().current_scene.find_child("Gameart", true, false)
+	if not puzzle_ui:
+		push_error("Puzzle UI 'Gamemoth' not found in scene!")
+		return
+
+	# --- Freeze the player ---
+	var player = get_tree().current_scene.find_child("youngrizal", true, false)
+	if player:
+		player.set_physics_process(false)
+
+	
+	velocity = Vector2.ZERO
+
+	# --- Show the puzzle ---
+	puzzle_ui.visible = true
+
+	# --- Show the start overlay if exists ---
+	var overlay = puzzle_ui.find_child("Startoverlay", true, false)
+	if overlay:
+		overlay.visible = true
+
+	# --- Start the board / scramble ---
+	var board_node = puzzle_ui.find_child("Boardart", true, false)
+	if board_node:
+		board_node._on_Tile_pressed(-1)
+
+		# --- FIX: Wait for the puzzle to be completed ---
+		# In Godot 4, we use 'await' followed by the signal name directly.
+		await board_node.game_won 
+
+		# Optional: Only proceed if a certain story is finished
+		if current_opening_dialogue == "2juanchorizal1":
+			await start_smooth_transition("res://levels/prelim/3/ateneodemanila.tscn")
+
+	# --- Unfreeze the player ---
+	if player:
+		player.set_physics_process(true)
 	
 
 func _on_dialogue_finished() -> void:
@@ -126,11 +171,14 @@ func _on_dialogue_finished() -> void:
 	
 	if current_opening_dialogue == "2maestrocruzrizal1":
 		await start_smooth_transition("res://levels/prelim/2/juanchocarrera.tscn")
-			
-	if current_opening_dialogue == "2juanchorizal1":
-		await start_smooth_transition("res://transitionstoryboard/ateneotranslationstory/ateneo1.tscn")
 		
-
+	
+	if current_opening_dialogue == "3narrator2":
+		await start_smooth_transition("res://levels/prelim/4/ust.tscn")
+		
+	if current_opening_dialogue == "4narrato2":
+		await start_smooth_transition("res://GUI/mainmenu/levels.tscn")
+			
 	current_opening_dialogue = ""
 
 
