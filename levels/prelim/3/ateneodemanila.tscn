@@ -4,8 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://b2upubioo8i3s" path="res://levels/sprites/environment/Props_Decor.png" id="2_u2xpb"]
 [ext_resource type="Texture2D" uid="uid://eyn88wp11fmk" path="res://levels/sprites/place/school.png" id="5_24rfd"]
 [ext_resource type="Texture2D" uid="uid://pg3x00y6y1rt" path="res://levels/sprites/place/house.png" id="5_wttop"]
+[ext_resource type="PackedScene" uid="uid://ck2d5qp7jls4c" path="res://characters/player/sprites/oldrizal/adultrizal.tscn" id="7_24rfd"]
 [ext_resource type="Script" uid="uid://crr7yee58lgos" path="res://levels/prelim/1/tilemap.gd" id="7_gaos1"]
-[ext_resource type="PackedScene" uid="uid://rl2ubgx68cwd" path="res://characters/player/youngrizal.tscn" id="8_mm85i"]
 [ext_resource type="PackedScene" uid="uid://djhisukfxtj0m" path="res://levels/level_transition.tscn" id="8_wttop"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mm85i"]
@@ -9309,5 +9309,5 @@ position = Vector2(882, 550)
 level = "uid://6phv1na0bh7v"
 size = 1
 
-[node name="youngrizal" parent="." instance=ExtResource("8_mm85i")]
-position = Vector2(57, 853)
+[node name="adultrizal" parent="." instance=ExtResource("7_24rfd")]
+position = Vector2(42, 843)
