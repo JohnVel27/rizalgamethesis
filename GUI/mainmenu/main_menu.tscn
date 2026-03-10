@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://m6axqlk1c0rq"]
+[gd_scene load_steps=5 format=3 uid="uid://m6axqlk1c0rq"]
 
 [ext_resource type="Script" uid="uid://c42vehfgbtvy2" path="res://GUI/mainmenu/scripts/main_menu.gd" id="1_3l01i"]
 [ext_resource type="Texture2D" uid="uid://blho4l12epsfp" path="res://GUI/mainmenu/rizalnotai.png" id="2_3l01i"]
@@ -15,9 +15,6 @@ corner_radius_bottom_left = 20
 shadow_color = Color(0, 0, 0, 0.203922)
 shadow_size = 5
 shadow_offset = Vector2(0, 3.41)
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_3l01i"]
-bg_color = Color(0.0117647, 0.0117647, 0.0117647, 0.435294)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -55,15 +52,5 @@ theme_override_constants/outline_size = 11
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_1j1f7")
 text = "START GAME"
-
-[node name="Panel2" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_3l01i")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

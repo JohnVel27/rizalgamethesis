@@ -12,7 +12,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5pb6c")
-board_size = 2
+board_size = 3
 tile_scene = ExtResource("2_k5c5n")
 
 [node name="TextureRect" type="TextureRect" parent="."]

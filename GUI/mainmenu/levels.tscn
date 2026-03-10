@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://dpola4vd6l03b"]
+[gd_scene load_steps=5 format=3 uid="uid://dpola4vd6l03b"]
 
 [ext_resource type="Script" uid="uid://bqdwri275e4ki" path="res://GUI/mainmenu/scripts/levelsmainmenu.gd" id="1_d8j8o"]
 [ext_resource type="Texture2D" uid="uid://blho4l12epsfp" path="res://GUI/mainmenu/rizalnotai.png" id="2_d8j8o"]
@@ -12,9 +12,6 @@ corner_radius_top_left = 20
 corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d8j8o"]
-bg_color = Color(0.121569, 0.121569, 0.121569, 0.396078)
 
 [node name="Levels" type="Control"]
 layout_mode = 3
@@ -75,15 +72,5 @@ theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_jyrh2")
 text = "Final"
-
-[node name="Panel2" type="Panel" parent="."]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_d8j8o")
 
 [connection signal="pressed" from="VBoxContainer/prelim" to="." method="_on_prelim_pressed"]
