@@ -49,9 +49,6 @@ func _ready() -> void:
 	elif scene_path.ends_with("ateneodemanila.tscn"):
 		start_opening_dialogue("3narrator1")
 
-	elif scene_path.ends_with("ahallway.tscn"):
-		start_opening_dialogue("3narrator2")
-
 	elif scene_path.ends_with("ust.tscn"):
 		start_opening_dialogue("4narrator1")
 
@@ -172,12 +169,6 @@ func _on_dialogue_finished() -> void:
 	if current_opening_dialogue == "2maestrocruzrizal1":
 		await start_smooth_transition("res://levels/prelim/2/juanchocarrera.tscn")
 		
-	
-	if current_opening_dialogue == "3narrator2":
-		await start_smooth_transition("res://levels/prelim/4/ust.tscn")
-		
-	if current_opening_dialogue == "4narrato2":
-		await start_smooth_transition("res://GUI/mainmenu/levels.tscn")
 			
 	current_opening_dialogue = ""
 
