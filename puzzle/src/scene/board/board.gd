@@ -17,7 +17,7 @@ var background_texture = null
 
 # Linked to the TextureRect in your scene tree
 var win_image: TextureRect
-var win_label: Label
+
 
 enum GAME_STATES {
 	NOT_STARTED,
@@ -38,11 +38,8 @@ func _ready():
 
 	# Fetch the TextureRect from your scene tree
 	win_image = $TextureRect
-	win_label = $Label
-	win_label.visible = false
 	win_image.visible = false
 	win_image.z_index = 100 
-	win_label.z_index = 100 
 	
 	gen_board()
 
@@ -138,7 +135,7 @@ func _on_Tile_pressed(number):
 func show_completed_picture():
 	
 	win_image.visible = true
-	win_label.visible = true
+	
 	
 	for tile in tiles:
 		tile.visible = false
