@@ -277,20 +277,20 @@ radius = 17.0294
 script = ExtResource("1_da1n5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(17, -23)
+position = Vector2(17, -44)
 scale = Vector2(1.85156, 1.86765)
 sprite_frames = SubResource("SpriteFrames_034je")
 animation = &"carry_walk_up"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 0)
+position = Vector2(1, -26)
 shape = SubResource("CircleShape2D_8f1ks")
 
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Label" type="Label" parent="."]
-offset_left = -35.0
-offset_top = -62.0
-offset_right = 57.0
-offset_bottom = -39.0
+offset_left = -36.0
+offset_top = -87.0
+offset_right = 56.0
+offset_bottom = -64.0
 text = "Rizal Sibling"

@@ -1,9 +1,10 @@
-[gd_scene load_steps=19 format=4 uid="uid://ckswxvohbwucu"]
+[gd_scene load_steps=20 format=4 uid="uid://ckswxvohbwucu"]
 
 [ext_resource type="Texture2D" uid="uid://dihtl2bhwd2iq" path="res://levels/sprites/environment/Ground.png" id="1_evi32"]
 [ext_resource type="Script" uid="uid://6pfey0sg0f5t" path="res://levels/scripts/level.gd" id="1_j12d8"]
 [ext_resource type="Texture2D" uid="uid://pg3x00y6y1rt" path="res://levels/sprites/place/house.png" id="4_j12d8"]
 [ext_resource type="Script" uid="uid://crr7yee58lgos" path="res://levels/prelim/1/tilemap.gd" id="6_jpeof"]
+[ext_resource type="PackedScene" uid="uid://bana47hu7ydsu" path="res://GUI/instruction/fullsize.tscn" id="6_ywvnf"]
 [ext_resource type="PackedScene" uid="uid://rl2ubgx68cwd" path="res://characters/player/youngrizal.tscn" id="7_tasoe"]
 [ext_resource type="PackedScene" uid="uid://djhisukfxtj0m" path="res://levels/level_transition.tscn" id="8_dhpqy"]
 [ext_resource type="PackedScene" uid="uid://dqal317m0uj16" path="res://characters/NPC/siblingsrizal/siblings.tscn" id="9_j12d8"]
@@ -5179,6 +5180,8 @@ tile_set = SubResource("TileSet_4epeb")
 
 [node name="youngrizal" parent="." instance=ExtResource("7_tasoe")]
 position = Vector2(1373, 533)
+
+[node name="Fullsize" parent="youngrizal" instance=ExtResource("6_ywvnf")]
 
 [node name="LevelTransition1" parent="." instance=ExtResource("8_dhpqy")]
 position = Vector2(-159, 294)

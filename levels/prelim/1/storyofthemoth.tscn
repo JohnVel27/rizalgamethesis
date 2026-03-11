@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://qwfvgr3si330"]
+[gd_scene load_steps=24 format=4 uid="uid://qwfvgr3si330"]
 
 [ext_resource type="Script" uid="uid://6pfey0sg0f5t" path="res://levels/scripts/level.gd" id="1_wxm3h"]
 [ext_resource type="Texture2D" uid="uid://bndwoold34pjg" path="res://levels/sprites/environment/furniture_and_props.png" id="1_xocaq"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://bbkawb3d4xlqm" path="res://levels/sprites/environment/windows_and_doors2.png" id="5_kmsrn"]
 [ext_resource type="PackedScene" uid="uid://b4woviog5lhqf" path="res://characters/NPC/teodora.tscn" id="6_n0h61"]
 [ext_resource type="PackedScene" uid="uid://rl2ubgx68cwd" path="res://characters/player/youngrizal.tscn" id="7_2vv4q"]
+[ext_resource type="PackedScene" uid="uid://bana47hu7ydsu" path="res://GUI/instruction/fullsize.tscn" id="7_kmsrn"]
 [ext_resource type="PackedScene" uid="uid://djhisukfxtj0m" path="res://levels/level_transition.tscn" id="9_kmsrn"]
 [ext_resource type="PackedScene" uid="uid://tja41kwu56t2" path="res://puzzle/src/scene/game/gamelamp.tscn" id="10_wxm3h"]
 
@@ -30805,6 +30806,8 @@ tile_set = SubResource("TileSet_qfvcp")
 [node name="windows" type="TileMapLayer" parent="TileMap/walls"]
 tile_map_data = PackedByteArray("AAAsAAMAAAABACkAAAAsAAQAAAABACoAAAAsAAUAAAABACsAAAAsAAYAAAABACwAAAAsAAcAAAABAC0AAAAtAAMAAAACACkAAAAtAAQAAAACACoAAAAtAAUAAAACACsAAAAtAAYAAAACACwAAAAtAAcAAAACAC0AAAAuAAMAAAADACkAAAAuAAQAAAADACoAAAAvAAMAAAAEACkAAAAvAAQAAAAEACoAAAAwAAMAAAAFACkAAAAwAAQAAAAFACoAAAAwAAUAAAAFACsAAAAwAAYAAAAFACwAAAAwAAcAAAAFAC0AAAAxAAMAAAAGACkAAAAxAAQAAAAGACoAAAAxAAUAAAAGACsAAAAxAAYAAAAGACwAAAAxAAcAAAAGAC0AAAA0AAMAAAABACkAAAA0AAQAAAABACoAAAA0AAUAAAABACsAAAA0AAYAAAABACwAAAA0AAcAAAABAC0AAAA1AAMAAAACACkAAAA1AAQAAAACACoAAAA1AAUAAAACACsAAAA1AAYAAAACACwAAAA1AAcAAAACAC0AAAA2AAMAAAADACkAAAA2AAQAAAADACoAAAA3AAMAAAAEACkAAAA3AAQAAAAEACoAAAA4AAMAAAAFACkAAAA4AAQAAAAFACoAAAA4AAUAAAAFACsAAAA4AAYAAAAFACwAAAA4AAcAAAAFAC0AAAA5AAMAAAAGACkAAAA5AAQAAAAGACoAAAA5AAUAAAAGACsAAAA5AAYAAAAGACwAAAA5AAcAAAAGAC0AAAASAAsAAgAIABYAAAASAAwAAgAIABcAAAA=")
 tile_set = SubResource("TileSet_ojaph")
+
+[node name="Fullsize" parent="." instance=ExtResource("7_kmsrn")]
 
 [node name="youngrizal" parent="." instance=ExtResource("7_2vv4q")]
 position = Vector2(330, 150)
