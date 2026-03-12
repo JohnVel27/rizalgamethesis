@@ -1,19 +1,19 @@
 join francisco right
 [style name="namelabel_francisco"]
-francisco: Pepe, ang isang tao ay hindi lang dapat matalino. Dapat siya’y marangal din
+francisco: Pepe, a person should not only be intelligent. He must also be honorable.
 join Rizal left
 leave francisco
 [style name="new_style"]
-Rizal: Ama, bakit po napakaraming lupa ang pag-aari ng mga prayle?
+Rizal: Father, why do the friars own so much land?
 leave Rizal
 join francisco right
 [style name="namelabel_francisco"]
-francisco: May mga tanong, anak… na kailangang itanong nang tahimik.
+francisco: There are questions, my son... that must be asked in silence.
 join Rizal left
 leave francisco
 [style name="new_style"]
-Rizal: Pero makatarungan po ba iyon?
+Rizal: But is that just?
 leave Rizal
 join francisco right
 [style name="namelabel_francisco"]
-francisco: Ang katarungan ay hindi laging kusang ibinibigay. Minsan, ipinaglalaban ito.
+francisco: Justice is not always freely given. Sometimes, it must be fought for.

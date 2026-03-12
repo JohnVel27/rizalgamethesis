@@ -1,47 +1,47 @@
-Justiano: Bagong estudyante. Tumayo ka.
-Rizal: Ako po si José Rizal Mercado, ginoo.
-Justiano: Marunong ka bang magbasa ng Espanyol?
-Rizal: Kaunti po, ginoo.
-Justiano: Ang tiwala sa sarili ay pinaghihirapan. Magbasa ka.
-Narrator: Maghanda sa minigames na pagsusulit ito ay isang multiple choice question.
+Justiano: New student. Stand up.
+Rizal: I am José Rizal Mercado, sir.
+Justiano: Do you know how to read Spanish?
+Rizal: A little, sir.
+Justiano: Self-confidence is earned. Read.
+Narrator: minigame quiz\: this is a multiple-choice question.
 label maestrocruz
-Narrator: Sino ang guro ni José Rizal sa Biñan?
+Narrator: Who was José Rizal's teacher in Biñan?
 - Maestro Juancho Carrera
-	Narrator: Ang sagot ay Maestro Justiniano Aquino Cruz, umulit ka sa umpisa ng tanong.
+	Narrator: Your answer is wrong, I'll repeat the question.
 	jump 2maestrocruzrizal1/maestrocruz
 - Maestro Justiniano Aquino Cruz
-	Narrator: Tama
+	Narrator: Correct!
 - Padre Damaso
-	Narrator: Ang sagot ay Maestro Justiniano Aquino Cruz, umulit ka sa umpisa ng tanong.
+	Narrator: Your answer is wrong, I'll repeat the question.
 	jump 2maestrocruzrizal1/maestrocruz
 - Kapitan Tiago
-	Narrator: Ang sagot ay Maestro Justiniano Aquino Cruz, umulit ka sa umpisa ng tanong.
+	Narrator: Your answer is wrong, I'll repeat the question.
 	jump 2maestrocruzrizal1/maestrocruz
 label calamba
-Narrator: Batang José, bago ka pumunta dito sa Biñan… mula sa anong bayan ka naglakbay?
+Narrator: Young José, before you came here to Biñan... from what town did you travel?
 - Cebu
-	Narrator: Ang sagot ay Calamba, umulit ka sa umpisa ng tanong.
+	Narrator: Your answer is wrong, I'll repeat the question.
 	jump 2maestrocruzrizal1/calamba
 - Calamba
-	Narrator: Tama
+	Narrator: Correct!
 - Vigan
-	Narrator: Ang sagot ay Calamba, umulit ka sa umpisa ng tanong.
+	Narrator: Your answer is wrong, I'll repeat the question.
 	jump 2maestrocruzrizal1/calamba
 - Maynila
-	Narrator: Ang sagot ay Calamba, umulit ka sa umpisa ng tanong.
+	Narrator: Your answer is wrong, I'll repeat the question.
 	jump 2maestrocruzrizal1/calamba
 label subjects
-Narrator: Sa paaralang ito, nag-aaral sila ng mga asignaturang nagpapatalas ng isip. Alin sa mga ito ang kanilang pinag-aaralan sa paaralan ni Rizal?
+Narrator: In this school, they study subjects that sharpen the mind. Which of these did they study at Rizal's school?
 - Espanyol, Latin, aritmetika, at katesismo
-	Narrator: Tama
+	Narrator: Correct!
 - Paglalayag at nabigasyon
-	Narrator: Ang sagot ay Espanyol, Latin, aritmetika, at katesismo, umulit ka sa umpisa ng tanong.
+	Narrator: Your answer is wrong, I'll repeat the question.
 	jump 2maestrocruzrizal1/subjects
 - Karpenterya
-	Narrator: Ang sagot ay Espanyol, Latin, aritmetika, at katesismo, umulit ka sa umpisa ng tanong.
+	Narrator: Your answer is wrong, I'll repeat the question.
 	jump 2maestrocruzrizal1/subjects
 - Musika at pagsasayaw
-	Narrator: Ang sagot ay Espanyol, Latin, aritmetika, at katesismo, umulit ka sa umpisa ng tanong.
+	Narrator: Your answer is wrong, I'll repeat the question.
 	jump 2maestrocruzrizal1/subjects
-classmates: Akala mo naman espesyal siya.
-Justiano: Tumahimik kayo! Sa silid-aralang ito, ang sipag ang nagbibigay ng respeto hindi ang pagmamataas.
+classmates: he acts as if he is special.
+Justiano: Be quiet! In this classroom, diligence earns respect, not arrogance.

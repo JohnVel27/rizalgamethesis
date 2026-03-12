@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bboychrkayfxv"
-path="res://.godot/imported/Carry_Idle_Down-Sheet.png-e21c9be7ce64b0831ecbc27e23d15eb0.ctex"
+uid="uid://c0jfbvja1xwbl"
+path="res://.godot/imported/main_menu.png-a476b379931c2537d969e7c761e16d3d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://characters/player/sprites/youngrizal/Body_A/Animations/Carry_Idle/Carry_Idle_Down-Sheet.png"
-dest_files=["res://.godot/imported/Carry_Idle_Down-Sheet.png-e21c9be7ce64b0831ecbc27e23d15eb0.ctex"]
+source_file="res://GUI/mainmenu/main_menu.png"
+dest_files=["res://.godot/imported/main_menu.png-a476b379931c2537d969e7c761e16d3d.ctex"]
 
 [params]
 
