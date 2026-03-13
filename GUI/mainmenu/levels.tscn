@@ -1,7 +1,16 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=5 format=3 uid="uid://dpola4vd6l03b"]
 
 [ext_resource type="Script" uid="uid://bqdwri275e4ki" path="res://GUI/mainmenu/scripts/levelsmainmenu.gd" id="1_d8j8o"]
 [ext_resource type="Texture2D" uid="uid://dfkuxcbsg4hrc" path="res://GUI/mainmenu/rizal.jpg" id="1_l3wuh"]
+=======
+[gd_scene format=3 uid="uid://dpola4vd6l03b"]
+
+[ext_resource type="Script" uid="uid://bqdwri275e4ki" path="res://GUI/mainmenu/scripts/levelsmainmenu.gd" id="1_d8j8o"]
+[ext_resource type="Texture2D" uid="uid://bk34xgyvf0717" path="res://GUI/mainmenu/main_menu.png" id="2_d8j8o"]
+[ext_resource type="Texture2D" uid="uid://d3ktvlix8l8uo" path="res://GUI/mainmenu/button.png" id="3_jyrh2"]
+[ext_resource type="AudioStream" uid="uid://ckcut52potooo" path="res://asset/sounds/bgm_ls.mp3" id="4_50qnj"]
+>>>>>>> Stashed changes
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_d8j8o"]
 texture = ExtResource("1_l3wuh")
@@ -13,7 +22,7 @@ corner_radius_top_right = 20
 corner_radius_bottom_right = 20
 corner_radius_bottom_left = 20
 
-[node name="Levels" type="Control"]
+[node name="Levels" type="Control" unique_id=1715880514]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -22,7 +31,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_d8j8o")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=1434226075]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,7 +42,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_d8j8o")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=872666199]
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -48,7 +57,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_constants/separation = 21
 
+<<<<<<< Updated upstream
 [node name="prelim" type="Button" parent="VBoxContainer"]
+=======
+[node name="prelim" type="TextureButton" parent="VBoxContainer" unique_id=134480973]
+custom_minimum_size = Vector2(400, 200)
+>>>>>>> Stashed changes
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -57,7 +71,12 @@ theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_jyrh2")
 text = "Prelim"
 
+<<<<<<< Updated upstream
 [node name="prelim3" type="Button" parent="VBoxContainer"]
+=======
+[node name="prelim3" type="TextureButton" parent="VBoxContainer" unique_id=658325453]
+custom_minimum_size = Vector2(200, 200)
+>>>>>>> Stashed changes
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -66,7 +85,12 @@ theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_jyrh2")
 text = "Midterm"
 
+<<<<<<< Updated upstream
 [node name="prelim2" type="Button" parent="VBoxContainer"]
+=======
+[node name="prelim2" type="TextureButton" parent="VBoxContainer" unique_id=1301940548]
+custom_minimum_size = Vector2(0, 200)
+>>>>>>> Stashed changes
 layout_mode = 2
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
@@ -74,5 +98,10 @@ theme_override_constants/outline_size = 10
 theme_override_font_sizes/font_size = 45
 theme_override_styles/normal = SubResource("StyleBoxFlat_jyrh2")
 text = "Final"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1705712602]
+stream = ExtResource("4_50qnj")
+volume_db = -35.0
+autoplay = true
 
 [connection signal="pressed" from="VBoxContainer/prelim" to="." method="_on_prelim_pressed"]

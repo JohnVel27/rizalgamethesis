@@ -3,6 +3,8 @@ class_name LevelTransition extends Area2D
 
 enum SIDE { LEFT, RIGHT, TOP, BOTTOM }
 
+@onready var doorsfx: AudioStreamPlayer = $doorsfx
+
 @export_file( "*.tscn" ) var level
 @export var target_transition_area : String = "LevelTransition"
 
@@ -40,6 +42,8 @@ func _ready() -> void:
 	
 	
 func _player_entered( _p : Node2D ) -> void:
+	doorsfx.play()
+	await doorsfx.finished
 	LevelManager.load_new_level(level, target_transition_area, Vector2.ZERO)
 	pass
 	
