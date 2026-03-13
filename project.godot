@@ -28,6 +28,7 @@ QuestManager="*res://quest/scripts/global_quest_manager.gd"
 [dialogic]
 
 directories/dch_directory={
+"Bully": "res://dialogue/characters/Bully.dch",
 "Justiano": "res://dialogue/characters/Justiano.dch",
 "Narrator": "res://dialogue/characters/Narrator.dch",
 "Rizal": "res://dialogue/characters/Rizal.dch",
@@ -38,7 +39,8 @@ directories/dch_directory={
 "dominicanfriars": "res://dialogue/characters/dominicanfriars.dch",
 "fathersanchez": "res://dialogue/characters/fathersanchez.dch",
 "francisco": "res://dialogue/characters/francisco.dch",
-"juancho": "res://dialogue/characters/juancho.dch"
+"juancho": "res://dialogue/characters/juancho.dch",
+"students": "res://dialogue/characters/students.dch"
 }
 directories/dtl_directory={
 "1/Narrator-calamba": "res://dialogue/prelim/1/Narrator-calamba.dtl",
@@ -64,6 +66,8 @@ directories/dtl_directory={
 "4narrato2": "res://dialogue/timeline/prelim/4/4narrato2.dtl",
 "4narrator1": "res://dialogue/timeline/prelim/4/4narrator1.dtl",
 "Narrator-calamba": "res://dialogue/timeline/prelim/1/Narrator-calamba.dtl",
+"firstbrawl": "res://dialogue/timeline/prelim/2/firstbrawl.dtl",
+"firstbrawl2": "res://dialogue/timeline/prelim/2/firstbrawl2.dtl",
 "firstglimpseofinjustice": "res://dialogue/timeline/prelim/1/firstglimpseofinjustice.dtl",
 "goingtobinan": "res://dialogue/timeline/prelim/2/goingtobinan.dtl",
 "narrator-livingroom": "res://dialogue/timeline/prelim/1/narrator-livingroom.dtl",

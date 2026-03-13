@@ -10,14 +10,14 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "angryclassmates",
+&"default_portrait": "angryclassmate",
 &"description": "",
-&"display_name": "Classmates",
+&"display_name": "Bully",
 &"mirror": false,
 &"nicknames": [""],
 &"offset": Vector2(280, 0),
 &"portraits": {
-"angryclassmates": {
+"angryclassmate": {
 "export_overrides": {
 "image": "\"res://asset/picture_character/bullyclass.png\""
 },
