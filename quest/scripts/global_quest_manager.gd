@@ -12,14 +12,18 @@ var current_quests: Array = []
 
 var all_quests: Dictionary = {
 	"prelim": [
-		{ "title": "The Beginning in Calamba", "is_complete": false, "completed_steps": [] }
+		{ "title": "The Beginning in Calamba", "is_complete": false, "completed_steps": [] },
+		{ "title": "Life at Biñan Laguna", "is_complete": false, "completed_steps": [] },
+		{ "title": "Bullies at the school", "is_complete": false, "completed_steps": [] },
+		{ "title": "Secondary Education at Ateneo", "is_complete": false, "completed_steps": [] },
+		{ "title": "Third Education at University Of Santo Thomas", "is_complete": false, "completed_steps": [] }
 	],
 	"midterm": [],
 	"final": []
 }
 
 func _ready() -> void:
-	# Load preliminary quests into the active tracking list
+
 	current_quests = all_quests["prelim"].duplicate(true)
 	gather_quest_data()
 	

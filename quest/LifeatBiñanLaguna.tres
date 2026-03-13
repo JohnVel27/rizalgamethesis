@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="Quest" load_steps=3 format=3 uid="uid://cd855qvb6fw5x"]
+
+[ext_resource type="Script" uid="uid://7ktwwmvwtcq0" path="res://quest/scripts/quest_reward_item.gd" id="1_6rysk"]
+[ext_resource type="Script" uid="uid://datfl3b15axlx" path="res://quest/scripts/quest_resource.gd" id="2_5d76o"]
+
+[resource]
+script = ExtResource("2_5d76o")
+title = "Life at Biñan Laguna"
+description = "Go to Biñan Laguna to study arithmetic and art under the tutelage of Maestro Cruz and Juancho Carrera"
+steps = Array[String](["enter the nipa hut meet the maestro and enter his class", "Meet Juancho Carrera and learn more about art"])
+reward_items = Array[ExtResource("1_6rysk")]([])
+metadata/_custom_type_script = "uid://datfl3b15axlx"

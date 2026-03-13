@@ -1,7 +1,7 @@
 extends Node2D
 
 
-var tile_size = Vector2(16, 16)
+var tile_size = Vector2(32, 32)
 
 func _process(_delta: float) -> void:
 	

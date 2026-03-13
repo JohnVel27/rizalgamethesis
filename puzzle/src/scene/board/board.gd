@@ -144,6 +144,8 @@ func show_completed_picture():
 	
 	var puzzle_root = get_node("../../../..") 
 	
+	QuestManager.update_quest("The Beginning in Calamba", "Story of mooth", true)
+	
 	if puzzle_root:
 		
 		puzzle_root.queue_free() 

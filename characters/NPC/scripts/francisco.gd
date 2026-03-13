@@ -145,7 +145,7 @@ func _on_dialogue_finished() -> void:
 	print("NPC and player movement resumed.")
 
 	# Update quest and move scene
-	QuestManager.update_quest("The Beginning in Calamba", "Talk to Francisco Mercado", true)
+	QuestManager.update_quest("The Beginning in Calamba", "Talk to Francisco Mercado", false)
 	print("Quest finished. Moving to Maestro School...")
 	start_smooth_transition()
 
