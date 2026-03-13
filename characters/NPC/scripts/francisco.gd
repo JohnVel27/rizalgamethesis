@@ -105,7 +105,7 @@ func _input(event: InputEvent) -> void:
 
 		# 🔒 Check if Teodora step is completed
 		var teodora_step_done = QuestManager.is_step_completed(
-			"Ang Simula sa Calamba", "kausapin si teodora alonso"
+			"The Beginning in Calamba", "Talk to Teodora Alonso"
 		)
 
 		if not teodora_step_done:
@@ -145,7 +145,7 @@ func _on_dialogue_finished() -> void:
 	print("NPC and player movement resumed.")
 
 	# Update quest and move scene
-	QuestManager.update_quest("Ang Simula sa Calamba", "Kausapin si Francisco Mercado", true)
+	QuestManager.update_quest("The Beginning in Calamba", "Talk to Francisco Mercado", true)
 	print("Quest finished. Moving to Maestro School...")
 	start_smooth_transition()
 

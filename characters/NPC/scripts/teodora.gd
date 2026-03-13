@@ -170,7 +170,7 @@ func _on_dialogue_finished() -> void:
 		player.set_physics_process(true)
 	timer.start()
 
-	QuestManager.update_quest("Ang Simula sa Calamba", "kausapin si teodora alonso")
+	QuestManager.update_quest("The Beginning in Calamba", "Talk to Teodora Alonso")
 
 	Dialogic.VAR.francisco.aftertalkteodora = true
 	

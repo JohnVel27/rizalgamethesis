@@ -12,7 +12,7 @@ var current_quests: Array = []
 
 var all_quests: Dictionary = {
 	"prelim": [
-		{ "title": "Ang Simula sa Calamba", "is_complete": false, "completed_steps": [] }
+		{ "title": "The Beginning in Calamba", "is_complete": false, "completed_steps": [] }
 	],
 	"midterm": [],
 	"final": []
@@ -28,7 +28,7 @@ func check_location_completion() -> void:
 	
 	# Check if player is in the Rizal Living Room
 	if current_scene_path == "res://levels/prelim/1/livingroomrizal.tscn":
-		update_quest("Ang Simula sa Calamba", "Maglakbay patungo sa bahay ni rizal", false)
+		update_quest("The Beginning in Calamba", "Travel to Rizal's house", false)
 		print("Location reached: Rizal Home")
 
 func gather_quest_data() -> void:

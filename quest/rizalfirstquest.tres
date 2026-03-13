@@ -5,8 +5,8 @@
 
 [resource]
 script = ExtResource("2_rn76t")
-title = "Ang Simula sa Calamba"
-description = "Batid ni Pepe ang halaga ng karunungan sa ilalim ng gabay ng kanyang mga magulang."
-steps = Array[String](["Maglakbay patungo sa bahay ni rizal", "Kausapin si Teodora Alonso", "Kausapin si Francisco Mercado"])
+title = "The Beginning in Calamba"
+description = "Pepe knows the value of wisdom under the guidance of his parents."
+steps = Array[String](["Travel to Rizal's house", "Talk to Teodora Alonso", "Talk to Francisco Mercado"])
 reward_items = Array[ExtResource("1_x55bi")]([])
 metadata/_custom_type_script = "uid://datfl3b15axlx"
