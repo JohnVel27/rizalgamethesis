@@ -12989,3 +12989,4 @@ position = Vector2(408, 286)
 position = Vector2(785, 304)
 
 [node name="Cursor" parent="." instance=ExtResource("9_ddxhp")]
+visible = false

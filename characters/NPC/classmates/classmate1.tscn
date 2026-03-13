@@ -243,7 +243,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8f1ks"]
-radius = 17.0294
+radius = 32.249
 
 [node name="classmate1" type="CharacterBody2D"]
 script = ExtResource("1_qgsd6")

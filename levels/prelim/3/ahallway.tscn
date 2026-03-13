@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=4 uid="uid://6phv1na0bh7v"]
+[gd_scene load_steps=16 format=4 uid="uid://6phv1na0bh7v"]
 
 [ext_resource type="Texture2D" uid="uid://3isw37f77rtq" path="res://levels/sprites/environment/Interiors_tilesets.png" id="1_phgmi"]
 [ext_resource type="Script" uid="uid://crr7yee58lgos" path="res://levels/prelim/1/tilemap.gd" id="2_7jjeh"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cobyvd1d16j27" path="res://characters/NPC/jesuitprofessors.tscn" id="6_jms2w"]
 [ext_resource type="PackedScene" uid="uid://drslyb2put8hu" path="res://characters/player/oldrizal.tscn" id="6_phgmi"]
 [ext_resource type="PackedScene" uid="uid://bge5wggf77ret" path="res://levels/cursor.tscn" id="8_wt0k4"]
+[ext_resource type="PackedScene" uid="uid://x17gyukrb882" path="res://characters/NPC/classmates/classmate3.tscn" id="9_umhvy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cb7a6"]
 texture = ExtResource("1_phgmi")
@@ -19231,3 +19232,12 @@ position = Vector2(749, 71)
 
 [node name="Cursor" parent="." instance=ExtResource("8_wt0k4")]
 visible = false
+
+[node name="classmate3" parent="." instance=ExtResource("9_umhvy")]
+position = Vector2(157, 15)
+
+[node name="classmate4" parent="." instance=ExtResource("9_umhvy")]
+position = Vector2(977, 46)
+
+[node name="classmate5" parent="." instance=ExtResource("9_umhvy")]
+position = Vector2(1137, 129)
