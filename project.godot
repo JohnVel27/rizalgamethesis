@@ -41,14 +41,28 @@ directories/dch_directory={
 "juancho": "res://dialogue/characters/juancho.dch"
 }
 directories/dtl_directory={
+"1/Narrator-calamba": "res://dialogue/prelim/1/Narrator-calamba.dtl",
+"1/firstglimpseofinjustice": "res://dialogue/prelim/1/firstglimpseofinjustice.dtl",
+"1/narrator-livingroom": "res://dialogue/prelim/1/narrator-livingroom.dtl",
+"1/rizalfranciscotalk1": "res://dialogue/prelim/1/rizalfranciscotalk1.dtl",
+"1/rizalteodoratalk1": "res://dialogue/prelim/1/rizalteodoratalk1.dtl",
+"1/storyofmoth": "res://dialogue/prelim/1/storyofmoth.dtl",
+"2/2juanchorizal1": "res://dialogue/prelim/2/2juanchorizal1.dtl",
+"2/2maestrocruzrizal1": "res://dialogue/prelim/2/2maestrocruzrizal1.dtl",
+"2/2narrator1": "res://dialogue/prelim/2/2narrator1.dtl",
+"2/goingtobinan": "res://dialogue/prelim/2/goingtobinan.dtl",
 "2juanchorizal1": "res://dialogue/timeline/prelim/2/2juanchorizal1.dtl",
 "2justianorizal1": "res://dialogue/timeline/prelim/2/scrapt/2justianorizal1.dtl",
 "2maestrocruzrizal1": "res://dialogue/timeline/prelim/2/2maestrocruzrizal1.dtl",
 "2narrator1": "res://dialogue/timeline/prelim/2/2narrator1.dtl",
 "2narrator2": "res://dialogue/timeline/prelim/2/scrapt/2narrator2.dtl",
+"3/3narrator1": "res://dialogue/prelim/3/3narrator1.dtl",
+"3/3narrator2": "res://dialogue/prelim/3/3narrator2.dtl",
 "3narrator1": "res://dialogue/timeline/prelim/3/3narrator1.dtl",
 "3narrator2": "res://dialogue/timeline/prelim/3/3narrator2.dtl",
 "3sanchezrizal1": "res://dialogue/timeline/prelim/3/scrapt/3sanchezrizal1.dtl",
+"4/4narrato2": "res://dialogue/prelim/4/4narrato2.dtl",
+"4/4narrator1": "res://dialogue/prelim/4/4narrator1.dtl",
 "4dominicanfriarsrizal1": "res://dialogue/timeline/prelim/4/scrapt/4dominicanfriarsrizal1.dtl",
 "4narrato2": "res://dialogue/timeline/prelim/4/4narrato2.dtl",
 "4narrator1": "res://dialogue/timeline/prelim/4/4narrator1.dtl",
@@ -59,6 +73,11 @@ directories/dtl_directory={
 "rizalfranciscotalk1": "res://dialogue/timeline/prelim/1/rizalfranciscotalk1.dtl",
 "rizalteodora1": "res://dialogue/timeline/prelim/1/scrapt/rizalteodora1.dtl",
 "rizalteodoratalk1": "res://dialogue/timeline/prelim/1/rizalteodoratalk1.dtl",
+"scrapt/2justianorizal1": "res://dialogue/prelim/2/scrapt/2justianorizal1.dtl",
+"scrapt/2narrator2": "res://dialogue/prelim/2/scrapt/2narrator2.dtl",
+"scrapt/3sanchezrizal1": "res://dialogue/prelim/3/scrapt/3sanchezrizal1.dtl",
+"scrapt/4dominicanfriarsrizal1": "res://dialogue/prelim/4/scrapt/4dominicanfriarsrizal1.dtl",
+"scrapt/rizalteodora1": "res://dialogue/prelim/1/scrapt/rizalteodora1.dtl",
 "storyofmoth": "res://dialogue/timeline/prelim/1/storyofmoth.dtl"
 }
 layout/style_directory={
@@ -66,9 +85,10 @@ layout/style_directory={
 "font_sizes": "res://dialogue/styles/font_sizes.tres",
 "namelabel_francisco": "res://dialogue/styles/namelabel_francisco.tres",
 "namelabel_teodora": "res://dialogue/styles/namelabel_teodora.tres",
-"new_style": "res://dialogue/styles/new_style.tres"
+"new_style": "res://dialogue/styles/new_style.tres",
+"transparentstylebox": "res://dialogue/styles/transparentstylebox.tres"
 }
-layout/style_list=["res://dialogue/styles/new_style.tres", "res://dialogue/styles/font_sizes.tres", "res://dialogue/styles/namelabel_teodora.tres", "res://dialogue/styles/namelabel_francisco.tres"]
+layout/style_list=["res://dialogue/styles/new_style.tres", "res://dialogue/styles/font_sizes.tres", "res://dialogue/styles/namelabel_teodora.tres", "res://dialogue/styles/namelabel_francisco.tres", "res://dialogue/styles/transparentstylebox.tres"]
 layout/default_style="res://dialogue/styles/new_style.tres"
 variables={
 "dominicanfriarsrizal": {

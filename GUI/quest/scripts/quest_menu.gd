@@ -76,11 +76,20 @@ func clear_quest_details() -> void:
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event.is_action_pressed("quest"):
+		
+		var scene_path = get_tree().current_scene.scene_file_path
+
+		if scene_path == "res://GUI/mainmenu/main_menu.tscn" \
+		or scene_path == "res://GUI/mainmenu/levels.tscn":
+			return
+
 		if is_open:
 			close_quest()
 		else:
 			open_quest()
+
 		get_viewport().set_input_as_handled()
+		
 		
 func open_quest() -> void:
 	is_open = true

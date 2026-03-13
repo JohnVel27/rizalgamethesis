@@ -1,0 +1,76 @@
+fathersanchez: Good morning, students. Sit properly and pay attention. In this classroom, discipline and effort are as important as knowledge. Every lesson you take here will shape not only your mind but also your character.
+Rizal: The Jesuits are strict… but their lessons seem meaningful. This is unlike any school I have attended.
+fathersanchez: Ah, you must be José Rizal from Biñan. Welcome to Ateneo. You will find our standards high, but if you work diligently, you will grow in intellect and virtue. Are you prepared to take your studies seriously?
+Rizal: Yes, Maestro. I will do my best and follow your guidance.
+fathersanchez: Very good. Now, let us begin. First, I want each of you to think about poetry. Poetry is not just words on paper — it is the reflection of the human heart, a mirror of our emotions, and a teacher of morality.
+fathersanchez: José, since you are new and have shown diligence before, tell us\: How does poetry reflect human emotion and virtue?
+Rizal: Poetry expresses what people feel in their hearts, Maestro. It teaches morality, sharpens the mind, and helps us understand the world.
+fathersanchez: Excellent, José. Your answer is thoughtful and clear. Remember, imagination is important, but discipline, practice, and perseverance are what make a student truly great.
+Narrator: José listened carefully, absorbing every word. This first lesson with Fr. Sánchez taught him that learning at Ateneo was not just about memorizing facts — it was about discipline, reflection, and using knowledge wisely. The path ahead would challenge him, but it would also shape him into a stronger, wiser young man.
+Narrator: Now answer this question carefully what did you learn about.
+if {sanchezrizalmultiplechoice.sanchezrizalmultiplechoicefinished} == true:
+	Narrator: You Answered all the question correctly.
+else:
+	label QuizStart
+	Narrator: Who is José’s professor at Ateneo?
+	- Maestro Justiniano Aquino Cruz
+		Narrator: Incorrect!
+		jump 3sanchezrizal1/QuizStart
+	- Fr. Sánchez
+		Narrator: Correct!
+	- Juancho Carrera
+		Narrator: Incorrect!
+		jump 3sanchezrizal1/QuizStart
+	- Padre Damaso
+		Narrator: Incorrect!
+		jump 3sanchezrizal1/QuizStart
+	Narrator: What does Fr. Sánchez say is as important as knowledge in his classroom?
+	- Fun and games
+		Narrator: Incorrect!
+		jump 3sanchezrizal1/QuizStart
+	- Discipline and effort
+		Narrator: Correct!
+	- Talent and luck
+		Narrator: Incorrect!
+		jump 3sanchezrizal1/QuizStart
+	- Wealth and status
+		Narrator: Incorrect!
+		jump 3sanchezrizal1/QuizStart
+	Narrator: What subject does Fr. Sánchez ask José about?
+	- Mathematics
+		Narrator: Incorrect!
+		jump 3sanchezrizal1/QuizStart
+	- History
+		Narrator: Incorrect!
+		jump 3sanchezrizal1/QuizStart
+	- Poetry
+		Narrator: Correct!
+	- Science
+		Narrator: Incorrect!
+		jump 3sanchezrizal1/QuizStart
+	Narrator: According to José, what does poetry teach?
+	- How to play music
+		Narrator: Incorrect!
+		jump 3sanchezrizal1/QuizStart
+	- Morality, sharpens the mind, and helps understand the world
+		Narrator: Correct!
+	- How to win contests
+		Narrator: Incorrect!
+		jump 3sanchezrizal1/QuizStart
+	- Only how to write beautiful words
+		Narrator: Incorrect!
+		jump 3sanchezrizal1/QuizStart
+	Narrator: What does Fr. Sánchez say makes a student truly great?
+	- Intelligence alone
+		Narrator: Incorrect!
+		jump 3sanchezrizal1/QuizStart
+	- Discipline, practice, and perseverance
+		Narrator: Correct!
+		set {sanchezrizalmultiplechoice.sanchezrizalmultiplechoicefinished} = true
+		set {sanchezrizalmultiplechoice.sanchezrizalmultiplechoicestarted} = false
+	- Memorizing facts quickly
+		Narrator: Incorrect!
+		jump 3sanchezrizal1/QuizStart
+	- Being popular among classmates
+		Narrator: Incorrect!
+		jump 3sanchezrizal1/QuizStart

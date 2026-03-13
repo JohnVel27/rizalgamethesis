@@ -1,20 +1,19 @@
-[gd_scene load_steps=5 format=3 uid="uid://m6axqlk1c0rq"]
+[gd_scene load_steps=7 format=3 uid="uid://m6axqlk1c0rq"]
 
 [ext_resource type="Script" uid="uid://c42vehfgbtvy2" path="res://GUI/mainmenu/scripts/main_menu.gd" id="1_3l01i"]
-[ext_resource type="Texture2D" uid="uid://blho4l12epsfp" path="res://GUI/mainmenu/rizalnotai.png" id="2_3l01i"]
+[ext_resource type="Texture2D" uid="uid://bk34xgyvf0717" path="res://GUI/mainmenu/main_menu.png" id="2_3l01i"]
+[ext_resource type="Texture2D" uid="uid://d3ktvlix8l8uo" path="res://GUI/mainmenu/button.png" id="3_itp4o"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3l01i"]
 texture = ExtResource("2_3l01i")
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1j1f7"]
-bg_color = Color(0.964706, 0.878431, 0.443137, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
-shadow_color = Color(0, 0, 0, 0.203922)
-shadow_size = 5
-shadow_offset = Vector2(0, 3.41)
+[sub_resource type="AtlasTexture" id="AtlasTexture_x5j3j"]
+atlas = ExtResource("3_itp4o")
+region = Rect2(50.1025, 67.3077, 537.846, 377.922)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7orac"]
+atlas = ExtResource("3_itp4o")
+region = Rect2(600.42, 63.9406, 544.041, 395.887)
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -34,23 +33,20 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_3l01i")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="TextureButton" parent="."]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -221.0
-offset_top = -158.0
-offset_right = 221.0
-offset_bottom = -44.0
+offset_left = -231.0
+offset_top = -488.0
+offset_right = 306.0
+offset_bottom = -111.0
 grow_horizontal = 2
 grow_vertical = 0
-theme_override_colors/font_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 11
-theme_override_font_sizes/font_size = 45
-theme_override_styles/normal = SubResource("StyleBoxFlat_1j1f7")
-text = "START GAME"
+texture_normal = SubResource("AtlasTexture_x5j3j")
+texture_hover = SubResource("AtlasTexture_7orac")
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

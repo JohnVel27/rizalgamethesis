@@ -252,15 +252,17 @@ radius = 61.8142
 script = ExtResource("1_3wve3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -31)
 shape = SubResource("CircleShape2D_ctinb")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(-11.25, -32)
+position = Vector2(-13, -65)
 scale = Vector2(2.05556, 2.44118)
 sprite_frames = SubResource("SpriteFrames_bi7nn")
 animation = &"carry_idle_down"
 
 [node name="chatdetection" type="Area2D" parent="."]
+position = Vector2(0, -39)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chatdetection"]
 shape = SubResource("CircleShape2D_fyvim")
@@ -268,10 +270,10 @@ shape = SubResource("CircleShape2D_fyvim")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Label" type="Label" parent="."]
-offset_left = -26.0
-offset_top = -73.0
-offset_right = 47.0
-offset_bottom = -50.0
+offset_left = -33.0
+offset_top = -115.0
+offset_right = 40.0
+offset_bottom = -92.0
 text = "Francisco"
 
 [connection signal="body_entered" from="chatdetection" to="." method="_on_chatdetection_body_entered"]

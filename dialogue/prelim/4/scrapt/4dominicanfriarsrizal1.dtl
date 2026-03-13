@@ -1,0 +1,70 @@
+\dominicanfriars: Rizal, your essays show promise, but remember,  colonial institutions have strict rules and traditions. Follow them carefully, or you will face consequences. Merit alone will not protect you here.
+Rizal: Why do they treat me differently than the Spanish students? I work just as hard, yet their words feel sharp… almost as if my effort is never enough. I must learn, but also be careful.
+classmates: José, do not be discouraged. Some of the friars do not trust Filipino students. They expect mistakes even when you do everything right.
+Rizal: I understand… but I will not stop learning. I must continue my studies, observe closely, and understand why this happens. Knowledge alone is not enough; one must see the truth behind the rules and remain steadfast in purpose.
+classmates: You have courage, José. Many would give up under this kind of scrutiny.
+Rizal: Courage is not enough; I need patience, discipline, and wisdom. I will prove that our people can excel, even under unfair circumstances, and use this knowledge to make a difference one day.
+Narrator: In that moment, José realized that learning at UST was more than studying books. He was observing the inequalities of the system, noting the subtle prejudices, and preparing himself to navigate a world that demanded not only intellect but resilience and courage.
+if {dominicanfriarsrizal.dominicanfriarsrizalfinished} == true:
+	Narrator: You already pass the quiz.
+else:
+	label QuizStart
+	Narrator: What warning does the Dominican professor give José?
+	- That merit alone will not protect him
+		Narrator: Correct !!
+	- That he will receive extra help
+		Narrator: Incorrect !!
+		jump 4dominicanfriarsrizal1/QuizStart
+	- That Ateneo was better than UST
+		Narrator: Incorrect !!
+		jump 4dominicanfriarsrizal1/QuizStart
+	- That he should not write essays
+		Narrator: Incorrect !!
+		jump 4dominicanfriarsrizal1/QuizStart
+	Narrator: Why does José feel uneasy in class?
+	- He forgot his notebook
+		Narrator: Incorrect !!
+		jump 4dominicanfriarsrizal1/QuizStart
+	- He notices he is treated differently than Spanish students
+		Narrator: Correct !!
+	- He doesn’t like the subjects
+		Narrator: Incorrect !!
+		jump 4dominicanfriarsrizal1/QuizStart
+	- He dislikes his classmates
+		Narrator: Incorrect !!
+		jump 4dominicanfriarsrizal1/QuizStart
+	Narrator: What advice does José’s classmate give him?
+	- To stop writing essays
+		Narrator: Incorrect  !!
+		jump 4dominicanfriarsrizal1/QuizStart
+	- To argue with the professors
+		Narrator: Incorrect  !!
+		jump 4dominicanfriarsrizal1/QuizStart
+	- Not to be discouraged, because some friars do not trust Filipino students
+		Narrator: Correct !!
+	- To leave UST immediately
+		Narrator: Incorrect  !!
+		jump 4dominicanfriarsrizal1/QuizStart
+	Narrator: How does José respond to the unfair treatment?
+	- He ignores his studies
+		Narrator: Incorrect  !!
+		jump 4dominicanfriarsrizal1/QuizStart
+	- He continues learning and observes the situation carefully
+		Narrator: Correct !!
+	- He complains loudly in class
+		Narrator: Incorrect  !!
+		jump 4dominicanfriarsrizal1/QuizStart
+	- He copies the work of Spanish students
+		Narrator: Incorrect  !!
+		jump 4dominicanfriarsrizal1/QuizStart
+	Narrator: What qualities does José realize he needs to succeed under unfair circumstances?
+	- Courage, patience, discipline, and wisdom
+		Narrator: Correct !!
+		set {dominicanfriarsrizal.dominicanfriarsrizalfinished} = true
+		set {dominicanfriarsrizal.dominicanfriarsrizalstarted} = false
+	- Talent and luck only
+		Narrator: Incorrect  !!
+	- Bravery and aggression
+		Narrator: Incorrect  !!
+	- Memorization and speed
+		Narrator: Incorrect  !!

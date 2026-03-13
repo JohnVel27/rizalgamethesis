@@ -1,0 +1,100 @@
+Justiano: You are the new student from Calamba, are you not?
+Rizal: Yes, Maestro. My name is José Rizal
+Justiano: Why have you come to Biñan to study?
+Narrator: Some boys glanced at him curiously. He was smaller than most, yet his voice was steady.
+Justiano: Many boys come here with the same words. Few remain when the lessons become difficult.
+Justiano: I will not give up, Maestro.
+Narrator: The teacher studied the boy’s face, searching for doubt — but saw none.
+Justiano: If you wish to remain, you must prove your effort. Tell me — why is education important?
+Rizal: Education helps us understand the world… and teaches us how to think, judge wisely, and improve ourselves.
+Narrator: A murmur passed through the classroom. Few boys spoke with such clarity.
+Justiano: Hmm. A thoughtful answer.
+Justiano: Answer this\: If there are four groups of three, how many are there in all?
+Justiano: You may answer Jose.
+Rizal: Twelve, Maestro.
+Justiano: Correct.
+classmates: He answered quickly…
+classmates: Perhaps he studied before coming here.
+Narrator: José kept his eyes forward, refusing to be distracted.
+Justiano: Repeat after me\: “Buenos días.”
+classmates: Buenos días.
+Justiano: What does it mean?
+Rizal: It means “Good morning,” Maestro.
+Justiano: You learn quickly.
+Narrator: Though praise was rare, the class noticed.
+Justiano: José, intelligence alone is not enough. What must a student possess to succeed?
+Rizal: Discipline, respect, and perseverance, Maestro.
+Justiano: Very good.
+Justiano: Remember this\: A sharp mind is useless without discipline. Knowledge without character is dangerous.
+Narrator: The boys listened carefully. Even the restless ones sat still.
+Justiano: If you continue to work hard, you will succeed in this school.
+Rizal: Thank you, Maestro. I will do my best.
+Narrator: Outside, the afternoon sun warmed the fields of Biñan. Inside the humble classroom, a young boy began shaping the discipline, courage, and perseverance that would guide his life.
+Narrator: In the strict school of Biñan, José learned that true learning required patience, resilience, and strength of character.
+Narrator: Im giving you an multiple choice to answer the following questions.
+if {justianorizalmultiplechoice.justianomultiplechoicefinished} == true:
+	Narrator: You already pass the test of rizal story in binan class maestro cruz !!
+else:
+	label QuizStart
+	Narrator: Young José, before coming here to Biñan… from what town did you travel?
+	- Manila
+		Narrator: Incorrect. Focus carefully, José. Try again.
+		jump 2justianorizal1/QuizStart
+	- Cebu
+		Narrator: Not quite. Concentrate and answer correctly.
+		jump 2justianorizal1/QuizStart
+	- Calamba
+		Narrator: Correct! Very good, José.
+	- Vigan
+		Narrator: That is wrong. Think carefully and answer again.
+		jump 2justianorizal1/QuizStart
+	Narrator: What does “Buenos días” mean?
+	- Good night
+		Narrator: Incorrect. Remember your Spanish lessons.
+		jump 2justianorizal1/QuizStart
+	- Good afternoon
+		Narrator: Not quite. Try again.
+		jump 2justianorizal1/QuizStart
+	- Good morning
+		Narrator: Correct! Excellent.
+	- Goodbye
+		Narrator: Wrong. Focus on the lesson.
+		jump 2justianorizal1/QuizStart
+	Narrator: What did José prove in class?
+	- He was lazy
+		Narrator: Incorrect. That is not true.
+		jump 2justianorizal1/QuizStart
+	- He was afraid to learn
+		Narrator: No, José is brave in learning. Try again.
+		jump 2justianorizal1/QuizStart
+	- He was intelligent and hardworking
+		Narrator: Correct! Very well said.
+	- He did not care about school
+		Narrator: Wrong. Think carefully.
+		jump 2justianorizal1/QuizStart
+	Narrator: Who was José Rizal’s teacher in Biñan?
+	- Padre Damaso
+		Narrator: Incorrect. Not him.
+		jump 2justianorizal1/QuizStart
+	- Maestro Justiniano Aquino Cruz
+		Narrator: Correct! That is right.
+	- Don Rafael
+		Narrator: No, that is not correct.
+		jump 2justianorizal1/QuizStart
+	- Juan Luna
+		Narrator: Wrong. Think carefully.
+		jump 2justianorizal1/QuizStart
+	Narrator: In this school, they study subjects that sharpen the mind. Which of these do they learn in school rizal?
+	- Music and dancing
+		Narrator: Incorrect. Focus on your lessons.
+		jump 2justianorizal1/QuizStart
+	- Spanish, Latin, arithmetic, and catechism
+		Narrator: Correct! Excellent work.
+		set {justianorizalmultiplechoice.justianomultiplechoicefinished} = true
+		set {justianorizalmultiplechoice.justinianomultiplechoicestarted} = false
+	- Sailing and navigation
+		Narrator: No, that is not part of our curriculum.
+		jump 2justianorizal1/QuizStart
+	- Carpentry
+		Narrator: Wrong. Try again.
+		jump 2justianorizal1/QuizStart

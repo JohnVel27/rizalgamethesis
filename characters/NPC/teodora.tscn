@@ -281,22 +281,23 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_h3phw"]
-radius = 38.4708
+radius = 53.0094
 
 [node name="teodora" type="CharacterBody2D"]
 script = ExtResource("1_fe6d1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(6, 13)
+position = Vector2(1, -33)
 shape = SubResource("CircleShape2D_7ed70")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(22, -17)
+position = Vector2(19, -66)
 scale = Vector2(2, 2.04688)
 sprite_frames = SubResource("SpriteFrames_kipga")
 animation = &"carry_walk_down"
 
 [node name="chatdetection" type="Area2D" parent="."]
+position = Vector2(-6, -47)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="chatdetection"]
 position = Vector2(7, 10)
@@ -305,10 +306,10 @@ shape = SubResource("CircleShape2D_h3phw")
 [node name="Timer" type="Timer" parent="."]
 
 [node name="Label" type="Label" parent="."]
-offset_left = -21.0
-offset_top = -48.0
-offset_right = 43.0
-offset_bottom = -25.0
+offset_left = -27.0
+offset_top = -105.0
+offset_right = 37.0
+offset_bottom = -82.0
 text = "Teodora"
 
 [connection signal="body_entered" from="chatdetection" to="." method="_on_chatdetection_body_entered"]
