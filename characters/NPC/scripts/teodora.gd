@@ -120,11 +120,15 @@ func _input(event: InputEvent) -> void:
 
 
 func start_teodora_dialogue() -> void:
-	var player = get_tree().current_scene.find_child("youngrizal", true, false)
-	if player: 
-		player.set_physics_process(false)
+	# Check kung tapos na ba talaga ang unang usapan
+	var done_talking = Dialogic.VAR.francisco.aftertalkteodora
 	
-	Dialogic.start("rizalteodoratalk1")
+	if done_talking:
+		# Mag-start ng ibang timeline na nagsasabing "Puntahan mo na ang iyong ama."
+		Dialogic.start("remind_rizal_talk_francisco")
+	else:
+		# Ito yung main dialogue (rizalteodoratalk1)
+		Dialogic.start("rizalteodoratalk1")
 	
 	if not Dialogic.timeline_ended.is_connected(_on_dialogue_finished):
 		Dialogic.timeline_ended.connect(_on_dialogue_finished, CONNECT_ONE_SHOT)
@@ -157,20 +161,19 @@ func _on_dialogic_signal(argument: String) -> void:
 			# Find the Board to trigger the game
 			var board_node = puzzle_ui.find_child("Board", true, false)
 			if board_node:
-				board_node._on_Tile_pressed(-1) # Trigger scramble
+				board_node._on_Tile_pressed(-1) 
 
 
 func _on_dialogue_finished() -> void:
 	var player = get_tree().current_scene.find_child("youngrizal", true, false)
 	if player:
 		player.set_physics_process(true)
-
-	
 	timer.start()
 
-	# Update quest
-	QuestManager.update_quest("Ang Simula sa Calamba", "Kausapin si Teodora Alonso", false)
-	print("Dialogue finished. NPC and player movement resumed.")
+	QuestManager.update_quest("Ang Simula sa Calamba", "kausapin si teodora alonso")
+
+	Dialogic.VAR.francisco.aftertalkteodora = true
+	
 
 
 func _on_dialogic_ended() -> void:

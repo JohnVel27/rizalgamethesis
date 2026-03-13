@@ -102,6 +102,19 @@ func play_idle_animation() -> void:
 # --- Player interaction ---
 func _input(event: InputEvent) -> void:
 	if event.is_action_pressed("interact") and is_near_npc:
+
+		# 🔒 Check if Teodora step is completed
+		var teodora_step_done = QuestManager.is_step_completed(
+			"Ang Simula sa Calamba", "kausapin si teodora alonso"
+		)
+
+		if not teodora_step_done:
+			# Only play reminder dialogue if timeline is not already running
+			if Dialogic.current_timeline == null:
+				Dialogic.start("remind_teodora")  # This will NOT play if quest step is done
+			return  # Stop here, cannot talk to Francisco yet
+
+		# ✅ Step is done → normal Francisco dialogue
 		if Dialogic.current_timeline == null:
 			# Pause player
 			var player = get_tree().current_scene.find_child("youngrizal", true, false)
@@ -109,13 +122,14 @@ func _input(event: InputEvent) -> void:
 				player.set_physics_process(false)
 
 			# Pause NPC movement
-			timer.stop()         # stop wandering timer
+			timer.stop()
 			velocity = Vector2.ZERO
-			move_and_slide()     # ensure NPC stops immediately
+			move_and_slide()
 
-			# Start dialogue
+			# Start Francisco dialogue
 			Dialogic.start("rizalfranciscotalk1")
 
+			# Resume after dialogue
 			if not Dialogic.timeline_ended.is_connected(_on_dialogue_finished):
 				Dialogic.timeline_ended.connect(_on_dialogue_finished, CONNECT_ONE_SHOT)
 

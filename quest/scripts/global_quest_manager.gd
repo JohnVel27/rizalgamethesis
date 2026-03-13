@@ -131,3 +131,14 @@ func find_quest(_quest: Quest) -> Dictionary:
 			return q
 	return { "title": "not found", "is_complete": false, "completed_steps": [] }
 	
+func is_step_completed(_title: String, _step: String) -> bool:
+	var index = get_quest_index_by_title(_title)
+	
+	if index == -1:
+		return false
+	
+	var q = current_quests[index]
+	var sanitized_step = _step.strip_edges().to_lower()
+	
+	return q["completed_steps"].has(sanitized_step)
+	

@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=4 uid="uid://634nvfjyveqo"]
+[gd_scene load_steps=19 format=4 uid="uid://634nvfjyveqo"]
 
 [ext_resource type="Texture2D" uid="uid://3isw37f77rtq" path="res://levels/sprites/environment/Interiors_tilesets.png" id="1_ca5wy"]
 [ext_resource type="Script" uid="uid://crr7yee58lgos" path="res://levels/prelim/1/tilemap.gd" id="2_mcwho"]
@@ -11,6 +11,7 @@
 [ext_resource type="Script" uid="uid://cvsqlhkiihhd0" path="res://GUI/inventory/scripts/slot_data.gd" id="5_ca5wy"]
 [ext_resource type="PackedScene" uid="uid://d0d1j41th0kpl" path="res://item/item_pickup/item_pickup.tscn" id="6_vtawn"]
 [ext_resource type="Resource" uid="uid://denk4ao8sn27r" path="res://item/apple.tres" id="7_cshyr"]
+[ext_resource type="PackedScene" uid="uid://bge5wggf77ret" path="res://levels/cursor.tscn" id="12_6s65v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dv0rb"]
 texture = ExtResource("1_ca5wy")
@@ -17679,3 +17680,6 @@ size = 1
 [node name="ItemPickup" parent="." instance=ExtResource("6_vtawn")]
 visible = false
 item_data = ExtResource("7_cshyr")
+
+[node name="Cursor" parent="." instance=ExtResource("12_6s65v")]
+visible = false

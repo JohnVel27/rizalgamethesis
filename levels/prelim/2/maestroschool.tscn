@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://cosib8wfpp0hj"]
+[gd_scene load_steps=15 format=4 uid="uid://cosib8wfpp0hj"]
 
 [ext_resource type="Texture2D" uid="uid://dihtl2bhwd2iq" path="res://levels/sprites/environment/Ground.png" id="1_p63a6"]
 [ext_resource type="PackedScene" uid="uid://bana47hu7ydsu" path="res://GUI/instruction/fullsize.tscn" id="4_hv8xg"]
@@ -6,6 +6,7 @@
 [ext_resource type="Script" uid="uid://crr7yee58lgos" path="res://levels/prelim/1/tilemap.gd" id="6_hv8xg"]
 [ext_resource type="PackedScene" uid="uid://c6uwktd5sd0bg" path="res://characters/carriage.tscn" id="6_vsta7"]
 [ext_resource type="PackedScene" uid="uid://rl2ubgx68cwd" path="res://characters/player/youngrizal.tscn" id="7_nn01p"]
+[ext_resource type="PackedScene" uid="uid://bge5wggf77ret" path="res://levels/cursor.tscn" id="8_2ppix"]
 [ext_resource type="PackedScene" uid="uid://djhisukfxtj0m" path="res://levels/level_transition.tscn" id="8_nn01p"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vi5gl"]
@@ -5187,3 +5188,6 @@ text = "Maestro School"
 
 [node name="Carriage" parent="." instance=ExtResource("6_vsta7")]
 position = Vector2(34, 823)
+
+[node name="Cursor" parent="." instance=ExtResource("8_2ppix")]
+visible = false

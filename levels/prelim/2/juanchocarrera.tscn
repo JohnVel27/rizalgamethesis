@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=4 uid="uid://bhyft80mb3bip"]
+[gd_scene load_steps=20 format=4 uid="uid://bhyft80mb3bip"]
 
 [ext_resource type="Texture2D" uid="uid://3isw37f77rtq" path="res://levels/sprites/environment/Interiors_tilesets.png" id="1_xgtye"]
 [ext_resource type="Script" uid="uid://crr7yee58lgos" path="res://levels/prelim/1/tilemap.gd" id="2_y3bho"]
@@ -12,6 +12,7 @@
 [ext_resource type="Resource" uid="uid://denk4ao8sn27r" path="res://item/apple.tres" id="10_opd0h"]
 [ext_resource type="PackedScene" uid="uid://bg5r6uvlt2lch" path="res://characters/NPC/juancho .tscn" id="10_xgtye"]
 [ext_resource type="PackedScene" uid="uid://b6pgy3cikylhf" path="res://puzzle/src/scene/game/gameart.tscn" id="11_y3bho"]
+[ext_resource type="PackedScene" uid="uid://bge5wggf77ret" path="res://levels/cursor.tscn" id="13_erna5"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dv0rb"]
 texture = ExtResource("1_xgtye")
@@ -17682,4 +17683,7 @@ item_data = ExtResource("10_opd0h")
 position = Vector2(573, 171)
 
 [node name="Gameart" parent="." instance=ExtResource("11_y3bho")]
+visible = false
+
+[node name="Cursor" parent="." instance=ExtResource("13_erna5")]
 visible = false

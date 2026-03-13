@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://cds5xlsdanwcf"]
+[gd_scene load_steps=24 format=4 uid="uid://cds5xlsdanwcf"]
 
 [ext_resource type="Script" uid="uid://6pfey0sg0f5t" path="res://levels/scripts/level.gd" id="1_ujy42"]
 [ext_resource type="Texture2D" uid="uid://3isw37f77rtq" path="res://levels/sprites/environment/Interiors_tilesets.png" id="2_ujy42"]
@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://bana47hu7ydsu" path="res://GUI/instruction/fullsize.tscn" id="7_5kqsa"]
 [ext_resource type="PackedScene" uid="uid://d1cjynht7awe8" path="res://characters/NPC/francisco.tscn" id="10_jtwxg"]
 [ext_resource type="PackedScene" uid="uid://cvrp4unwqdk2l" path="res://puzzle/src/scene/game/game.tscn" id="11_5kqsa"]
+[ext_resource type="PackedScene" uid="uid://bge5wggf77ret" path="res://levels/cursor.tscn" id="12_nhh08"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jtwxg"]
 texture = ExtResource("2_ujy42")
@@ -26289,4 +26290,7 @@ position = Vector2(265, 176)
 position = Vector2(514, 244)
 
 [node name="Game" parent="." instance=ExtResource("11_5kqsa")]
+visible = false
+
+[node name="Cursor" parent="." instance=ExtResource("12_nhh08")]
 visible = false

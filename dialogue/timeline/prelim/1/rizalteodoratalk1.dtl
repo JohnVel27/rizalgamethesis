@@ -15,3 +15,4 @@ leave Rizal
 [style name="namelabel_teodora"]
 Teodora: Because knowledge is a light. And our country is living in darkness.
 [signal arg="minipuzzle"]
+set {francisco.aftertalkteodora} = true
