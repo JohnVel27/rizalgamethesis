@@ -136,6 +136,7 @@ func show_completed_picture() -> void:
 	# 1. Show the "You Win" visuals
 	win_image.visible = true
 	
+	QuestManager.update_quest("The Beginning in Calamba", "Moth and flame", true)
 	# 2. Hide the puzzle tiles so the full image is clear
 	for tile in tiles:
 		tile.visible = false

@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://cp5frwrsi3l0"]
 
 [ext_resource type="Script" uid="uid://dslacqk3fddhm" path="res://puzzle/src/scene/Tile/tile.gd" id="1_em3us"]
-[ext_resource type="Texture2D" uid="uid://cjceg3vdd4g6g" path="res://puzzle/assets/picture/rizalartworks.png" id="2_em3us"]
+[ext_resource type="Texture2D" uid="uid://daxwqer7l2ywn" path="res://puzzle/assets/picture/spanish-coat-of-arms.png" id="2_em3us"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pcnas"]
 draw_center = false
@@ -15,7 +15,7 @@ border_color = Color(0.00523753, 0.0463289, 0.0231644, 1)
 script = ExtResource("1_em3us")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.505929, 0.895105)
+scale = Vector2(0.962406, 0.962406)
 texture = ExtResource("2_em3us")
 centered = false
 hframes = 2
