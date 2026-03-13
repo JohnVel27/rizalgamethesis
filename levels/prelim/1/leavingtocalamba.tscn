@@ -8,9 +8,9 @@
 [ext_resource type="PackedScene" uid="uid://bana47hu7ydsu" path="res://GUI/instruction/fullsize.tscn" id="5_2or71"]
 [ext_resource type="PackedScene" uid="uid://d0d1j41th0kpl" path="res://item/item_pickup/item_pickup.tscn" id="7_uoavx"]
 [ext_resource type="Resource" uid="uid://t3yx2apedfwh" path="res://item/gem.tres" id="8_q2a8u"]
-[ext_resource type="PackedScene" uid="uid://b4woviog5lhqf" path="res://characters/NPC/teodora.tscn" id="8_t0yc1"]
-[ext_resource type="PackedScene" uid="uid://d1cjynht7awe8" path="res://characters/NPC/francisco.tscn" id="9_npdxu"]
+[ext_resource type="PackedScene" uid="uid://cbw4cx786h2mu" path="res://characters/NPC/siblingsrizal/francisco1.tscn" id="10_2or71"]
 [ext_resource type="PackedScene" uid="uid://c6uwktd5sd0bg" path="res://characters/carriage.tscn" id="10_npdxu"]
+[ext_resource type="PackedScene" uid="uid://01yyjmirv4dk" path="res://characters/NPC/siblingsrizal/teodora1.tscn" id="11_a6mkf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3pew2"]
 texture = ExtResource("2_npdxu")
@@ -5184,11 +5184,11 @@ visible = false
 position = Vector2(462, 519)
 item_data = ExtResource("8_q2a8u")
 
-[node name="teodora" parent="." instance=ExtResource("8_t0yc1")]
-position = Vector2(-129, 378)
-
-[node name="Francisco" parent="." instance=ExtResource("9_npdxu")]
-position = Vector2(-214, 396)
-
 [node name="Carriage" parent="." instance=ExtResource("10_npdxu")]
 position = Vector2(-181, 518)
+
+[node name="Francisco" parent="." instance=ExtResource("10_2or71")]
+position = Vector2(-218, 429)
+
+[node name="teodora" parent="." instance=ExtResource("11_a6mkf")]
+position = Vector2(-125, 435)

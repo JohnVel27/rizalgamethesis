@@ -14,6 +14,9 @@ var last_direction: Vector2 = Vector2.DOWN
 var current_opening_dialogue := ""
 
 func _ready() -> void:
+	
+	self.process_mode = PROCESS_MODE_ALWAYS
+	
 	if get_tree().current_scene.has_node("TileMap"):
 		tile_map = get_tree().current_scene.get_node("TileMap")
 	else:
@@ -62,13 +65,15 @@ func _ready() -> void:
 # =========================
 
 func start_opening_dialogue(timeline_name: String) -> void:
+	# Prevent starting if a dialogue is already running
 	if Dialogic.current_timeline != null:
 		return
-
+	
 	current_opening_dialogue = timeline_name
+	
+	# Start the specific timeline
 	Dialogic.start(timeline_name)
-
-
+	
 # =========================
 # WHEN DIALOGUE ENDS
 # =========================
@@ -169,7 +174,6 @@ func _on_dialogue_finished() -> void:
 	if current_opening_dialogue == "2maestrocruzrizal1":
 		await start_smooth_transition("res://levels/prelim/2/juanchocarrera.tscn")
 		
-			
 	current_opening_dialogue = ""
 
 
