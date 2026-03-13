@@ -1,8 +1,9 @@
-[gd_scene load_steps=34 format=3 uid="uid://drslyb2put8hu"]
+[gd_scene format=3 uid="uid://drslyb2put8hu"]
 
 [ext_resource type="Script" uid="uid://igvr8njmabhs" path="res://characters/player/oldrizal.gd" id="1_128u3"]
 [ext_resource type="Texture2D" uid="uid://dt37bqgqcbta2" path="res://characters/player/sprites/oldrizal/ADULT_RIZAL.png" id="2_apo34"]
 [ext_resource type="Script" uid="uid://he8ej8be1xv" path="res://characters/player/rizalcamera.gd" id="3_nb7w8"]
+[ext_resource type="AudioStream" uid="uid://35m7tgqqvlvb" path="res://asset/sfx/walking.wav" id="4_apo34"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fpfew"]
 atlas = ExtResource("2_apo34")
@@ -246,20 +247,24 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_4l5r2"]
 radius = 29.8329
 
-[node name="oldrizal" type="CharacterBody2D"]
+[node name="oldrizal" type="CharacterBody2D" unique_id=1125931399]
 script = ExtResource("1_128u3")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2016081310]
 position = Vector2(-12, -34.5388)
 scale = Vector2(2, 2.07813)
 sprite_frames = SubResource("SpriteFrames_k85p3")
 animation = &"carry_idle_right"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=608923162]
 shape = SubResource("CircleShape2D_4l5r2")
 
-[node name="Camera2D" type="Camera2D" parent="."]
+[node name="Camera2D" type="Camera2D" parent="." unique_id=977506355]
 editor_draw_limits = true
 script = ExtResource("3_nb7w8")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1779276809]
+
+[node name="walk_sfx" type="AudioStreamPlayer" parent="." unique_id=1913377865]
+stream = ExtResource("4_apo34")
+volume_db = -20.0

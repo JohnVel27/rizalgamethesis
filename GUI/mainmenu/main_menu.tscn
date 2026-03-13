@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://m6axqlk1c0rq"]
+[gd_scene format=3 uid="uid://m6axqlk1c0rq"]
 
 [ext_resource type="Script" uid="uid://c42vehfgbtvy2" path="res://GUI/mainmenu/scripts/main_menu.gd" id="1_3l01i"]
 [ext_resource type="Texture2D" uid="uid://bk34xgyvf0717" path="res://GUI/mainmenu/main_menu.png" id="2_3l01i"]
 [ext_resource type="Texture2D" uid="uid://d3ktvlix8l8uo" path="res://GUI/mainmenu/button.png" id="3_itp4o"]
+[ext_resource type="AudioStream" uid="uid://c4yha5jjbu6n6" path="res://asset/sfx/bgm_mm.mp3" id="4_x5j3j"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3l01i"]
 texture = ExtResource("2_3l01i")
@@ -15,7 +16,7 @@ region = Rect2(50.1025, 67.3077, 537.846, 377.922)
 atlas = ExtResource("3_itp4o")
 region = Rect2(600.42, 63.9406, 544.041, 395.887)
 
-[node name="MainMenu" type="Control"]
+[node name="MainMenu" type="Control" unique_id=1811956526]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -24,7 +25,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_3l01i")
 
-[node name="Panel" type="Panel" parent="."]
+[node name="Panel" type="Panel" parent="." unique_id=851288449]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -33,7 +34,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/panel = SubResource("StyleBoxTexture_3l01i")
 
-[node name="Button" type="TextureButton" parent="."]
+[node name="Button" type="TextureButton" parent="." unique_id=1558526092]
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
@@ -48,5 +49,10 @@ grow_horizontal = 2
 grow_vertical = 0
 texture_normal = SubResource("AtlasTexture_x5j3j")
 texture_hover = SubResource("AtlasTexture_7orac")
+
+[node name="bgm" type="AudioStreamPlayer" parent="." unique_id=1465058210]
+stream = ExtResource("4_x5j3j")
+volume_db = -35.0
+autoplay = true
 
 [connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

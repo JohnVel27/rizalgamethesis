@@ -3,6 +3,7 @@ extends CharacterBody2D
 @export var speed: float = 80.0
 @export var wander_radius: int = 10 # Ilang tiles ang layo ng random lakad
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
+@onready var walk_sfx: AudioStreamPlayer = $walk_sfx
 
 # Kakailanganin mo ng Timer node na child ng NPC
 @onready var timer: Timer = $Timer 
@@ -80,6 +81,7 @@ func _physics_process(_delta: float) -> void:
 		play_idle_animation()
 		velocity = Vector2.ZERO
 		move_and_slide()
+		walk_sfx.stop()
 		return
 
 	# Target center ng kasalukuyang tile sa path
@@ -98,6 +100,10 @@ func move_to_target(target: Vector2) -> void:
 	last_direction = direction
 	velocity = direction * speed
 	move_and_slide()
+	
+	if !walk_sfx.playing:
+		walk_sfx.play()
+	
 	play_walk_animation(direction)
 
 # --- RANDOM WANDERING LOGIC ---

@@ -3,6 +3,7 @@ class_name Player
 
 @export var inventory_data: InventoryData
 
+@onready var walk_sfx: AudioStreamPlayer = $walk_sfx
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 var tile_map: TileMap
 var astar: AStarGrid2D
@@ -228,6 +229,7 @@ func _physics_process(_delta: float) -> void:
 		play_idle_animation()
 		velocity = Vector2.ZERO
 		move_and_slide()
+		walk_sfx.stop()
 		return
 
 	var target_position: Vector2 = tile_map.map_to_local(current_id_path[0])
@@ -244,6 +246,10 @@ func move_to_target(target: Vector2) -> void:
 	last_direction = direction
 	velocity = direction * speed
 	move_and_slide()
+	
+	if !walk_sfx.playing:
+		walk_sfx.play()
+	
 	play_walk_animation(direction)
 
 
