@@ -6,11 +6,11 @@
 [ext_resource type="Texture2D" uid="uid://bndwoold34pjg" path="res://levels/sprites/environment/furniture_and_props.png" id="3_dv0rb"]
 [ext_resource type="PackedScene" uid="uid://bana47hu7ydsu" path="res://GUI/instruction/fullsize.tscn" id="4_a8s8l"]
 [ext_resource type="Script" uid="uid://ycgvd8hp2isu" path="res://GUI/inventory/scripts/inventory_data.gd" id="4_cshyr"]
-[ext_resource type="PackedScene" uid="uid://cdjpou0v8x1gm" path="res://characters/NPC/justiniano .tscn" id="4_mcwho"]
 [ext_resource type="PackedScene" uid="uid://djhisukfxtj0m" path="res://levels/level_transition.tscn" id="5_3osll"]
 [ext_resource type="Script" uid="uid://cvsqlhkiihhd0" path="res://GUI/inventory/scripts/slot_data.gd" id="5_ca5wy"]
 [ext_resource type="PackedScene" uid="uid://d0d1j41th0kpl" path="res://item/item_pickup/item_pickup.tscn" id="6_vtawn"]
 [ext_resource type="Resource" uid="uid://denk4ao8sn27r" path="res://item/apple.tres" id="7_cshyr"]
+[ext_resource type="PackedScene" uid="uid://dqsfdv6ffapek" path="res://characters/NPC/justiniano1 .tscn" id="9_6s65v"]
 [ext_resource type="PackedScene" uid="uid://bge5wggf77ret" path="res://levels/cursor.tscn" id="12_6s65v"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_dv0rb"]
@@ -17669,13 +17669,13 @@ tile_set = SubResource("TileSet_12o6l")
 position = Vector2(308, 449)
 inventory_data = SubResource("Resource_ca5wy")
 
-[node name="justiniano" parent="." instance=ExtResource("4_mcwho")]
-position = Vector2(620, 163)
-
 [node name="LevelTransition" parent="." instance=ExtResource("5_3osll")]
 position = Vector2(855, 782)
 level = "uid://cosib8wfpp0hj"
 size = 1
+
+[node name="justiniano" parent="." instance=ExtResource("9_6s65v")]
+position = Vector2(542, 163)
 
 [node name="ItemPickup" parent="." instance=ExtResource("6_vtawn")]
 visible = false

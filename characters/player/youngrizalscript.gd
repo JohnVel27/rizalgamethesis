@@ -48,6 +48,9 @@ func _ready() -> void:
 		
 	elif scene_path.ends_with("juanchocarrera.tscn"):
 		start_opening_dialogue("2juanchorizal1")
+		
+	elif scene_path.ends_with("maestroschool1.tscn"):
+		start_opening_dialogue("brawlmission")
 
 	elif scene_path.ends_with("ateneodemanila.tscn"):
 		start_opening_dialogue("3narrator1")
@@ -126,18 +129,24 @@ func _on_dialogic_juancho_signal(argument: String) -> void:
 	if argument != "minigamepuzzleart":
 		return
 
+	# 1. I-SAVE ANG TREE AGAD sa simula pa lang ng function
+	var tree = get_tree()
+	if not tree: return # Safety check
+	
+	var scene = tree.current_scene
+
 	# --- Find the puzzle UI in the current scene ---
-	var puzzle_ui = get_tree().current_scene.find_child("Gameart", true, false)
+	# Gamitin ang 'scene' variable imbes na get_tree().current_scene
+	var puzzle_ui = scene.find_child("Gameart", true, false)
 	if not puzzle_ui:
-		push_error("Puzzle UI 'Gamemoth' not found in scene!")
+		push_error("Puzzle UI 'Gameart' not found in scene!")
 		return
 
 	# --- Freeze the player ---
-	var player = get_tree().current_scene.find_child("youngrizal", true, false)
+	var player = scene.find_child("youngrizal", true, false)
 	if player:
 		player.set_physics_process(false)
 
-	
 	velocity = Vector2.ZERO
 
 	# --- Show the puzzle ---
@@ -154,15 +163,16 @@ func _on_dialogic_juancho_signal(argument: String) -> void:
 		board_node._on_Tile_pressed(-1)
 
 		# --- FIX: Wait for the puzzle to be completed ---
-		# In Godot 4, we use 'await' followed by the signal name directly.
 		await board_node.game_won 
 
-		# Optional: Only proceed if a certain story is finished
+		# Siguraduhin na 'tree' reference pa rin ang gamit natin dito
 		if current_opening_dialogue == "2juanchorizal1":
+			# Siguraduhin na ang start_smooth_transition function mo ay tumatanggap ng 'tree' reference
 			await start_smooth_transition("res://levels/prelim/3/ateneodemanila.tscn")
 
 	# --- Unfreeze the player ---
-	if player:
+	# Re-check player existence after await
+	if is_instance_valid(player):
 		player.set_physics_process(true)
 	
 
@@ -172,7 +182,7 @@ func _on_dialogue_finished() -> void:
 		await start_smooth_transition("res://transitionstoryboard/binan.tscn")
 	
 	if current_opening_dialogue == "2maestrocruzrizal1":
-		await start_smooth_transition("res://levels/prelim/2/juanchocarrera.tscn")
+		await start_smooth_transition("res://levels/prelim/2/maestroschool1.tscn")
 		
 	current_opening_dialogue = ""
 

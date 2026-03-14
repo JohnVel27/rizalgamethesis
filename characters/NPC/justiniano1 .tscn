@@ -1,121 +1,120 @@
-[gd_scene load_steps=34 format=3 uid="uid://cdjpou0v8x1gm"]
+[gd_scene load_steps=33 format=3 uid="uid://dqsfdv6ffapek"]
 
-[ext_resource type="Script" uid="uid://cs884n70ey56i" path="res://characters/NPC/scripts/justiano.gd" id="1_7pg2y"]
-[ext_resource type="Texture2D" uid="uid://dd066djv6lbxr" path="res://characters/NPC/sprites/justiano/WHITE_SUIT.png" id="2_7agau"]
+[ext_resource type="Texture2D" uid="uid://dd066djv6lbxr" path="res://characters/NPC/sprites/justiano/WHITE_SUIT.png" id="2_ke55v"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7agau"]
 radius = 32.0624
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bdggl"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(378, 0, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x65ni"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(378, 204, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_tlqje"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(378, 136, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rjq1b"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(378, 68, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rjxl1"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(0, 0, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_7re4v"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(63, 0, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fuy7q"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(126, 0, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_28m7n"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(189, 0, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_w7mr8"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(252, 0, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8ufey"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(315, 0, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vox35"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(0, 204, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_we2ng"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(63, 204, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_n56qy"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(126, 204, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_56mec"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(189, 204, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xo4m2"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(252, 204, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_getho"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(315, 204, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_abce5"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(0, 136, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cg77y"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(63, 136, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x5816"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(126, 136, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_g2tov"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(189, 136, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_sxayx"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(252, 136, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_18cge"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(315, 136, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_fuoyj"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(0, 68, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_iuk0u"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(63, 68, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_xrr4d"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(126, 68, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4x5re"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(189, 68, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5h46t"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(252, 68, 63, 68)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v1f1a"]
-atlas = ExtResource("2_7agau")
+atlas = ExtResource("2_ke55v")
 region = Rect2(315, 68, 63, 68)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bdggl"]
@@ -249,7 +248,6 @@ animations = [{
 radius = 47.0
 
 [node name="justiniano" type="CharacterBody2D"]
-script = ExtResource("1_7pg2y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_7agau")

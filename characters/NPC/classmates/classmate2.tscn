@@ -1,5 +1,6 @@
-[gd_scene load_steps=32 format=3 uid="uid://bdah84stonynx"]
+[gd_scene load_steps=34 format=3 uid="uid://bdah84stonynx"]
 
+[ext_resource type="Script" uid="uid://3gvme2katd7c" path="res://characters/NPC/classmates/classmate_2.gd" id="1_rokjl"]
 [ext_resource type="Texture2D" uid="uid://0np7hpcvpvgv" path="res://characters/NPC/classmates/Classmate_rizal.png" id="2_6u5q5"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1fw06"]
@@ -242,18 +243,30 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_8f1ks"]
-radius = 41.4849
+radius = 21.3776
 
-[node name="classmate1" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_6u5q5"]
+radius = 84.8999
+
+[node name="classmate2" type="CharacterBody2D"]
+script = ExtResource("1_rokjl")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(1, -55)
 scale = Vector2(1.85156, 1.86765)
 sprite_frames = SubResource("SpriteFrames_034je")
-animation = &"carry_idle_up"
+animation = &"carry_idle_down"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(0, -25)
+position = Vector2(10, -25)
 shape = SubResource("CircleShape2D_8f1ks")
 
 [node name="Timer" type="Timer" parent="."]
+
+[node name="chatdetection" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="chatdetection"]
+shape = SubResource("CircleShape2D_6u5q5")
+
+[connection signal="body_entered" from="chatdetection" to="." method="_on_chatdetection_body_entered"]
+[connection signal="body_exited" from="chatdetection" to="." method="_on_chatdetection_body_exited"]
