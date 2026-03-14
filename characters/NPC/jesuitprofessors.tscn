@@ -249,6 +249,8 @@ animations = [{
 radius = 86.8332
 
 [node name="jesuitprofessors" type="CharacterBody2D"]
+collision_layer = 2
+collision_mask = 23
 script = ExtResource("1_i6w0v")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

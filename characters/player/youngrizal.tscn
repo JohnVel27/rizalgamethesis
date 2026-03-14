@@ -5,6 +5,7 @@
 [ext_resource type="Script" uid="uid://he8ej8be1xv" path="res://characters/player/rizalcamera.gd" id="8_2iowp"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_67vlx"]
+radius = 30.8869
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6imks"]
 atlas = ExtResource("2_b0udd")
@@ -274,9 +275,11 @@ animations = [{
 }]
 
 [node name="youngrizal" type="CharacterBody2D"]
+collision_mask = 17
 script = ExtResource("1_pek1k")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-10, -15)
 shape = SubResource("CircleShape2D_67vlx")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]

@@ -137,6 +137,8 @@ func show_completed_picture() -> void:
 	# 1. Show the "You Win" visuals
 	win_image.visible = true
 	
+	QuestManager.update_quest("Life at Biñan Laguna", "Meet Juancho Carrera and learn more about art", true)
+	
 	
 	# 2. Hide the puzzle tiles so the full image is clear
 	for tile in tiles:

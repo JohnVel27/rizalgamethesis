@@ -249,6 +249,8 @@ animations = [{
 radius = 58.3095
 
 [node name="dominicanfriars" type="CharacterBody2D"]
+collision_layer = 8
+collision_mask = 49
 script = ExtResource("1_yhg5y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

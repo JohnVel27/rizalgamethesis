@@ -151,6 +151,17 @@ test={
 ]
 }
 
+[layer_names]
+
+2d_physics/layer_2="jesuitprofessors"
+2d_physics/layer_3="classmate3"
+2d_physics/layer_4="dominicanfriars"
+2d_physics/layer_5="walls"
+2d_physics/layer_6="classmate1"
+2d_physics/layer_7="teodora"
+2d_physics/layer_8="Francisco"
+2d_physics/layer_9="Player"
+
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0

@@ -27,6 +27,8 @@ func _ready() -> void:
 	current_quests = all_quests["prelim"].duplicate(true)
 	gather_quest_data()
 	
+	
+	
 func check_location_completion() -> void:
 	var current_scene_path = get_tree().current_scene.scene_file_path
 	
@@ -34,6 +36,16 @@ func check_location_completion() -> void:
 	if current_scene_path == "res://levels/prelim/1/livingroomrizal.tscn":
 		update_quest("The Beginning in Calamba", "Travel to Rizal's house", false)
 		print("Location reached: Rizal Home")
+		
+		
+	if current_scene_path == "res://levels/prelim/2/juanchocarrera.tscn":
+		update_quest("Life at Biñan Laguna", "Enter the nipa hut meet the maestro and enter his class", false)
+		
+	if current_scene_path == "res://levels/prelim/3/ahallway.tscn":
+		update_quest("Secondary Education at Ateneo", "Enter Ateneo", true)
+		
+	if current_scene_path == "res://levels/prelim/4/uhallway.tscn":
+		update_quest("Third Education at University Of Santo Thomas", "Enter UST", true)
 
 func gather_quest_data() -> void:
 	quests.clear()

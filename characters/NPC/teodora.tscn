@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bsi54v1cha78o" path="res://characters/NPC/sprites/teodora/rizalmother2.png" id="2_fe6d1"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7ed70"]
-radius = 22.0227
+radius = 32.0624
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h3phw"]
 atlas = ExtResource("2_fe6d1")
@@ -284,6 +284,7 @@ animations = [{
 radius = 53.0094
 
 [node name="teodora" type="CharacterBody2D"]
+collision_mask = 145
 script = ExtResource("1_fe6d1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

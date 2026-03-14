@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://botpt5ypqy2av" path="res://characters/NPC/sprites/francisco/RIZAL_FATHER.png" id="1_bc2j8"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ctinb"]
-radius = 18.0278
+radius = 26.0
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3wve3"]
 atlas = ExtResource("1_bc2j8")
@@ -249,6 +249,8 @@ animations = [{
 radius = 61.8142
 
 [node name="Francisco" type="CharacterBody2D"]
+collision_layer = 128
+collision_mask = 81
 script = ExtResource("1_3wve3")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]

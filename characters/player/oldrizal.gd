@@ -15,6 +15,12 @@ var last_direction: Vector2 = Vector2.DOWN
 var current_opening_dialogue := ""
 
 func _ready() -> void:
+	
+	# --- Check quest or location at scene start ---
+	if has_node("/root/QuestManager"):
+		QuestManager.check_location_completion()
+		
+		
 	# 1. Hanapin ang TileMap (dapat may node ka na "TileMap" sa scene)
 	if get_tree().current_scene.has_node("TileMap"):
 		tile_map = get_tree().current_scene.get_node("TileMap")

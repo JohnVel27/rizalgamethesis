@@ -1,6 +1,7 @@
-[gd_scene load_steps=32 format=3 uid="uid://bg5r6uvlt2lch"]
+[gd_scene load_steps=33 format=3 uid="uid://bg5r6uvlt2lch"]
 
 [ext_resource type="Texture2D" uid="uid://cj2i2pkokryct" path="res://characters/NPC/sprites/juancho/juancho.png" id="1_3dfx0"]
+[ext_resource type="Script" uid="uid://cvpm4fthrqmhr" path="res://characters/NPC/juancho_.gd" id="1_v42pw"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v42pw"]
 atlas = ExtResource("1_3dfx0")
@@ -245,6 +246,7 @@ animations = [{
 radius = 28.0713
 
 [node name="juancho" type="CharacterBody2D"]
+script = ExtResource("1_v42pw")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(-11.875, -31.5)

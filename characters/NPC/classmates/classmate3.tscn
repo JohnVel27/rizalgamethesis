@@ -246,6 +246,8 @@ animations = [{
 radius = 35.9026
 
 [node name="classmate3" type="CharacterBody2D"]
+collision_layer = 4
+collision_mask = 23
 script = ExtResource("1_1jy3c")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
