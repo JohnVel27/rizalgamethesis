@@ -43,25 +43,11 @@ directories/dch_directory={
 "students": "res://dialogue/characters/students.dch"
 }
 directories/dtl_directory={
-"1/Narrator-calamba": "res://dialogue/prelim/1/Narrator-calamba.dtl",
-"1/firstglimpseofinjustice": "res://dialogue/prelim/1/firstglimpseofinjustice.dtl",
-"1/narrator-livingroom": "res://dialogue/prelim/1/narrator-livingroom.dtl",
-"1/rizalfranciscotalk1": "res://dialogue/prelim/1/rizalfranciscotalk1.dtl",
-"1/rizalteodoratalk1": "res://dialogue/prelim/1/rizalteodoratalk1.dtl",
-"1/storyofmoth": "res://dialogue/prelim/1/storyofmoth.dtl",
-"2/2juanchorizal1": "res://dialogue/prelim/2/2juanchorizal1.dtl",
-"2/2maestrocruzrizal1": "res://dialogue/prelim/2/2maestrocruzrizal1.dtl",
-"2/2narrator1": "res://dialogue/prelim/2/2narrator1.dtl",
-"2/goingtobinan": "res://dialogue/prelim/2/goingtobinan.dtl",
 "2juanchorizal1": "res://dialogue/timeline/prelim/2/2juanchorizal1.dtl",
 "2maestrocruzrizal1": "res://dialogue/timeline/prelim/2/2maestrocruzrizal1.dtl",
 "2narrator1": "res://dialogue/timeline/prelim/2/2narrator1.dtl",
-"3/3narrator1": "res://dialogue/prelim/3/3narrator1.dtl",
-"3/3narrator2": "res://dialogue/prelim/3/3narrator2.dtl",
 "3narrator1": "res://dialogue/timeline/prelim/3/3narrator1.dtl",
 "3narrator2": "res://dialogue/timeline/prelim/3/3narrator2.dtl",
-"4/4narrato2": "res://dialogue/prelim/4/4narrato2.dtl",
-"4/4narrator1": "res://dialogue/prelim/4/4narrator1.dtl",
 "4dominicanfriarsrizal1": "res://dialogue/timeline/prelim/4/scrapt/4dominicanfriarsrizal1.dtl",
 "4narrato2": "res://dialogue/timeline/prelim/4/4narrato2.dtl",
 "4narrator1": "res://dialogue/timeline/prelim/4/4narrator1.dtl",
@@ -77,11 +63,6 @@ directories/dtl_directory={
 "remind_teodora": "res://dialogue/timeline/prelim/1/remind_teodora.dtl",
 "rizalfranciscotalk1": "res://dialogue/timeline/prelim/1/rizalfranciscotalk1.dtl",
 "rizalteodoratalk1": "res://dialogue/timeline/prelim/1/rizalteodoratalk1.dtl",
-"scrapt/2justianorizal1": "res://dialogue/prelim/2/scrapt/2justianorizal1.dtl",
-"scrapt/2narrator2": "res://dialogue/prelim/2/scrapt/2narrator2.dtl",
-"scrapt/3sanchezrizal1": "res://dialogue/prelim/3/scrapt/3sanchezrizal1.dtl",
-"scrapt/4dominicanfriarsrizal1": "res://dialogue/prelim/4/scrapt/4dominicanfriarsrizal1.dtl",
-"scrapt/rizalteodora1": "res://dialogue/prelim/1/scrapt/rizalteodora1.dtl",
 "storyofmoth": "res://dialogue/timeline/prelim/1/storyofmoth.dtl"
 }
 layout/style_directory={
