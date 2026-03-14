@@ -10,12 +10,22 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "",
+&"default_portrait": "Bullyclass",
 &"description": "",
 &"display_name": "Students",
 &"mirror": false,
 &"nicknames": [""],
-&"offset": Vector2(0, 0),
-&"portraits": {},
-&"scale": 1.0
+&"offset": Vector2(-230, 0),
+&"portraits": {
+"Bullyclass": {
+"export_overrides": {
+"image": "\"res://asset/picture_character/bullyclass.png\""
+},
+"mirror": true,
+"offset": Vector2(0, 0),
+"scale": 1,
+"scene": ""
+}
+},
+&"scale": 0.4
 }
