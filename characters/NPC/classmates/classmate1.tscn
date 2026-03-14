@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=3 uid="uid://bbm4qikcs55u2"]
+[gd_scene format=3 uid="uid://bbm4qikcs55u2"]
 
 [ext_resource type="Script" uid="uid://dm43e4a03fdhq" path="res://characters/NPC/scripts/siblings.gd" id="1_qgsd6"]
 [ext_resource type="Texture2D" uid="uid://0np7hpcvpvgv" path="res://characters/NPC/classmates/Classmate_rizal.png" id="2_5spwl"]
@@ -245,19 +245,19 @@ animations = [{
 [sub_resource type="CircleShape2D" id="CircleShape2D_8f1ks"]
 radius = 32.249
 
-[node name="classmate1" type="CharacterBody2D"]
+[node name="classmate1" type="CharacterBody2D" unique_id=11986019]
 collision_layer = 32
 collision_mask = 41
 script = ExtResource("1_qgsd6")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=406039748]
 position = Vector2(1, -55)
 scale = Vector2(1.85156, 1.86765)
 sprite_frames = SubResource("SpriteFrames_034je")
 animation = &"carry_walk_up"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1810633268]
 position = Vector2(0, -25)
 shape = SubResource("CircleShape2D_8f1ks")
 
-[node name="Timer" type="Timer" parent="."]
+[node name="Timer" type="Timer" parent="." unique_id=1984652929]

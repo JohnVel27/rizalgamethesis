@@ -8,16 +8,20 @@
 
 config_version=5
 
+[animation]
+
+compatibility/default_parent_skeleton_in_mesh_instance_3d=true
+
 [application]
 
 config/name="rizalgamethesis"
 run/main_scene="uid://m6axqlk1c0rq"
-config/features=PackedStringArray("4.4", "Forward Plus")
+config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Dialogic="*uid://ds2q0uclmolvu"
 Transitionlayer="*res://levels/Transitionlayer.tscn"
 LevelManager="*res://00_globals/global_level_manager.gd"
 PlayerManager="*res://00_globals/global_player_manager.gd"
@@ -43,46 +47,46 @@ directories/dch_directory={
 "students": "res://dialogue/characters/students.dch"
 }
 directories/dtl_directory={
-"1/Narrator-calamba": "res://dialogue/prelim/1/Narrator-calamba.dtl",
-"1/firstglimpseofinjustice": "res://dialogue/prelim/1/firstglimpseofinjustice.dtl",
-"1/narrator-livingroom": "res://dialogue/prelim/1/narrator-livingroom.dtl",
-"1/rizalfranciscotalk1": "res://dialogue/prelim/1/rizalfranciscotalk1.dtl",
-"1/rizalteodoratalk1": "res://dialogue/prelim/1/rizalteodoratalk1.dtl",
-"1/storyofmoth": "res://dialogue/prelim/1/storyofmoth.dtl",
-"2/2juanchorizal1": "res://dialogue/prelim/2/2juanchorizal1.dtl",
-"2/2maestrocruzrizal1": "res://dialogue/prelim/2/2maestrocruzrizal1.dtl",
-"2/2narrator1": "res://dialogue/prelim/2/2narrator1.dtl",
-"2/goingtobinan": "res://dialogue/prelim/2/goingtobinan.dtl",
-"2juanchorizal1": "res://dialogue/timeline/prelim/2/2juanchorizal1.dtl",
-"2maestrocruzrizal1": "res://dialogue/timeline/prelim/2/2maestrocruzrizal1.dtl",
-"2narrator1": "res://dialogue/timeline/prelim/2/2narrator1.dtl",
-"3/3narrator1": "res://dialogue/prelim/3/3narrator1.dtl",
-"3/3narrator2": "res://dialogue/prelim/3/3narrator2.dtl",
-"3narrator1": "res://dialogue/timeline/prelim/3/3narrator1.dtl",
-"3narrator2": "res://dialogue/timeline/prelim/3/3narrator2.dtl",
-"4/4narrato2": "res://dialogue/prelim/4/4narrato2.dtl",
-"4/4narrator1": "res://dialogue/prelim/4/4narrator1.dtl",
-"4dominicanfriarsrizal1": "res://dialogue/timeline/prelim/4/scrapt/4dominicanfriarsrizal1.dtl",
-"4narrato2": "res://dialogue/timeline/prelim/4/4narrato2.dtl",
-"4narrator1": "res://dialogue/timeline/prelim/4/4narrator1.dtl",
-"Narrator-calamba": "res://dialogue/timeline/prelim/1/Narrator-calamba.dtl",
+"1/Narrator-calamba": "res://dialogue/timeline/prelim/1/Narrator-calamba.dtl",
+"1/firstglimpseofinjustice": "res://dialogue/timeline/prelim/1/firstglimpseofinjustice.dtl",
+"1/narrator-livingroom": "res://dialogue/timeline/prelim/1/narrator-livingroom.dtl",
+"1/rizalfranciscotalk1": "res://dialogue/timeline/prelim/1/rizalfranciscotalk1.dtl",
+"1/rizalteodoratalk1": "res://dialogue/timeline/prelim/1/rizalteodoratalk1.dtl",
+"1/storyofmoth": "res://dialogue/timeline/prelim/1/storyofmoth.dtl",
+"2/2juanchorizal1": "res://dialogue/timeline/prelim/2/2juanchorizal1.dtl",
+"2/2maestrocruzrizal1": "res://dialogue/timeline/prelim/2/2maestrocruzrizal1.dtl",
+"2/2narrator1": "res://dialogue/timeline/prelim/2/2narrator1.dtl",
+"2/goingtobinan": "res://dialogue/timeline/prelim/2/goingtobinan.dtl",
+"2juanchorizal1": "res://dialogue/prelim/2/2juanchorizal1.dtl",
+"2justianorizal1": "res://dialogue/prelim/2/scrapt/2justianorizal1.dtl",
+"2maestrocruzrizal1": "res://dialogue/prelim/2/2maestrocruzrizal1.dtl",
+"2narrator1": "res://dialogue/prelim/2/2narrator1.dtl",
+"2narrator2": "res://dialogue/prelim/2/scrapt/2narrator2.dtl",
+"3/3narrator1": "res://dialogue/timeline/prelim/3/3narrator1.dtl",
+"3/3narrator2": "res://dialogue/timeline/prelim/3/3narrator2.dtl",
+"3narrator1": "res://dialogue/prelim/3/3narrator1.dtl",
+"3narrator2": "res://dialogue/prelim/3/3narrator2.dtl",
+"3sanchezrizal1": "res://dialogue/prelim/3/scrapt/3sanchezrizal1.dtl",
+"4/4narrato2": "res://dialogue/timeline/prelim/4/4narrato2.dtl",
+"4/4narrator1": "res://dialogue/timeline/prelim/4/4narrator1.dtl",
+"4dominicanfriarsrizal1": "res://dialogue/prelim/4/scrapt/4dominicanfriarsrizal1.dtl",
+"4narrato2": "res://dialogue/prelim/4/4narrato2.dtl",
+"4narrator1": "res://dialogue/prelim/4/4narrator1.dtl",
+"Narrator-calamba": "res://dialogue/prelim/1/Narrator-calamba.dtl",
 "brawlmission": "res://dialogue/timeline/prelim/2/brawlmission.dtl",
 "firstbrawl": "res://dialogue/timeline/prelim/2/firstbrawl.dtl",
 "firstbrawl2": "res://dialogue/timeline/prelim/2/firstbrawl2.dtl",
-"firstglimpseofinjustice": "res://dialogue/timeline/prelim/1/firstglimpseofinjustice.dtl",
+"firstglimpseofinjustice": "res://dialogue/prelim/1/firstglimpseofinjustice.dtl",
 "foughtback": "res://dialogue/timeline/prelim/2/foughtback.dtl",
-"goingtobinan": "res://dialogue/timeline/prelim/2/goingtobinan.dtl",
-"narrator-livingroom": "res://dialogue/timeline/prelim/1/narrator-livingroom.dtl",
+"goingtobinan": "res://dialogue/prelim/2/goingtobinan.dtl",
+"narrator-livingroom": "res://dialogue/prelim/1/narrator-livingroom.dtl",
 "remind_rizal_talk_francisco": "res://dialogue/timeline/prelim/1/remind_rizal_talk_francisco.dtl",
 "remind_teodora": "res://dialogue/timeline/prelim/1/remind_teodora.dtl",
-"rizalfranciscotalk1": "res://dialogue/timeline/prelim/1/rizalfranciscotalk1.dtl",
-"rizalteodoratalk1": "res://dialogue/timeline/prelim/1/rizalteodoratalk1.dtl",
-"scrapt/2justianorizal1": "res://dialogue/prelim/2/scrapt/2justianorizal1.dtl",
-"scrapt/2narrator2": "res://dialogue/prelim/2/scrapt/2narrator2.dtl",
-"scrapt/3sanchezrizal1": "res://dialogue/prelim/3/scrapt/3sanchezrizal1.dtl",
-"scrapt/4dominicanfriarsrizal1": "res://dialogue/prelim/4/scrapt/4dominicanfriarsrizal1.dtl",
-"scrapt/rizalteodora1": "res://dialogue/prelim/1/scrapt/rizalteodora1.dtl",
-"storyofmoth": "res://dialogue/timeline/prelim/1/storyofmoth.dtl"
+"rizalfranciscotalk1": "res://dialogue/prelim/1/rizalfranciscotalk1.dtl",
+"rizalteodora1": "res://dialogue/prelim/1/scrapt/rizalteodora1.dtl",
+"rizalteodoratalk1": "res://dialogue/prelim/1/rizalteodoratalk1.dtl",
+"scrapt/4dominicanfriarsrizal1": "res://dialogue/timeline/prelim/4/scrapt/4dominicanfriarsrizal1.dtl",
+"storyofmoth": "res://dialogue/prelim/1/storyofmoth.dtl"
 }
 layout/style_directory={
 "": "res://dialogue/styles/new_style.tres",
@@ -109,8 +113,8 @@ glossary/default_case_sensitive=true
 
 window/size/viewport_width=1000
 window/size/viewport_height=800
-window/size/window_width_override=1600
-window/size/window_height_override=1000
+window/size/window_width_override=1428
+window/size/window_height_override=828
 
 [editor_plugins]
 
