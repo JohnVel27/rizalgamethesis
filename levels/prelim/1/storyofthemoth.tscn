@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://qwfvgr3si330"]
+[gd_scene load_steps=27 format=4 uid="uid://qwfvgr3si330"]
 
 [ext_resource type="Script" uid="uid://6pfey0sg0f5t" path="res://levels/scripts/level.gd" id="1_wxm3h"]
 [ext_resource type="Texture2D" uid="uid://bndwoold34pjg" path="res://levels/sprites/environment/furniture_and_props.png" id="1_xocaq"]
@@ -9,9 +9,11 @@
 [ext_resource type="PackedScene" uid="uid://b4woviog5lhqf" path="res://characters/NPC/teodora.tscn" id="6_n0h61"]
 [ext_resource type="PackedScene" uid="uid://rl2ubgx68cwd" path="res://characters/player/youngrizal.tscn" id="7_2vv4q"]
 [ext_resource type="PackedScene" uid="uid://bana47hu7ydsu" path="res://GUI/instruction/fullsize.tscn" id="7_kmsrn"]
+[ext_resource type="AudioStream" uid="uid://c3nvh131yhmgp" path="res://asset/sfx/bgm.mp3" id="7_u4sch"]
 [ext_resource type="PackedScene" uid="uid://djhisukfxtj0m" path="res://levels/level_transition.tscn" id="9_kmsrn"]
 [ext_resource type="PackedScene" uid="uid://tja41kwu56t2" path="res://puzzle/src/scene/game/gamelamp.tscn" id="10_wxm3h"]
 [ext_resource type="PackedScene" uid="uid://bge5wggf77ret" path="res://levels/cursor.tscn" id="12_n0h61"]
+[ext_resource type="AudioStream" uid="uid://tp8o0vogatrp" path="res://asset/sfx/Doorsfx.wav" id="12_u4sch"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_jtwxg"]
 texture = ExtResource("2_d1lb6")
@@ -30790,7 +30792,7 @@ sources/0 = SubResource("TileSetAtlasSource_nhh08")
 sources/1 = SubResource("TileSetAtlasSource_qfvcp")
 sources/2 = SubResource("TileSetAtlasSource_l0drw")
 
-[node name="Livingroomrizal" type="Node2D"]
+[node name="storyofthemoth" type="Node2D"]
 script = ExtResource("1_wxm3h")
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -30808,6 +30810,11 @@ tile_set = SubResource("TileSet_qfvcp")
 tile_map_data = PackedByteArray("AAAsAAMAAAABACkAAAAsAAQAAAABACoAAAAsAAUAAAABACsAAAAsAAYAAAABACwAAAAsAAcAAAABAC0AAAAtAAMAAAACACkAAAAtAAQAAAACACoAAAAtAAUAAAACACsAAAAtAAYAAAACACwAAAAtAAcAAAACAC0AAAAuAAMAAAADACkAAAAuAAQAAAADACoAAAAvAAMAAAAEACkAAAAvAAQAAAAEACoAAAAwAAMAAAAFACkAAAAwAAQAAAAFACoAAAAwAAUAAAAFACsAAAAwAAYAAAAFACwAAAAwAAcAAAAFAC0AAAAxAAMAAAAGACkAAAAxAAQAAAAGACoAAAAxAAUAAAAGACsAAAAxAAYAAAAGACwAAAAxAAcAAAAGAC0AAAA0AAMAAAABACkAAAA0AAQAAAABACoAAAA0AAUAAAABACsAAAA0AAYAAAABACwAAAA0AAcAAAABAC0AAAA1AAMAAAACACkAAAA1AAQAAAACACoAAAA1AAUAAAACACsAAAA1AAYAAAACACwAAAA1AAcAAAACAC0AAAA2AAMAAAADACkAAAA2AAQAAAADACoAAAA3AAMAAAAEACkAAAA3AAQAAAAEACoAAAA4AAMAAAAFACkAAAA4AAQAAAAFACoAAAA4AAUAAAAFACsAAAA4AAYAAAAFACwAAAA4AAcAAAAFAC0AAAA5AAMAAAAGACkAAAA5AAQAAAAGACoAAAA5AAUAAAAGACsAAAA5AAYAAAAGACwAAAA5AAcAAAAGAC0AAAASAAsAAgALABcAAAARAAoAAgAKABYAAAARAAsAAgAKABcAAAASAAoAAgALABYAAAA=")
 tile_set = SubResource("TileSet_ojaph")
 
+[node name="Bgm" type="AudioStreamPlayer" parent="TileMap"]
+stream = ExtResource("7_u4sch")
+volume_db = -25.0
+autoplay = true
+
 [node name="Fullsize" parent="." instance=ExtResource("7_kmsrn")]
 
 [node name="youngrizal" parent="." instance=ExtResource("7_2vv4q")]
@@ -30821,6 +30828,10 @@ position = Vector2(829, 751)
 level = "uid://ckswxvohbwucu"
 target_transition_area = "LevelTransition1"
 side = 2
+
+[node name="door_sfx" type="AudioStreamPlayer" parent="LevelTransition"]
+stream = ExtResource("12_u4sch")
+volume_db = -10.0
 
 [node name="Gamelamp" parent="." instance=ExtResource("10_wxm3h")]
 visible = false

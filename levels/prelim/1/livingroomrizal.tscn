@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=4 uid="uid://cds5xlsdanwcf"]
+[gd_scene load_steps=25 format=4 uid="uid://cds5xlsdanwcf"]
 
 [ext_resource type="Script" uid="uid://6pfey0sg0f5t" path="res://levels/scripts/level.gd" id="1_ujy42"]
 [ext_resource type="Texture2D" uid="uid://3isw37f77rtq" path="res://levels/sprites/environment/Interiors_tilesets.png" id="2_ujy42"]
@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://bndwoold34pjg" path="res://levels/sprites/environment/furniture_and_props.png" id="5_jtwxg"]
 [ext_resource type="Texture2D" uid="uid://bbkawb3d4xlqm" path="res://levels/sprites/environment/windows_and_doors2.png" id="6_5kqsa"]
 [ext_resource type="PackedScene" uid="uid://bana47hu7ydsu" path="res://GUI/instruction/fullsize.tscn" id="7_5kqsa"]
+[ext_resource type="AudioStream" uid="uid://c3nvh131yhmgp" path="res://asset/sfx/bgm.mp3" id="7_cn5r0"]
 [ext_resource type="PackedScene" uid="uid://d1cjynht7awe8" path="res://characters/NPC/francisco.tscn" id="10_jtwxg"]
 [ext_resource type="PackedScene" uid="uid://cvrp4unwqdk2l" path="res://puzzle/src/scene/game/game.tscn" id="11_5kqsa"]
 [ext_resource type="PackedScene" uid="uid://bge5wggf77ret" path="res://levels/cursor.tscn" id="12_nhh08"]
@@ -26293,6 +26294,11 @@ tile_set = SubResource("TileSet_qfvcp")
 [node name="windows" type="TileMapLayer" parent="TileMap/walls"]
 tile_map_data = PackedByteArray("AAAsAAMAAAABACkAAAAsAAQAAAABACoAAAAsAAUAAAABACsAAAAsAAYAAAABACwAAAAsAAcAAAABAC0AAAAtAAMAAAACACkAAAAtAAQAAAACACoAAAAtAAUAAAACACsAAAAtAAYAAAACACwAAAAtAAcAAAACAC0AAAAuAAMAAAADACkAAAAuAAQAAAADACoAAAAvAAMAAAAEACkAAAAvAAQAAAAEACoAAAAwAAMAAAAFACkAAAAwAAQAAAAFACoAAAAwAAUAAAAFACsAAAAwAAYAAAAFACwAAAAwAAcAAAAFAC0AAAAxAAMAAAAGACkAAAAxAAQAAAAGACoAAAAxAAUAAAAGACsAAAAxAAYAAAAGACwAAAAxAAcAAAAGAC0AAAA0AAMAAAABACkAAAA0AAQAAAABACoAAAA0AAUAAAABACsAAAA0AAYAAAABACwAAAA0AAcAAAABAC0AAAA1AAMAAAACACkAAAA1AAQAAAACACoAAAA1AAUAAAACACsAAAA1AAYAAAACACwAAAA1AAcAAAACAC0AAAA2AAMAAAADACkAAAA2AAQAAAADACoAAAA3AAMAAAAEACkAAAA3AAQAAAAEACoAAAA4AAMAAAAFACkAAAA4AAQAAAAFACoAAAA4AAUAAAAFACsAAAA4AAYAAAAFACwAAAA4AAcAAAAFAC0AAAA5AAMAAAAGACkAAAA5AAQAAAAGACoAAAA5AAUAAAAGACsAAAA5AAYAAAAGACwAAAA5AAcAAAAGAC0AAAA=")
 tile_set = SubResource("TileSet_ojaph")
+
+[node name="Bgm" type="AudioStreamPlayer" parent="TileMap"]
+stream = ExtResource("7_cn5r0")
+volume_db = -25.0
+autoplay = true
 
 [node name="Fullsize" parent="." instance=ExtResource("7_5kqsa")]
 
