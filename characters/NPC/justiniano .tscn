@@ -1,7 +1,8 @@
-[gd_scene load_steps=34 format=3 uid="uid://cdjpou0v8x1gm"]
+[gd_scene load_steps=35 format=3 uid="uid://cdjpou0v8x1gm"]
 
 [ext_resource type="Script" uid="uid://cs884n70ey56i" path="res://characters/NPC/scripts/justiano.gd" id="1_7pg2y"]
 [ext_resource type="Texture2D" uid="uid://dd066djv6lbxr" path="res://characters/NPC/sprites/justiano/WHITE_SUIT.png" id="2_7agau"]
+[ext_resource type="AudioStream" uid="uid://35m7tgqqvlvb" path="res://asset/sfx/walking.wav" id="3_bdggl"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7agau"]
 radius = 32.0624
@@ -258,7 +259,7 @@ shape = SubResource("CircleShape2D_7agau")
 position = Vector2(-8, -23)
 scale = Vector2(1.73828, 2.02734)
 sprite_frames = SubResource("SpriteFrames_bdggl")
-animation = &"carry_idle_down"
+animation = &"carry_idle_left"
 
 [node name="chatdetectionjustiano" type="Area2D" parent="."]
 
@@ -267,11 +268,15 @@ position = Vector2(1, 1)
 shape = SubResource("CircleShape2D_rjxl1")
 
 [node name="Label" type="Label" parent="."]
-offset_left = -61.0
-offset_top = -64.0
-offset_right = 85.0
-offset_bottom = -41.0
+offset_left = -59.0
+offset_top = -91.0
+offset_right = 87.0
+offset_bottom = -68.0
 text = "Maestro Justiniano"
+
+[node name="walk_sfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_bdggl")
+volume_db = -20.0
 
 [connection signal="body_entered" from="chatdetectionjustiano" to="." method="_on_chatdetectionjustiano_body_entered"]
 [connection signal="body_exited" from="chatdetectionjustiano" to="." method="_on_chatdetectionjustiano_body_exited"]

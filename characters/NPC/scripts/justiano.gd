@@ -1,10 +1,11 @@
 extends CharacterBody2D
 
-@export var speed: float = 160.0
+@export var speed: float = 200.0
 @export var stopping_distance: float = 30.0 
 
 @onready var sprite: AnimatedSprite2D = $AnimatedSprite2D
 @onready var young_rizal = $"../classmate1"
+@onready var walk_sfx: AudioStreamPlayer = $walk_sfx
 
 var tile_map: TileMap
 var astar: AStarGrid2D
@@ -12,7 +13,10 @@ var current_id_path: Array[Vector2i] = []
 var last_direction: Vector2 = Vector2.DOWN
 
 var is_dialogue_active: bool = false
-var last_timeline_played: String = "" # Para tandaan kung aling dialogue ang natapos
+var last_timeline_played: String = "" 
+
+
+
 
 func _ready() -> void:
 	# 1. Hanapin ang TileMap at AstarGrid
@@ -68,7 +72,12 @@ func move_to_target(target: Vector2) -> void:
 	last_direction = direction
 	velocity = direction * speed
 	move_and_slide()
+	
 	play_walk_animation(direction)
+	
+	
+	if not walk_sfx.playing:
+		walk_sfx.play()
 
 func find_path_to_target(target_pos: Vector2) -> void:
 	var start_point = tile_map.local_to_map(global_position)
@@ -92,6 +101,9 @@ func play_walk_animation(dir: Vector2) -> void:
 		sprite.play("carry_walk_down" if dir.y > 0 else "carry_walk_up")
 
 func play_idle_animation() -> void:
+	if walk_sfx.playing:
+		walk_sfx.stop()
+		
 	if abs(last_direction.x) > abs(last_direction.y):
 		sprite.play("carry_idle_right" if last_direction.x > 0 else "carry_idle_left")
 	else:
@@ -105,6 +117,8 @@ func _on_dialogue_started() -> void:
 
 func _on_dialogue_finished() -> void:
 	is_dialogue_active = false
+	
+	QuestManager.update_quest("Bullies at the school", "Talk to your classmate and confront their grievances towards you", true)
 	
 	# I-check kung ang huling tinakbong dialogue ay ang brawl scene
 	if last_timeline_played == "firstbrawl2":

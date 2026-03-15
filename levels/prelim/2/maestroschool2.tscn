@@ -5200,4 +5200,4 @@ position = Vector2(330, 823)
 position = Vector2(233, 821)
 
 [node name="justiniano" parent="." instance=ExtResource("8_7o3fl")]
-position = Vector2(1098, 876)
+position = Vector2(1383, 870)

@@ -43,6 +43,7 @@ directories/dch_directory={
 "students": "res://dialogue/characters/students.dch"
 }
 directories/dtl_directory={
+"1narratorfirstglimpse": "res://dialogue/timeline/prelim/1/1narratorfirstglimpse.dtl",
 "2juanchorizal1": "res://dialogue/timeline/prelim/2/2juanchorizal1.dtl",
 "2maestrocruzrizal1": "res://dialogue/timeline/prelim/2/2maestrocruzrizal1.dtl",
 "2narrator1": "res://dialogue/timeline/prelim/2/2narrator1.dtl",

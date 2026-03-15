@@ -14,6 +14,6 @@ metadata/_custom_type_script = "uid://7ktwwmvwtcq0"
 script = ExtResource("2_rn76t")
 title = "The Beginning in Calamba"
 description = "Pepe knows the value of wisdom under the guidance of his parents."
-steps = Array[String](["Travel to Rizal's house", "Talk to Teodora Alonso", "Talk to Francisco Mercado", "Moth and flame"])
+steps = Array[String](["Travel to Rizal's house", "Talk to Teodora Alonso", "Talk to Francisco Mercado", "Moth and flame", "Go to Rizal sibling and interact with her"])
 reward_items = Array[ExtResource("1_x55bi")]([SubResource("Resource_xdlh0")])
 metadata/_custom_type_script = "uid://datfl3b15axlx"

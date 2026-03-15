@@ -55,6 +55,9 @@ func check_scene_opening_dialogue():
 
 	elif scene_path.ends_with("storyofthemoth.tscn"):
 		start_opening_dialogue("storyofmoth")
+		
+	elif scene_path.ends_with("firstglimpseinjustice.tscn"):
+		start_opening_dialogue("1narratorfirstglimpse")
 
 	elif scene_path.ends_with("leavingtocalamba.tscn"):
 		start_opening_dialogue("goingtobinan")

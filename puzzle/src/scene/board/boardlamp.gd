@@ -136,7 +136,7 @@ func show_completed_picture() -> void:
 	# 1. Show the "You Win" visuals
 	win_image.visible = true
 	
-	QuestManager.update_quest("The Beginning in Calamba", "Moth and flame", true)
+	QuestManager.update_quest("The Beginning in Calamba", "Moth and flame", false)
 	# 2. Hide the puzzle tiles so the full image is clear
 	for tile in tiles:
 		tile.visible = false
@@ -145,7 +145,7 @@ func show_completed_picture() -> void:
 	await get_tree().create_timer(3.0).timeout
 	
 	# 4. Directly trigger the transition to the next level
-	await Transitionlayer.start_smooth_transition("res://levels/prelim/1/leavingtocalamba.tscn")
+	await Transitionlayer.start_smooth_transition("res://levels/prelim/1/firstglimpseinjustice.tscn")
 
 func is_board_solved():
 	var count = 1
