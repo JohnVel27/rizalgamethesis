@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://ckswxvohbwucu"]
+[gd_scene load_steps=21 format=4 uid="uid://ckswxvohbwucu"]
 
 [ext_resource type="Texture2D" uid="uid://dihtl2bhwd2iq" path="res://levels/sprites/environment/Ground.png" id="1_evi32"]
 [ext_resource type="Script" uid="uid://6pfey0sg0f5t" path="res://levels/scripts/level.gd" id="1_j12d8"]
@@ -13,8 +13,6 @@
 [ext_resource type="FontFile" uid="uid://dov3t2xbxgg58" path="res://asset/font/HFPoet.ttf" id="10_3pew2"]
 [ext_resource type="PackedScene" uid="uid://cyywqetk2sp77" path="res://characters/NPC/siblingsrizal/siblings2.tscn" id="11_ql6nh"]
 [ext_resource type="PackedScene" uid="uid://bge5wggf77ret" path="res://levels/cursor.tscn" id="13_4epeb"]
-[ext_resource type="PackedScene" uid="uid://d2uff7ot6w80j" path="res://characters/NPC/sprites/farmer/farmer1.tscn" id="14_pnpcy"]
-[ext_resource type="PackedScene" uid="uid://bo70nu0ucowyi" path="res://characters/NPC/sprites/farmer/farmer2.tscn" id="15_ng0i6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3pew2"]
 texture = ExtResource("1_evi32")
@@ -5201,7 +5199,7 @@ volume_db = -10.0
 [node name="Fullsize" parent="." instance=ExtResource("6_ywvnf")]
 
 [node name="siblings" parent="." instance=ExtResource("9_j12d8")]
-position = Vector2(479, 402)
+position = Vector2(161, 527)
 
 [node name="Label" type="Label" parent="."]
 offset_left = 925.0
@@ -5235,9 +5233,3 @@ position = Vector2(-164, 625)
 
 [node name="Cursor" parent="." instance=ExtResource("13_4epeb")]
 visible = false
-
-[node name="farmer1" parent="." instance=ExtResource("14_pnpcy")]
-position = Vector2(-589, 544)
-
-[node name="farmer2" parent="." instance=ExtResource("15_ng0i6")]
-position = Vector2(735, 328)

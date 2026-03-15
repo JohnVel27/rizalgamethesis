@@ -10,16 +10,16 @@
 "style": "",
 "suffix": ""
 },
-&"default_portrait": "Maestro Carrera",
+&"default_portrait": "neutral",
 &"description": "",
-&"display_name": "Maestro Carrera",
+&"display_name": "Justinianotop",
 &"mirror": false,
 &"nicknames": [""],
-&"offset": Vector2(280, 20),
+&"offset": Vector2(0, -540),
 &"portraits": {
-"Maestro Carrera": {
+"neutral": {
 "export_overrides": {
-"image": "\"res://asset/picture_character/Maestro_Carrera.png\""
+"image": "\"res://asset/picture_character/Maestro_Cruz.png\""
 },
 "mirror": false,
 "offset": Vector2(0, 0),
@@ -27,5 +27,5 @@
 "scene": ""
 }
 },
-&"scale": 0.45
+&"scale": 0.4
 }

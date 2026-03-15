@@ -40,6 +40,7 @@ directories/dch_directory={
 "fathersanchez": "res://dialogue/characters/fathersanchez.dch",
 "francisco": "res://dialogue/characters/francisco.dch",
 "juancho": "res://dialogue/characters/juancho.dch",
+"justinianotop": "res://dialogue/characters/justinianotop.dch",
 "students": "res://dialogue/characters/students.dch"
 }
 directories/dtl_directory={

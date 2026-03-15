@@ -15,13 +15,13 @@
 &"display_name": "Classmates",
 &"mirror": false,
 &"nicknames": [""],
-&"offset": Vector2(280, 0),
+&"offset": Vector2(-230, 0),
 &"portraits": {
 "angryclassmates": {
 "export_overrides": {
 "image": "\"res://asset/picture_character/bullyclass.png\""
 },
-"mirror": false,
+"mirror": true,
 "offset": Vector2(0, 0),
 "scale": 1,
 "scene": ""

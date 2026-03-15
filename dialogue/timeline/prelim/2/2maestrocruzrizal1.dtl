@@ -1,7 +1,15 @@
+join Justiano right
 Justiano: New student. Stand up.
+join Rizal left
+leave Justiano
 Rizal: I am José Rizal Mercado, sir.
+join Justiano right
+leave Rizal
 Justiano: Do you know how to read Spanish?
+join Rizal left
+leave Justiano
 Rizal: A little, sir.
+join Justiano right
 Justiano: Self-confidence is earned. Read.
 Narrator: minigame quiz\: this is a multiple-choice question.
 label maestrocruz
