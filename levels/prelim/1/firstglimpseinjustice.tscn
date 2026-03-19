@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://bana47hu7ydsu" path="res://GUI/instruction/fullsize.tscn" id="6_4gegy"]
 [ext_resource type="PackedScene" uid="uid://rl2ubgx68cwd" path="res://characters/player/youngrizal.tscn" id="7_pxfed"]
 [ext_resource type="PackedScene" uid="uid://d2uff7ot6w80j" path="res://characters/NPC/sprites/farmer/farmer1.tscn" id="9_whfn7"]
-[ext_resource type="PackedScene" path="res://characters/NPC/friars1.tscn" id="10_xi0fe"]
+[ext_resource type="PackedScene" uid="uid://duosm87bomjgd" path="res://characters/NPC/friars1.tscn" id="10_xi0fe"]
 [ext_resource type="PackedScene" uid="uid://bo70nu0ucowyi" path="res://characters/NPC/sprites/farmer/farmer2.tscn" id="11_mkhai"]
 [ext_resource type="PackedScene" uid="uid://bge5wggf77ret" path="res://levels/cursor.tscn" id="11_pmai2"]
 [ext_resource type="PackedScene" uid="uid://bjtkyrwhyrtb5" path="res://characters/NPC/sprites/farmer/farmer3nomovement.tscn" id="12_iyrcb"]

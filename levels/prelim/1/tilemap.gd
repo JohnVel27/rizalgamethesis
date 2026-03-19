@@ -3,17 +3,16 @@ extends TileMap
 var AstarGrid: AStarGrid2D
 
 func _ready() -> void:
-	# Ensure the tilemap bounds are updated for the camera/level manager
+	
 	LevelManager.change_tilemap_bounds(_get_tilemap_bounds())
 	# Initialize the navigation grid
 	assigning_astar()
 
 func assigning_astar() -> void:
-	# Reference the specific child layer where your walls are drawn
+	
 	var wall_layer = $walls 
 	
-	# get_used_rect() on a TileMap combines all layers, 
-	# which is perfect for defining the total playable area.
+	
 	var used_rect = get_used_rect()
 	
 	AstarGrid = AStarGrid2D.new()

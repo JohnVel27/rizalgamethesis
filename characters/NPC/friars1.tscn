@@ -1,6 +1,6 @@
-[gd_scene load_steps=34 format=3 uid="uid://cga70u1tku2ju"]
+[gd_scene load_steps=34 format=3 uid="uid://duosm87bomjgd"]
 
-[ext_resource type="Script" uid="uid://bf35ul4f7orgq" path="res://characters/NPC/friars_1.gd" id="1_opfww"]
+[ext_resource type="Script" path="res://characters/NPC/friars_1.gd" id="1_opfww"]
 [ext_resource type="Texture2D" uid="uid://dy0ic4bky0yyn" path="res://characters/NPC/sprites/dominicanfriar/Friar_Dominican_2.png" id="2_opfww"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_dcysj"]

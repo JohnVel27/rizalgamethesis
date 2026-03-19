@@ -17,42 +17,59 @@ config/icon="res://icon.svg"
 
 [autoload]
 
-Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 Transitionlayer="*res://levels/Transitionlayer.tscn"
 LevelManager="*res://00_globals/global_level_manager.gd"
 PlayerManager="*res://00_globals/global_player_manager.gd"
 InventoryMenu="*res://GUI/inventory/inventory_menu.tscn"
 QuestMenu="*res://GUI/quest/quest_menu.tscn"
 QuestManager="*res://quest/scripts/global_quest_manager.gd"
+Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
 
 [dialogic]
 
 directories/dch_directory={
 "Bully": "res://dialogue/characters/Bully.dch",
+"Captain": "res://dialogue/characters/Captain.dch",
+"Dr Louis de Wecke": "res://dialogue/characters/Dr Louis de Wecke.dch",
+"Graciano López Jaena": "res://dialogue/characters/Graciano López Jaena.dch",
 "Justiano": "res://dialogue/characters/Justiano.dch",
+"Marcelo H del Pilar": "res://dialogue/characters/Marcelo H del Pilar.dch",
+"Maximo Viola": "res://dialogue/characters/Maximo Viola.dch",
 "Narrator": "res://dialogue/characters/Narrator.dch",
+"Paciano": "res://dialogue/characters/Paciano.dch",
+"Printing Master": "res://dialogue/characters/Printing Master.dch",
+"Reformist": "res://dialogue/characters/Reformist.dch",
 "Rizal": "res://dialogue/characters/Rizal.dch",
 "Rizal sibling": "res://dialogue/characters/Rizal sibling.dch",
+"Spanish Official": "res://dialogue/characters/Spanish Official.dch",
 "TenantFarmer": "res://dialogue/characters/TenantFarmer.dch",
 "Teodora": "res://dialogue/characters/Teodora.dch",
+"Villagers": "res://dialogue/characters/Villagers.dch",
 "classmates": "res://dialogue/characters/classmates.dch",
 "dominicanfriars": "res://dialogue/characters/dominicanfriars.dch",
+"european scholar": "res://dialogue/characters/european scholar.dch",
 "fathersanchez": "res://dialogue/characters/fathersanchez.dch",
 "francisco": "res://dialogue/characters/francisco.dch",
 "juancho": "res://dialogue/characters/juancho.dch",
 "justinianotop": "res://dialogue/characters/justinianotop.dch",
+"passenger": "res://dialogue/characters/passenger.dch",
 "students": "res://dialogue/characters/students.dch"
 }
 directories/dtl_directory={
+"1": "res://dialogue/timeline/midterm/1/1.dtl",
 "1narratorfirstglimpse": "res://dialogue/timeline/prelim/1/1narratorfirstglimpse.dtl",
+"2/1": "res://dialogue/timeline/midterm/2/1.dtl",
 "2juanchorizal1": "res://dialogue/timeline/prelim/2/2juanchorizal1.dtl",
 "2maestrocruzrizal1": "res://dialogue/timeline/prelim/2/2maestrocruzrizal1.dtl",
 "2narrator1": "res://dialogue/timeline/prelim/2/2narrator1.dtl",
+"3/1": "res://dialogue/timeline/midterm/3/1.dtl",
 "3narrator1": "res://dialogue/timeline/prelim/3/3narrator1.dtl",
 "3narrator2": "res://dialogue/timeline/prelim/3/3narrator2.dtl",
+"4/1": "res://dialogue/timeline/midterm/4/1.dtl",
 "4dominicanfriarsrizal1": "res://dialogue/timeline/prelim/4/scrapt/4dominicanfriarsrizal1.dtl",
 "4narrato2": "res://dialogue/timeline/prelim/4/4narrato2.dtl",
 "4narrator1": "res://dialogue/timeline/prelim/4/4narrator1.dtl",
+"5/1": "res://dialogue/timeline/midterm/5/1.dtl",
 "Narrator-calamba": "res://dialogue/timeline/prelim/1/Narrator-calamba.dtl",
 "brawlmission": "res://dialogue/timeline/prelim/2/brawlmission.dtl",
 "firstbrawl": "res://dialogue/timeline/prelim/2/firstbrawl.dtl",
