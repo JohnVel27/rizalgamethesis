@@ -1,5 +1,6 @@
-[gd_scene load_steps=38 format=3 uid="uid://01yyjmirv4dk"]
+[gd_scene load_steps=39 format=3 uid="uid://01yyjmirv4dk"]
 
+[ext_resource type="Script" uid="uid://b6o4fu2ekfrxj" path="res://characters/NPC/siblingsrizal/teodora_1.gd" id="1_4d73t"]
 [ext_resource type="Texture2D" uid="uid://bsi54v1cha78o" path="res://characters/NPC/sprites/teodora/rizalmother2.png" id="2_diqsk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_7ed70"]
@@ -283,6 +284,7 @@ animations = [{
 radius = 53.0094
 
 [node name="teodora" type="CharacterBody2D"]
+script = ExtResource("1_4d73t")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(1, -33)

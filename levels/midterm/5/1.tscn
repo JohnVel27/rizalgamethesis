@@ -1,9 +1,11 @@
-[gd_scene load_steps=7 format=3 uid="uid://d16wuuen1vxlu"]
+[gd_scene load_steps=9 format=3 uid="uid://d16wuuen1vxlu"]
 
 [ext_resource type="Texture2D" uid="uid://dihtl2bhwd2iq" path="res://levels/sprites/environment/Ground.png" id="1_8jtd1"]
 [ext_resource type="Script" uid="uid://crr7yee58lgos" path="res://levels/prelim/1/tilemap.gd" id="2_rlk7u"]
 [ext_resource type="AudioStream" uid="uid://c3nvh131yhmgp" path="res://asset/sfx/bgm.mp3" id="3_eixrr"]
 [ext_resource type="PackedScene" uid="uid://ck2d5qp7jls4c" path="res://characters/player/sprites/oldrizal/adultrizal.tscn" id="4_rlk7u"]
+[ext_resource type="PackedScene" uid="uid://cmkaofbetgte" path="res://characters/filipino reformist/filipinoreformist.tscn" id="5_eixrr"]
+[ext_resource type="PackedScene" uid="uid://cgw0ppcuekm0p" path="res://characters/spanish officials/spanishofficial.tscn" id="6_xcfdo"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xcfdo"]
 texture = ExtResource("1_8jtd1")
@@ -356,3 +358,9 @@ autoplay = true
 
 [node name="adultrizal" parent="." instance=ExtResource("4_rlk7u")]
 position = Vector2(1181, 904)
+
+[node name="filipinoreformist" parent="." instance=ExtResource("5_eixrr")]
+position = Vector2(1201, 705)
+
+[node name="spanishofficial" parent="." instance=ExtResource("6_xcfdo")]
+position = Vector2(1059, 722)

@@ -57,12 +57,15 @@ directories/dch_directory={
 }
 directories/dtl_directory={
 "1": "res://dialogue/timeline/midterm/1/1.dtl",
+"1midtermnarrator1": "res://dialogue/timeline/midterm/1/1midtermnarrator1.dtl",
 "1narratorfirstglimpse": "res://dialogue/timeline/prelim/1/1narratorfirstglimpse.dtl",
 "2/1": "res://dialogue/timeline/midterm/2/1.dtl",
 "2juanchorizal1": "res://dialogue/timeline/prelim/2/2juanchorizal1.dtl",
 "2maestrocruzrizal1": "res://dialogue/timeline/prelim/2/2maestrocruzrizal1.dtl",
+"2midtermnarrator1": "res://dialogue/timeline/midterm/2/2midtermnarrator1.dtl",
 "2narrator1": "res://dialogue/timeline/prelim/2/2narrator1.dtl",
 "3/1": "res://dialogue/timeline/midterm/3/1.dtl",
+"3midtermnarrator1": "res://dialogue/timeline/midterm/3/3midtermnarrator1.dtl",
 "3narrator1": "res://dialogue/timeline/prelim/3/3narrator1.dtl",
 "3narrator2": "res://dialogue/timeline/prelim/3/3narrator2.dtl",
 "4/1": "res://dialogue/timeline/midterm/4/1.dtl",
@@ -70,6 +73,7 @@ directories/dtl_directory={
 "4narrato2": "res://dialogue/timeline/prelim/4/4narrato2.dtl",
 "4narrator1": "res://dialogue/timeline/prelim/4/4narrator1.dtl",
 "5/1": "res://dialogue/timeline/midterm/5/1.dtl",
+"5midtermnarrator1": "res://dialogue/timeline/midterm/5/5midtermnarrator1.dtl",
 "Narrator-calamba": "res://dialogue/timeline/prelim/1/Narrator-calamba.dtl",
 "brawlmission": "res://dialogue/timeline/prelim/2/brawlmission.dtl",
 "firstbrawl": "res://dialogue/timeline/prelim/2/firstbrawl.dtl",

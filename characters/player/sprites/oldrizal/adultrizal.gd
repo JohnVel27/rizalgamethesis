@@ -44,6 +44,16 @@ func _ready() -> void:
 		start_opening_dialogue("4narrator1")
 	elif scene_path.ends_with("res://levels/prelim/4/uhallway.tscn"):
 		start_opening_dialogue("4narrato2")
+	elif scene_path.ends_with("res://levels/midterm/1/1.tscn"):
+		start_opening_dialogue("1midtermnarrator1")
+	elif scene_path.ends_with("res://levels/midterm/2/1.tscn"):
+		start_opening_dialogue("2midtermnarrator1")
+	elif scene_path.ends_with("res://levels/midterm/3/comebackhome.tscn"):
+		start_opening_dialogue("3midtermnarrator1")
+	elif scene_path.ends_with("res://levels/midterm/4/1.tscn"):
+		start_opening_dialogue("1midtermnarrator1")
+	elif scene_path.ends_with("res://levels/midterm/5/1.tscn"):
+		start_opening_dialogue("5midtermnarrator1")
 
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	Dialogic.signal_event.connect(_on_dialogic_juancho_signal)

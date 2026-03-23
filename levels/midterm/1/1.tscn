@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://cpguutudrpte"]
+[gd_scene load_steps=19 format=3 uid="uid://cpguutudrpte"]
 
 [ext_resource type="Texture2D" uid="uid://dihtl2bhwd2iq" path="res://levels/sprites/environment/Ground.png" id="1_pinvi"]
 [ext_resource type="Script" uid="uid://crr7yee58lgos" path="res://levels/prelim/1/tilemap.gd" id="2_m4kt3"]
@@ -10,6 +10,8 @@
 [ext_resource type="PackedScene" uid="uid://dsfsv0vf71b0w" path="res://characters/passengers/passengernonwalk.tscn" id="6_u58y5"]
 [ext_resource type="PackedScene" uid="uid://dxh63qhe48phw" path="res://characters/paciano/pacianononwalk.tscn" id="7_i41b5"]
 [ext_resource type="PackedScene" uid="uid://1sbie53h6bhw" path="res://characters/shipcaptain/shipcaptainnonwalk.tscn" id="7_s5lue"]
+[ext_resource type="PackedScene" uid="uid://bana47hu7ydsu" path="res://GUI/instruction/fullsize.tscn" id="11_h4spw"]
+[ext_resource type="PackedScene" uid="uid://bge5wggf77ret" path="res://levels/cursor.tscn" id="12_1t7u8"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_i41b5"]
 texture = ExtResource("1_pinvi")
@@ -639,7 +641,12 @@ position = Vector2(1198, 736)
 position = Vector2(746, 896)
 
 [node name="shipcaptain" parent="." instance=ExtResource("7_s5lue")]
-position = Vector2(897, 828)
+position = Vector2(1089, 699)
 
 [node name="paciano" parent="." instance=ExtResource("7_i41b5")]
 position = Vector2(942, 688)
+
+[node name="Fullsize" parent="." instance=ExtResource("11_h4spw")]
+
+[node name="Cursor" parent="." instance=ExtResource("12_1t7u8")]
+visible = false
