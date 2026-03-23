@@ -1,13 +1,29 @@
+join Paciano center
 Paciano: Jose, the authorities grow suspicious of educated Filipinos. You must leave quietly.
-Rizal:  I understand, brother. But if I remain here, I cannot learn what our country truly needs.
+join Rizal left
+Rizal: I understand, brother. But if I remain here, I cannot learn what our country truly needs.
 Paciano: Europe will open your eyes, but it will also test you.
 Rizal: Then I will face it. Everything I learn there will be for our people.
 Paciano: Remember why you are going. Do not forget the Philippines.
-Rizal:  I will not forget. One day, what I learn will help awaken our nation
+Rizal: I will not forget. One day, what I learn will help awaken our nation
+leave Rizal
+leave Paciano
+join Captain center
 Captain: Final boarding call. Passengers for Spain must board now.
+leave Captain
+join Rizal left
 Rizal: Farewell, brother. Take care of our family.
+join Paciano center
 Paciano: Go, Jose. Make our sacrifices worth it.
+leave Paciano
+leave Rizal
+join Captain center
 Captain: The seas ahead are long, young man. What brings you to Europe?
+join Rizal left
 Rizal: Knowledge, Captain. Knowledge that may change my country.
-passenger:  Spain is a different world from Manila.
+leave Rizal
+join passenger center
+passenger: Spain is a different world from Manila.
+leave passenger
+join Rizal left
 Rizal: That is why I must see it for myself.

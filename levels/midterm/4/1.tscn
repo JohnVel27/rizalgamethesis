@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://o2ue4asgi3ql"]
+[gd_scene format=3 uid="uid://o2ue4asgi3ql"]
 
 [ext_resource type="Texture2D" uid="uid://dihtl2bhwd2iq" path="res://levels/sprites/environment/Ground.png" id="1_m7lwd"]
 [ext_resource type="Script" uid="uid://crr7yee58lgos" path="res://levels/prelim/1/tilemap.gd" id="2_hj8lb"]
@@ -339,9 +339,9 @@ custom_data_layer_0/name = "Walkable"
 custom_data_layer_0/type = 1
 sources/0 = SubResource("TileSetAtlasSource_hmjqc")
 
-[node name="1" type="Node2D"]
+[node name="1" type="Node2D" unique_id=2036595481]
 
-[node name="TileMap" type="TileMap" parent="."]
+[node name="TileMap" type="TileMap" parent="." unique_id=1349069919]
 tile_set = SubResource("TileSet_58g7b")
 format = 2
 layer_0/name = "ground"
@@ -349,22 +349,22 @@ layer_0/tile_data = PackedInt32Array(-21, 65536, 5, 65515, 65536, 6, -20, 131072
 layer_1/name = "props_decor"
 script = ExtResource("2_hj8lb")
 
-[node name="walls" type="TileMapLayer" parent="TileMap"]
+[node name="walls" type="TileMapLayer" parent="TileMap" unique_id=1966267966]
 tile_set = SubResource("TileSet_58g7b")
 
-[node name="Bgm" type="AudioStreamPlayer" parent="TileMap"]
+[node name="Bgm" type="AudioStreamPlayer" parent="TileMap" unique_id=880464721]
 stream = ExtResource("3_sjs63")
 volume_db = -25.0
 autoplay = true
 
-[node name="adultrizal" parent="." instance=ExtResource("4_hj8lb")]
+[node name="adultrizal" parent="." unique_id=2080858295 instance=ExtResource("4_hj8lb")]
 position = Vector2(1181, 904)
 
-[node name="graciano" parent="." instance=ExtResource("5_58g7b")]
+[node name="graciano" parent="." unique_id=1107103344 instance=ExtResource("5_58g7b")]
 position = Vector2(1033, 753)
 
-[node name="marcelo" parent="." instance=ExtResource("6_3ai1n")]
+[node name="marcelo" parent="." unique_id=49372478 instance=ExtResource("6_3ai1n")]
 position = Vector2(1302, 744)
 
-[node name="paciano" parent="." instance=ExtResource("7_58g7b")]
+[node name="paciano" parent="." unique_id=1132427505 instance=ExtResource("7_58g7b")]
 position = Vector2(1146, 697)
