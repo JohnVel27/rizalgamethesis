@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://bge5wggf77ret" path="res://levels/cursor.tscn" id="11_pmai2"]
 [ext_resource type="PackedScene" uid="uid://bjtkyrwhyrtb5" path="res://characters/NPC/sprites/farmer/farmer3nomovement.tscn" id="12_iyrcb"]
 [ext_resource type="PackedScene" uid="uid://n3gruiiq54iu" path="res://characters/NPC/sprites/farmer/farmer4nomovement.tscn" id="13_sw2qx"]
-[ext_resource type="PackedScene" path="res://characters/NPC/siblingsrizal/siblings2nomovement.tscn" id="14_4gegy"]
+[ext_resource type="PackedScene" uid="uid://dg06p2x4vph8r" path="res://characters/NPC/siblingsrizal/siblings2nomovement.tscn" id="14_4gegy"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_3pew2"]
 texture = ExtResource("2_jwr4b")
