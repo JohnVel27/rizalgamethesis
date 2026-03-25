@@ -258,7 +258,7 @@ shape = SubResource("CircleShape2D_67vlx")
 position = Vector2(2, -54)
 scale = Vector2(2, 1.89063)
 sprite_frames = SubResource("SpriteFrames_gscx5")
-animation = &"carry_idle_side_right"
+animation = &"carry_walk_side_right"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 editor_draw_limits = true

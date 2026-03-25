@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://d16wuuen1vxlu"]
+[gd_scene load_steps=27 format=4 uid="uid://d16wuuen1vxlu"]
 
 [ext_resource type="Texture2D" uid="uid://dihtl2bhwd2iq" path="res://levels/sprites/environment/Ground.png" id="1_8jtd1"]
 [ext_resource type="Texture2D" uid="uid://b2upubioo8i3s" path="res://levels/sprites/environment/Props_Decor.png" id="2_32rib"]
@@ -7,11 +7,12 @@
 [ext_resource type="Texture2D" uid="uid://bsucxsmtr42m7" path="res://levels/sprites/environment/Roofs.png" id="3_ivxj4"]
 [ext_resource type="PackedScene" uid="uid://ck2d5qp7jls4c" path="res://characters/player/sprites/oldrizal/adultrizal.tscn" id="4_rlk7u"]
 [ext_resource type="Texture2D" uid="uid://cestyxtyk3e4a" path="res://levels/sprites/environment/Walls.png" id="4_uab7t"]
-[ext_resource type="PackedScene" uid="uid://cmkaofbetgte" path="res://characters/filipino reformist/filipinoreformist.tscn" id="5_eixrr"]
 [ext_resource type="Texture2D" uid="uid://bbkawb3d4xlqm" path="res://levels/sprites/environment/windows_and_doors2.png" id="5_f4khx"]
 [ext_resource type="Texture2D" uid="uid://diu2s77lqwlwk" path="res://levels/sprites/environment/Sconce_Spritesheet.png" id="5_uab7t"]
-[ext_resource type="PackedScene" uid="uid://cgw0ppcuekm0p" path="res://characters/spanish officials/spanishofficial.tscn" id="6_xcfdo"]
 [ext_resource type="Texture2D" uid="uid://dw5vg3o403jek" path="res://levels/sprites/environment/windows_and_doors.png" id="8_f4khx"]
+[ext_resource type="PackedScene" uid="uid://djhisukfxtj0m" path="res://levels/level_transition.tscn" id="12_f4khx"]
+[ext_resource type="FontFile" uid="uid://dov3t2xbxgg58" path="res://asset/font/HFPoet.ttf" id="13_f4khx"]
+[ext_resource type="AudioStream" uid="uid://tp8o0vogatrp" path="res://asset/sfx/Doorsfx.wav" id="13_fmkbh"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xcfdo"]
 texture = ExtResource("1_8jtd1")
@@ -5426,6 +5427,9 @@ sources/0 = SubResource("TileSetAtlasSource_p7oes")
 sources/1 = SubResource("TileSetAtlasSource_sn5ot")
 sources/2 = SubResource("TileSetAtlasSource_bi8ny")
 
+[sub_resource type="FontVariation" id="FontVariation_fmkbh"]
+base_font = ExtResource("13_f4khx")
+
 [node name="1" type="Node2D"]
 
 [node name="TileMap" type="TileMap" parent="."]
@@ -5450,10 +5454,24 @@ volume_db = -25.0
 autoplay = true
 
 [node name="adultrizal" parent="." instance=ExtResource("4_rlk7u")]
-position = Vector2(1181, 904)
+position = Vector2(74, 161)
 
-[node name="filipinoreformist" parent="." instance=ExtResource("5_eixrr")]
-position = Vector2(397, 870)
+[node name="Label" type="Label" parent="."]
+offset_left = 533.0
+offset_top = 18.0
+offset_right = 771.0
+offset_bottom = 95.0
+theme_override_fonts/font = SubResource("FontVariation_fmkbh")
+theme_override_font_sizes/font_size = 30
+text = "Brussels Appartment 
+Rizal"
+horizontal_alignment = 1
 
-[node name="spanishofficial" parent="." instance=ExtResource("6_xcfdo")]
-position = Vector2(502, 870)
+[node name="LevelTransition1" parent="." instance=ExtResource("12_f4khx")]
+position = Vector2(665, 202)
+level = "uid://dc3tv7a88vdag"
+size = 1
+
+[node name="door_sfx" type="AudioStreamPlayer" parent="LevelTransition1"]
+stream = ExtResource("13_fmkbh")
+volume_db = -10.0

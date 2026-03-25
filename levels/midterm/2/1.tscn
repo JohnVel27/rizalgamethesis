@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=4 uid="uid://c54j5omyxjilv"]
+[gd_scene load_steps=12 format=4 uid="uid://c54j5omyxjilv"]
 
 [ext_resource type="Texture2D" uid="uid://dihtl2bhwd2iq" path="res://levels/sprites/environment/Ground.png" id="1_30fnv"]
 [ext_resource type="Script" uid="uid://crr7yee58lgos" path="res://levels/prelim/1/tilemap.gd" id="2_4rdg6"]
@@ -6,8 +6,6 @@
 [ext_resource type="AudioStream" uid="uid://c3nvh131yhmgp" path="res://asset/sfx/bgm.mp3" id="3_w4xng"]
 [ext_resource type="PackedScene" uid="uid://2m5by5vk8x3h" path="res://characters/Dr. Louis de Wecker/louisnowalk.tscn" id="4_w4xng"]
 [ext_resource type="PackedScene" uid="uid://ck2d5qp7jls4c" path="res://characters/player/sprites/oldrizal/adultrizal.tscn" id="5_gn0iy"]
-[ext_resource type="PackedScene" uid="uid://cbm6kc0pjjqhw" path="res://characters/Maximo Viola/maximonowalk.tscn" id="6_ylbmc"]
-[ext_resource type="PackedScene" uid="uid://bha8s4ojuxsc2" path="res://characters/European Scholars/europeanscholars.tscn" id="7_k5we3"]
 [ext_resource type="PackedScene" uid="uid://bge5wggf77ret" path="res://levels/cursor.tscn" id="9_bre23"]
 [ext_resource type="PackedScene" uid="uid://bana47hu7ydsu" path="res://GUI/instruction/fullsize.tscn" id="10_cjd05"]
 
@@ -514,12 +512,6 @@ position = Vector2(984, 622)
 
 [node name="adultrizal" parent="." instance=ExtResource("5_gn0iy")]
 position = Vector2(785, 936)
-
-[node name="maximo" parent="." instance=ExtResource("6_ylbmc")]
-position = Vector2(819, 494)
-
-[node name="europeanscholar" parent="." instance=ExtResource("7_k5we3")]
-position = Vector2(673, 642)
 
 [node name="Cursor" parent="." instance=ExtResource("9_bre23")]
 visible = false

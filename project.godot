@@ -73,6 +73,7 @@ directories/dtl_directory={
 "4narrator1": "res://dialogue/timeline/prelim/4/4narrator1.dtl",
 "5/1": "res://dialogue/timeline/midterm/5/1.dtl",
 "5midtermnarrator1": "res://dialogue/timeline/midterm/5/5midtermnarrator1.dtl",
+"5midtermnarrator2": "res://dialogue/timeline/midterm/5/5midtermnarrator2.dtl",
 "Narrator-calamba": "res://dialogue/timeline/prelim/1/Narrator-calamba.dtl",
 "brawlmission": "res://dialogue/timeline/prelim/2/brawlmission.dtl",
 "firstbrawl": "res://dialogue/timeline/prelim/2/firstbrawl.dtl",
