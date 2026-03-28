@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://d16wuuen1vxlu"]
+[gd_scene load_steps=29 format=4 uid="uid://cov7h1hqfqypr"]
 
 [ext_resource type="Texture2D" uid="uid://dihtl2bhwd2iq" path="res://levels/sprites/environment/Ground.png" id="1_8jtd1"]
 [ext_resource type="Texture2D" uid="uid://b2upubioo8i3s" path="res://levels/sprites/environment/Props_Decor.png" id="2_32rib"]
@@ -13,6 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://djhisukfxtj0m" path="res://levels/level_transition.tscn" id="12_f4khx"]
 [ext_resource type="FontFile" uid="uid://dov3t2xbxgg58" path="res://asset/font/HFPoet.ttf" id="13_f4khx"]
 [ext_resource type="AudioStream" uid="uid://tp8o0vogatrp" path="res://asset/sfx/Doorsfx.wav" id="13_fmkbh"]
+[ext_resource type="PackedScene" uid="uid://bana47hu7ydsu" path="res://GUI/instruction/fullsize.tscn" id="14_fmkbh"]
+[ext_resource type="PackedScene" uid="uid://bge5wggf77ret" path="res://levels/cursor.tscn" id="15_wqfno"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_xcfdo"]
 texture = ExtResource("1_8jtd1")
@@ -5469,9 +5471,14 @@ horizontal_alignment = 1
 
 [node name="LevelTransition1" parent="." instance=ExtResource("12_f4khx")]
 position = Vector2(665, 202)
-level = "uid://dc3tv7a88vdag"
+level = "uid://dd43x8xn6vw7w"
 size = 1
 
 [node name="door_sfx" type="AudioStreamPlayer" parent="LevelTransition1"]
 stream = ExtResource("13_fmkbh")
 volume_db = -10.0
+
+[node name="Fullsize" parent="." instance=ExtResource("14_fmkbh")]
+
+[node name="Cursor" parent="." instance=ExtResource("15_wqfno")]
+visible = false

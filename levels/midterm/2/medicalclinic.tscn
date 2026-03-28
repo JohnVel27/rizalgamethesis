@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=4 uid="uid://82t2apuln7po"]
+[gd_scene load_steps=26 format=4 uid="uid://dydefb252uyto"]
 
 [ext_resource type="Script" uid="uid://6pfey0sg0f5t" path="res://levels/scripts/level.gd" id="1_vnhgx"]
 [ext_resource type="Texture2D" uid="uid://3isw37f77rtq" path="res://levels/sprites/environment/Interiors_tilesets.png" id="2_j5cf2"]

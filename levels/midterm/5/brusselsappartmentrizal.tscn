@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=4 uid="uid://dc3tv7a88vdag"]
+[gd_scene load_steps=25 format=4 uid="uid://dd43x8xn6vw7w"]
 
 [ext_resource type="Script" uid="uid://6pfey0sg0f5t" path="res://levels/scripts/level.gd" id="1_0yntx"]
 [ext_resource type="Texture2D" uid="uid://3isw37f77rtq" path="res://levels/sprites/environment/Interiors_tilesets.png" id="2_u3no3"]
@@ -26359,6 +26359,8 @@ sources/1 = SubResource("TileSetAtlasSource_qfvcp")
 [node name="Livingroomrizal" type="Node2D"]
 script = ExtResource("1_0yntx")
 
+[node name="Fullsize" parent="." instance=ExtResource("8_mxuib")]
+
 [node name="TileMap" type="TileMap" parent="."]
 position = Vector2(4, -30)
 tile_set = SubResource("TileSet_ujy42")
@@ -26378,9 +26380,6 @@ tile_set = SubResource("TileSet_ojaph")
 stream = ExtResource("7_nhi8b")
 volume_db = -25.0
 autoplay = true
-
-[node name="Fullsize" parent="." instance=ExtResource("8_mxuib")]
-visible = false
 
 [node name="Game" parent="." instance=ExtResource("12_636g1")]
 visible = false
